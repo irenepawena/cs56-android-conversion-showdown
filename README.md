@@ -3,5 +3,5 @@
 
 
 
-![image](MainActivity.jpg =)
-![image](CalculatorActivity.jpg =500x200)
+![alt tag](MainActivity.jpg =)
+![alt tag](CalculatorActivity.jpg =500x200)
