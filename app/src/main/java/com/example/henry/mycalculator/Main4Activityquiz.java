@@ -34,23 +34,30 @@ public class Main4Activityquiz extends Activity implements OnClickListener{
     }
 
 
-    String myString = "0";
+    //String myString = "0";
     public void TestResult(View view){
-        int binary = Integer.parseInt(myString,2);
+        // Take number from text field and convert it to an integer
+        TextView myText = (TextView)findViewById(R.id.decimal);
+        String TxtString = myText.getText().toString();
+        int binary = Integer.parseInt(TxtString,2);
+
+        // Take user answer from text field and convert it to an integer
         EditText answer = (EditText) findViewById(R.id.AnswerField);
         TextView respond = (TextView) findViewById(R.id.RightOrWrong);
         int binaryanswer = Integer.parseInt(answer.getText().toString());
+
+        // compare the answer to the actual value
         if(binary == binaryanswer){
             respond.setText("Correct");
         } else {
             respond.setText("Incorrect");
         }
 
+        // create a Random number for the next problem
         Random rand = new Random();
         int number = rand.nextInt(4097);
-        TextView myText = (TextView)findViewById(R.id.decimal);
-        String myString = String.valueOf(number);
-        myText.setText(myString);
+        String Stringnew = String.valueOf(number);
+        myText.setText(Stringnew);
     }
 
 
