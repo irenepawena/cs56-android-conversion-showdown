@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/DecimalBinary"
-        android:id="@+id/checkBox"
+        android:id="@+id/Decimal_Binary"
         android:layout_marginTop="32dp"
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
@@ -31,8 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/DecimalOctal"
-        android:id="@+id/checkBox2"
-        android:layout_below="@+id/checkBox"
+        android:id="@+id/Decimal_Octal"
+        android:layout_below="@+id/Decimal_Binary"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -40,8 +40,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/DecimalHexa"
-        android:id="@+id/checkBox3"
-        android:layout_below="@+id/checkBox4"
+        android:id="@+id/Decimal_Hexadecimal"
+        android:layout_below="@+id/Binary_Octal"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -49,8 +49,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/BinaryOctal"
-        android:id="@+id/checkBox4"
-        android:layout_below="@+id/checkBox2"
+        android:id="@+id/Binary_Octal"
+        android:layout_below="@+id/Decimal_Octal"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -58,8 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/BinaryHexa"
-        android:id="@+id/checkBox5"
-        android:layout_below="@+id/checkBox3"
+        android:id="@+id/Binary_Hexadecimal"
+        android:layout_below="@+id/Decimal_Hexadecimal"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -67,8 +67,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/OctalHexa"
-        android:id="@+id/checkBox6"
-        android:layout_below="@+id/checkBox5"
+        android:id="@+id/Octal_Hexadecimal"
+        android:layout_below="@+id/Binary_Hexadecimal"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -78,8 +78,9 @@
         android:layout_height="wrap_content"
         android:text="@string/TestButton"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/checkBox3"
-        android:layout_toEndOf="@+id/checkBox3" />
+        android:layout_toRightOf="@+id/Decimal_Hexadecimal"
+        android:layout_toEndOf="@+id/Decimal_Hexadecimal"
+        android:onClick="ButtonStartQuiz" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -87,43 +88,56 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/AskLength"
         android:id="@+id/textView2"
-        android:layout_below="@+id/checkBox6"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/Octal_Hexadecimal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
+    <RadioGroup android:layout_width="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/SixQs"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/SixQs"
-        android:id="@+id/checkBox7"
+        android:onClick="Qnum"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp" />
 
-    <CheckBox
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/TwelveQs"
-        android:id="@+id/checkBox8"
-        android:layout_below="@+id/checkBox7"
+        android:id="@+id/TwelveQs"
+        android:onClick="Qnum"
+        android:layout_below="@+id/SixQs"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <CheckBox
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/TwentyfourQs"
-        android:id="@+id/checkBox9"
-        android:layout_below="@+id/checkBox8"
+        android:id="@+id/twenty4Qs"
+        android:onClick="Qnum"
+        android:layout_below="@+id/TwelveQs"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <CheckBox
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Endless"
-        android:id="@+id/checkBox10"
-        android:layout_below="@+id/checkBox9"
+        android:id="@+id/Endless"
+        android:onClick="Qnum"
+        android:layout_below="@+id/twenty4Qs"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>

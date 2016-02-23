@@ -22,4 +22,15 @@
     <string name="TwelveQs">12 Questions</string>
     <string name="TwentyfourQs">24 Questions</string>
     <string name="Endless">Endless</string>
+
+    <string name="abort">FINISH EARLY</string>
+    <string name="submit">Submit my answer</string>
+    <string name="genButtontext">Generate Number</string>
+    <string name="generate"> 0 </string>
+    <string name="convertstring">Decimal:</string>
+    <string name="AnswerString">Your Answer:</string>
+
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect</string>
+
 </resources>
