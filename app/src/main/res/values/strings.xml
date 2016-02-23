@@ -5,4 +5,21 @@
     <string name="title_activity_display_message">My Message</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_main3">Main3Activity</string>
+    <string name="NumQs">How Many Questions?</string>
+    <string name="title_activity_main4_activityquiz">Main4Activityquiz</string>
+
+    <string name="DecimalBinary">Decimal __ Binary</string>
+    <string name="TestQ">What do you want to work on? check all that apply</string>
+    <string name="DecimalOctal">Decimal __ Octal</string>
+    <string name="DecimalHexa">Decimal __ Hexadecimal</string>
+    <string name="BinaryOctal">Binary __ Octal</string>
+    <string name="BinaryHexa">Binary __ Hexadecimal</string>
+    <string name="OctalHexa">Octal __ Hexadecimal</string>
+
+    <string name="TestButton">Test My Skills</string>
+    <string name="AskLength">Length of Test (choose one)</string>
+    <string name="SixQs">6 Questions</string>
+    <string name="TwelveQs">12 Questions</string>
+    <string name="TwentyfourQs">24 Questions</string>
+    <string name="Endless">Endless</string>
 </resources>
