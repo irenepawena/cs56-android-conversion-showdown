@@ -21,8 +21,12 @@ Created 3 Activities:
   
   2) Calculator Screen in which it is a simple calculator application with Addition, Subtraction, Multiplication, Division. There is a button that directs the user to the next screen.
   
-  3) Quiz Screen in which the the user is prompted with a conversion quiz between binary and decimal (In Progress).
+  3) Quiz Intro Screen that prompts the user for what they would like to be quizzed on.
+
+  4) Quiz Activity which tests the users knowledge of numeric conversions (still in progress, only does Decimal to Binary)
   
 
 ![alt tag](MainActivity.jpg)
 ![alt tag](CalculatorActivity.jpg)
+![alt tag](ActivityIntroQuiz.jpg)
+![alt tag](QuizActivity.jpg)
