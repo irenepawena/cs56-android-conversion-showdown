@@ -33,8 +33,8 @@ public class Main4Activityquiz extends Activity implements OnClickListener{
         startActivity(intent);
     }
 
-
     //String myString = "0";
+
     public void TestResult(View view){
         // Take number from text field and convert it to an integer
         TextView myText = (TextView)findViewById(R.id.decimal);
@@ -43,21 +43,35 @@ public class Main4Activityquiz extends Activity implements OnClickListener{
 
         // Take user answer from text field and convert it to an integer
         EditText answer = (EditText) findViewById(R.id.AnswerField);
-        TextView respond = (TextView) findViewById(R.id.RightOrWrong);
-        int binaryanswer = Integer.parseInt(answer.getText().toString());
+        int binaryanswer = Integer.parseInt(answer.getText().toString(),10);
 
         // compare the answer to the actual value
+        TextView respond = (TextView) findViewById(R.id.RightOrWrong);
         if(binary == binaryanswer){
-            respond.setText("Correct");
+            respond.setText(R.string.correct);
         } else {
-            respond.setText("Incorrect");
+            respond.setText(R.string.incorrect);
         }
 
+        TextView test = (TextView)findViewById(R.id.test);
+        test.setText("The Correct answer is " + TxtString);
         // create a Random number for the next problem
+       // Random rand = new Random();
+       // int number = rand.nextInt(4097);
+       // String Stringnew = String.valueOf(number);
+       // myText.setText(Stringnew);
+    }
+
+
+    public void changeDecimal(View view){
+        // create a Random number for the next problem
+        TextView myText = (TextView)findViewById(R.id.decimal);
         Random rand = new Random();
         int number = rand.nextInt(4097);
-        String Stringnew = String.valueOf(number);
-        myText.setText(Stringnew);
+        //String Stringnew = String.valueOf(number);
+        //myText.setText(Stringnew);
+        //myText.set(R.string.generate);
+        myText.setText(String.valueOf(number));
     }
 
 

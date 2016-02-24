@@ -35,11 +35,12 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/abort"
+        android:text="@string/changeDecimal"
         android:id="@+id/abort"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="changeDecimal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -91,4 +92,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="31dp"
         android:layout_below="@+id/submitAnswer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test"
+        android:layout_above="@+id/abort"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp" />
 </RelativeLayout>
