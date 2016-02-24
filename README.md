@@ -28,5 +28,5 @@ Created 3 Activities:
 
 ![alt tag](MainActivity.jpg)
 ![alt tag](CalculatorActivity.jpg)
-![alt tag](/android-quiz/ActivityIntroQuiz.jpg)
-![alt tag](QuizActivity.jpg)
+![alt tag](https://github.com/henryhyu/android-quiz/blob/master/ActivityIntroQuiz.JPG)
+![alt tag](https://github.com/henryhyu/android-quiz/blob/master/QuizActivity.JPG)
