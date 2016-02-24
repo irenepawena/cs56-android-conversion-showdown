@@ -22,7 +22,9 @@ Created 3 Activities:
   2) Calculator Screen in which it is a simple calculator application with Addition, Subtraction, Multiplication, Division. There is a button that directs the user to the next screen.
   
   3) Quiz Intro Screen that prompts the user for what they would like to be quizzed on.
-
+        We still need to figure out how to make sure the display looks the same on different devices. On smaller screen simulators 
+        there is some overlap in the text. It works on an andorid device properly (HTC ONE M8).
+        
   4) Quiz Activity which tests the users knowledge of numeric conversions (still in progress, only does Decimal to Binary)
   
 
