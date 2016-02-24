@@ -33,33 +33,29 @@ public class Main4Activityquiz extends Activity implements OnClickListener{
         startActivity(intent);
     }
 
-    //String myString = "0";
 
     public void TestResult(View view){
         // Take number from text field and convert it to an integer
         TextView myText = (TextView)findViewById(R.id.decimal);
         String TxtString = myText.getText().toString();
-        int binary = Integer.parseInt(TxtString,2);
+        int binary = Integer.parseInt(TxtString);
 
         // Take user answer from text field and convert it to an integer
         EditText answer = (EditText) findViewById(R.id.AnswerField);
-        int binaryanswer = Integer.parseInt(answer.getText().toString(),10);
+        int binaryanswer = Integer.parseInt(answer.getText().toString(), 2);
+        String binarytext = answer.getText().toString();
 
         // compare the answer to the actual value
+        TextView test = (TextView)findViewById(R.id.test);
         TextView respond = (TextView) findViewById(R.id.RightOrWrong);
         if(binary == binaryanswer){
             respond.setText(R.string.correct);
+            test.setText(TxtString + " is the same as" + binarytext);
         } else {
             respond.setText(R.string.incorrect);
+            test.setText("Keep Trying");
         }
 
-        TextView test = (TextView)findViewById(R.id.test);
-        test.setText("The Correct answer is " + TxtString);
-        // create a Random number for the next problem
-       // Random rand = new Random();
-       // int number = rand.nextInt(4097);
-       // String Stringnew = String.valueOf(number);
-       // myText.setText(Stringnew);
     }
 
 
@@ -68,9 +64,6 @@ public class Main4Activityquiz extends Activity implements OnClickListener{
         TextView myText = (TextView)findViewById(R.id.decimal);
         Random rand = new Random();
         int number = rand.nextInt(4097);
-        //String Stringnew = String.valueOf(number);
-        //myText.setText(Stringnew);
-        //myText.set(R.string.generate);
         myText.setText(String.valueOf(number));
     }
 
