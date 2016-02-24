@@ -28,5 +28,5 @@ Created 3 Activities:
 
 ![alt tag](MainActivity.jpg)
 ![alt tag](CalculatorActivity.jpg)
-![alt tag](ActivityIntroQuiz.jpg)
+![alt tag](relative/android-quiz/ActivityIntroQuiz.jpg)
 ![alt tag](QuizActivity.jpg)
