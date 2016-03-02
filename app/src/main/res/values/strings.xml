@@ -32,5 +32,11 @@
 
     <string name="correct">Correct!</string>
     <string name="incorrect">Incorrect</string>
+    <string name="title_activity_fix_it">FixItActivity</string>
 
+    <string name="FixIt">You have input an invalid number.</string>
+    <string name="FixIt2">Binary numbers only have "1" and "0"</string>
+    <string name="FixtIt3">Octal numbers use digits "0 to 7"</string>
+    <string name="FixIt4">Hexadecimal numbers use "0 to 9" and "A to F"</string>
+    <string name="ButtonFix">I got it</string>
 </resources>

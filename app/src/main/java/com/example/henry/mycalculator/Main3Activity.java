@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 
 //import com.google.android.gms.appindexing.Action;
@@ -15,6 +16,8 @@ import android.widget.RadioButton;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+
+import java.util.ArrayList;
 
 public class Main3Activity extends Activity implements OnClickListener {
 
@@ -47,6 +50,61 @@ public class Main3Activity extends Activity implements OnClickListener {
             Intent i = new Intent(Main3Activity.this, Main4Activityquiz.class);
             startActivity(i);
         }
+    }
+
+    ArrayList<String> selection = new ArrayList<String>();
+
+    public void selectItem(View view){
+        boolean checked = ((CheckBox)view).isChecked();
+            switch(view.getId()){
+                case R.id.Decimal_Binary:
+                    if(checked){
+                        selection.add("Decimal_Binary");
+                    } else {
+                        selection.remove("Decimal_Binary");
+                    }
+                    break;
+
+                case R.id.Decimal_Octal:
+                    if(checked){
+                        selection.add("Decimal_Octal");
+                    } else {
+                        selection.remove("Decimal_Octal");
+                    }
+                    break;
+
+                case R.id.Binary_Octal:
+                    if(checked){
+                        selection.add("Binary_Octal");
+                    } else {
+                        selection.remove("Binary_Octal");
+                    }
+                    break;
+
+                case R.id.Decimal_Hexadecimal:
+                    if(checked){
+                        selection.add("Decimal_Hexadecimal");
+                    } else {
+                        selection.remove("Decimal_Hexadecimal");
+                    }
+                    break;
+
+                case R.id.Binary_Hexadecimal:
+                    if(checked){
+                        selection.add("Binary_Hexadecimal");
+                    } else {
+                        selection.remove("Binary_Hexadecimal");
+                    }
+                    break;
+
+                case R.id.Octal_Hexadecimal:
+                    if(checked){
+                        selection.add("Octal_Hexadecimal");
+                    } else {
+                        selection.remove("Octal_Hexadecimal");
+                    }
+                    break;
+            }
     }
 
     public void Qnum(View view) {

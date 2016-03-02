@@ -75,7 +75,9 @@
 
     <EditText
         android:layout_width="wrap_content"
+        android:editable="true"
         android:layout_height="wrap_content"
+        android:hint="Enter binary #"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/AnswerField"
