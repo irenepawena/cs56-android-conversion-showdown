@@ -28,7 +28,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/TFnum1" />
+        android:id="@+id/TFnum1"
+        android:inputType="number"
+        android:imeOptions="actionNext"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +42,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/TFnum2" />
+        android:id="@+id/TFnum2"
+        android:inputType="number"/>
 
     <TextView
         android:layout_width="160dp"
