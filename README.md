@@ -1,5 +1,8 @@
 # cs56-android-quiz
 
+## Brief Update March 3rd, 2016
+Fixed if button was pressed, no input was given, application would crash. Implemented a percentage score for quiz. Revamped README.md. 
+
 ## Project History
 
 | Details      | -              | -                  |
