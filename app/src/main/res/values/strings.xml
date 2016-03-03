@@ -32,6 +32,9 @@
     <string name="percent">0/0</string>
     <string name="denominator">0</string>
     <string name="numerator">0</string>
+    <string name="keepTrying">Keep Trying</string>
+    <string name="numcorrect"># correct:</string>
+    <string name="numattempt"># attempts:</string>
 
     <string name="correct">Correct!</string>
     <string name="incorrect">Incorrect</string>

@@ -120,7 +120,9 @@
         android:text="@string/numerator"
         android:id="@+id/NumCorrect"
         android:layout_above="@+id/NumAttempt"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignLeft="@+id/numbercorrect"
+        android:layout_alignStart="@+id/numbercorrect"
+        android:layout_marginLeft="65dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -129,6 +131,24 @@
         android:text="@string/denominator"
         android:id="@+id/NumAttempt"
         android:layout_above="@+id/PercentCorrect"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignLeft="@+id/numberattempts"
+        android:layout_marginLeft="75dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/numcorrect"
+        android:id="@+id/numbercorrect"
+        android:layout_above="@+id/numberattempts"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/numattempt"
+        android:id="@+id/numberattempts"
+        android:layout_above="@+id/PercentCorrect"
+        android:layout_alignParentLeft="true"/>
 </RelativeLayout>

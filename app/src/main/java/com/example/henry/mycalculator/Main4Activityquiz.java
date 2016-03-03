@@ -20,6 +20,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Main4Activityquiz extends Activity implements OnClickListener {
@@ -28,16 +29,14 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    private GoogleApiClient client;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4_activityquiz);
-        Intent intentextra = getIntent();
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        //client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        ArrayList<String> step = getIntent().getExtras().getStringArrayList("selection");
+
     }
 
 
@@ -49,11 +48,9 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
         startActivity(intent);
     }
 
-public static int numerator = 0;
-public static int denominator = 0;
-public static int result = 0;
-
     public void TestResult(View view) {
+
+
         // Take number from text field and convert it to an integer
         TextView myText = (TextView) findViewById(R.id.decimal);
         String TxtString = myText.getText().toString();
@@ -103,7 +100,7 @@ public static int result = 0;
             } else {
 
                 respond.setText(R.string.incorrect);
-                test.setText("Keep Trying");
+                test.setText("@string/keepTrying");
             }
             TextView de = (TextView) findViewById(R.id.NumAttempt);
             int d = Integer.parseInt(de.getText().toString());

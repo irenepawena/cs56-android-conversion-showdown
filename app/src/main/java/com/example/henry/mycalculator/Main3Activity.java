@@ -39,9 +39,7 @@ public class Main3Activity extends Activity implements OnClickListener {
     @Override
     public void onClick(View view) {
         Intent intentextra = new Intent(this, Main3Activity.class);
-        intentextra.putStringArrayListExtra("selection",selection);
-        // Calling another activity Main4Activitytest start the quiz
-
+        intentextra.putStringArrayListExtra("selection", selection);
         startActivity(intentextra);
     }
 
