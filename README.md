@@ -26,6 +26,11 @@ Run the app by clicking Run on Android Studio. Choose any Android Device as your
 @TODO
 Screenshots of the running Application goes here.
 
+![Alt text](AndroidStudio.png)
+![Alt text](Calculator.png)
+![Alt text](SelectionScreen.png)
+![Alt text](QuizActivity.JPG)
+
 ## Legacy Code Issues
 
 @TODO
