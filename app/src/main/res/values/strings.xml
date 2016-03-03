@@ -23,12 +23,15 @@
     <string name="TwentyfourQs">24 Questions</string>
     <string name="Endless">Endless</string>
 
-    <string name="changeDecimal">Change Decimal</string>
+    <string name="changeDecimal">Change Number</string>
     <string name="submit">Submit my answer</string>
     <string name="genButtontext">Generate Number</string>
     <string name="generate"> 5 </string>
     <string name="convertstring">Decimal:</string>
     <string name="AnswerString">Your Answer:</string>
+    <string name="percent">0/0</string>
+    <string name="denominator">0</string>
+    <string name="numerator">0</string>
 
     <string name="correct">Correct!</string>
     <string name="incorrect">Incorrect</string>

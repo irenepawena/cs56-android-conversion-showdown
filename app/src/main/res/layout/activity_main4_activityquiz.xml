@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/changeDecimal"
-        android:id="@+id/abort"
+        android:id="@+id/ChangeNumber"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -99,9 +99,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/test"
-        android:layout_above="@+id/abort"
+        android:layout_above="@+id/ChangeNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="47dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/percent"
+        android:id="@+id/PercentCorrect"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/numerator"
+        android:id="@+id/NumCorrect"
+        android:layout_above="@+id/NumAttempt"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/denominator"
+        android:id="@+id/NumAttempt"
+        android:layout_above="@+id/PercentCorrect"
+        android:layout_alignParentLeft="true" />
 
 </RelativeLayout>

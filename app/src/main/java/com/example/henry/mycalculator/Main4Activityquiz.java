@@ -49,6 +49,9 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
         startActivity(intent);
     }
 
+public static int numerator = 0;
+public static int denominator = 0;
+public static int result = 0;
 
     public void TestResult(View view) {
         // Take number from text field and convert it to an integer
@@ -64,8 +67,6 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
         // Take user answer from text field and convert it to binary number then an int
         EditText answer = (EditText) findViewById(R.id.AnswerField);
         String sAnswer = answer.getText().toString();
-        //TextView answer1 = (TextView) findViewById(R.id.AnswerField);
-        //int checkBinary = Integer.parseInt(answer.getText().toString());
 
         if(TextUtils.isEmpty(sAnswer)) {
             answer.setError("Put a value please");
@@ -73,6 +74,7 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
         }
 
         int checkBinary = Integer.parseInt(answer.getText().toString());
+
         if (checkBinary % 10 > 1 ) {
             answer.setError("You don't know what a binary is do you");
             return;
@@ -82,14 +84,38 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
             int binaryanswer = Integer.parseInt(answer.getText().toString(), 2);
             String binarytext = answer.getText().toString();
 
+            //denominator always increases
+            TextView denominator = (TextView) findViewById(R.id.NumAttempt);
+            int den = Integer.parseInt(denominator.getText().toString());
+            den = den + 1;
+            denominator.setText(String.valueOf(den));
+
+            TextView numerator = (TextView) findViewById(R.id.NumCorrect);
+            int num = Integer.parseInt(numerator.getText().toString());
+
             // compare the answer to the actual value
             if (binary == binaryanswer) {
+                num = num + 1;
+                numerator.setText(String.valueOf(num));
+
                 respond.setText(R.string.correct);
                 test.setText(TxtString + " is the same as " + binarytext);
             } else {
+
                 respond.setText(R.string.incorrect);
                 test.setText("Keep Trying");
             }
+            TextView de = (TextView) findViewById(R.id.NumAttempt);
+            int d = Integer.parseInt(de.getText().toString());
+            float deno = (float) d;
+
+            TextView nu = (TextView) findViewById(R.id.NumCorrect);
+            int n = Integer.parseInt(nu.getText().toString());
+            float numer = (float) n;
+
+            float result = (numer/deno)*100;
+            TextView percent = (TextView) findViewById(R.id.PercentCorrect);
+            percent.setText(String.valueOf(result + " %"));
         }
     }
 
@@ -101,6 +127,7 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
         int number = rand.nextInt(4097);
         myText.setText(String.valueOf(number));
     }
+
 
 
 }
