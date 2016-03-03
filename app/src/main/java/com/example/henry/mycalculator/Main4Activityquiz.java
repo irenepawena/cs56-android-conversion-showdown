@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,9 +34,10 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4_activityquiz);
+        Intent intentextra = getIntent();
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        //client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
 
@@ -58,17 +60,22 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
         TextView test = (TextView) findViewById(R.id.test);
         TextView respond = (TextView) findViewById(R.id.RightOrWrong);
 
+
         // Take user answer from text field and convert it to binary number then an int
         EditText answer = (EditText) findViewById(R.id.AnswerField);
+        String sAnswer = answer.getText().toString();
+        //TextView answer1 = (TextView) findViewById(R.id.AnswerField);
+        //int checkBinary = Integer.parseInt(answer.getText().toString());
+
+        if(TextUtils.isEmpty(sAnswer)) {
+            answer.setError("Put a value please");
+            return;
+        }
+
         int checkBinary = Integer.parseInt(answer.getText().toString());
-
-        if (checkBinary % 10 > 1){
-            respond.setText("Do you remember what a binary number looks like?");
-            test.setText(" ");
-            answer.setEnabled(true);
-            Intent i = new Intent(Main4Activityquiz.this, FixItActivity.class);
-            startActivity(i);
-
+        if (checkBinary % 10 > 1 ) {
+            answer.setError("You don't know what a binary is do you");
+            return;
 
         } else {
 
@@ -96,43 +103,4 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
     }
 
 
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main4Activityquiz Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.example.henry.mycalculator/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main4Activityquiz Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.example.henry.mycalculator/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
-    }
 }

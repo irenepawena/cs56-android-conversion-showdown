@@ -38,11 +38,11 @@ public class Main3Activity extends Activity implements OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(this, Main3Activity.class);
-
+        Intent intentextra = new Intent(this, Main3Activity.class);
+        intentextra.putStringArrayListExtra("selection",selection);
         // Calling another activity Main4Activitytest start the quiz
 
-        startActivity(intent);
+        startActivity(intentextra);
     }
 
     public void ButtonStartQuiz(View v) {
