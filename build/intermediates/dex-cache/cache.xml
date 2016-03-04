@@ -2,46 +2,46 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
-        <dex dex="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.1.0_5a4748c7cce61a10fd7712f86a1b6e5e8bf4613b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jar="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0_db18bb6ded4419f8b697cabe017c05787e3603fa.jar" />
+        <dex dex="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0_88d0c4ecc5f1052a9621d5debcdb7dd63e2d24a6.jar" />
     </item>
     <item
-        jar="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-21.0.3_c9c3351a6815f6779fcb5ddc743ab71c30c05883.jar" />
-    </item>
-    <item
-        jar="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jar="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.0_9a99d15ee543724173d3604890d242d6051c6ad5.jar" />
+        <dex dex="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-22.2.0_355e0a225cc6afb607ece5066e413259c296c3f7.jar" />
     </item>
     <item
-        jar="C:\Users\Phillip\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jar="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.1.0_4cc7005e88f1cf359ce1ef71efe40ba9be62dda4.jar" />
+    </item>
+    <item
+        jar="/Users/henryyu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0_b4f66b7e7e39fd84c9457081162555a294dc0c52.jar" />
+        <dex dex="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0_ce721632174a6eb3e4af33f1eb8e102a52fffe55.jar" />
     </item>
     <item
-        jar="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jar="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
-        <dex dex="C:\Users\Phillip\Desktop\cs56\Android\AndroidStudio\android-quiz\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.1.0_8983360ea6745d36bcb7f70497827298c7444f00.jar" />
+        <dex dex="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.1.0_6b0c62bc01a5ded9d4416efd0f95a01d1e13447d.jar" />
+    </item>
+    <item
+        jar="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/henryyu/AndroidStudioProjects/android-quiz/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-21.0.3_7479e1f8d14ec9b4743b2cd8057ef7f6b3ae0187.jar" />
     </item>
 
 </items>
