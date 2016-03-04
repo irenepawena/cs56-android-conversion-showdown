@@ -25,12 +25,8 @@ import java.util.Random;
 
 public class Main4Activityquiz extends Activity implements OnClickListener {
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-
 int numberQuestions = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,8 +121,6 @@ int numberQuestions = 0;
         Random rand = new Random();
         int number = rand.nextInt(4097);
         myText.setText(String.valueOf(number));
-        TextView test = (TextView) findViewById(R.id.tester);
-        test.setText(String.valueOf(numberQuestions));
 
     }
 
