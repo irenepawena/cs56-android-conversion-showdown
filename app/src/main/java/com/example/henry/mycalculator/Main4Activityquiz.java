@@ -35,7 +35,7 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4_activityquiz);
-        ArrayList<String> step = getIntent().getExtras().getStringArrayList("selection");
+        //ArrayList<String> step = getIntent().getExtras().getStringArrayList("selection");
 
     }
 
