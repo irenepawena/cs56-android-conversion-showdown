@@ -30,12 +30,13 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
 
-
+int numberQuestions = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4_activityquiz);
-        //int numberQuestions = i.getIntExtra("numberQuestions");
+
+        numberQuestions = getIntent().getIntExtra("numberQuestions", -1);
         //ArrayList<String> step = getIntent().getExtras().getStringArrayList("selection");
 
     }
@@ -124,6 +125,8 @@ public class Main4Activityquiz extends Activity implements OnClickListener {
         Random rand = new Random();
         int number = rand.nextInt(4097);
         myText.setText(String.valueOf(number));
+        TextView test = (TextView) findViewById(R.id.tester);
+        test.setText(String.valueOf(numberQuestions));
     }
 
 

@@ -45,4 +45,7 @@
     <string name="FixtIt3">Octal numbers use digits "0 to 7"</string>
     <string name="FixIt4">Hexadecimal numbers use "0 to 9" and "A to F"</string>
     <string name="ButtonFix">I got it</string>
+
+
+    <string name="TestAct">Test</string>
 </resources>
