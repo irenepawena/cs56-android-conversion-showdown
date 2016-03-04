@@ -25,8 +25,13 @@ public class Main3Activity extends Activity implements OnClickListener {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-   // private GoogleApiClient client;
+    private GoogleApiClient client;
 
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    // private GoogleApiClient client;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +39,10 @@ public class Main3Activity extends Activity implements OnClickListener {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         //client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        //int numberQuestions = 5000;
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     @Override
@@ -46,64 +55,67 @@ public class Main3Activity extends Activity implements OnClickListener {
     public void ButtonStartQuiz(View v) {
         if (v.getId() == R.id.btnStartQuizActivity) {
             Intent i = new Intent(Main3Activity.this, Main4Activityquiz.class);
+            //i.putExtra("numberQuestions", numberQuestions);
             startActivity(i);
         }
     }
 
     ArrayList<String> selection = new ArrayList<String>();
 
-    public void selectItem(View view){
-        boolean checked = ((CheckBox)view).isChecked();
-            switch(view.getId()){
-                case R.id.Decimal_Binary:
-                    if(checked){
-                        selection.add("Decimal_Binary");
-                    } else {
-                        selection.remove("Decimal_Binary");
-                    }
-                    break;
+    public void selectItem(View view) {
+        boolean checked = ((CheckBox) view).isChecked();
+        switch (view.getId()) {
+            case R.id.Decimal_Binary:
+                if (checked) {
+                    selection.add("Decimal_Binary");
+                } else {
+                    selection.remove("Decimal_Binary");
+                }
+                break;
 
-                case R.id.Decimal_Octal:
-                    if(checked){
-                        selection.add("Decimal_Octal");
-                    } else {
-                        selection.remove("Decimal_Octal");
-                    }
-                    break;
+            case R.id.Decimal_Octal:
+                if (checked) {
+                    selection.add("Decimal_Octal");
+                } else {
+                    selection.remove("Decimal_Octal");
+                }
+                break;
 
-                case R.id.Binary_Octal:
-                    if(checked){
-                        selection.add("Binary_Octal");
-                    } else {
-                        selection.remove("Binary_Octal");
-                    }
-                    break;
+            case R.id.Binary_Octal:
+                if (checked) {
+                    selection.add("Binary_Octal");
+                } else {
+                    selection.remove("Binary_Octal");
+                }
+                break;
 
-                case R.id.Decimal_Hexadecimal:
-                    if(checked){
-                        selection.add("Decimal_Hexadecimal");
-                    } else {
-                        selection.remove("Decimal_Hexadecimal");
-                    }
-                    break;
+            case R.id.Decimal_Hexadecimal:
+                if (checked) {
+                    selection.add("Decimal_Hexadecimal");
+                } else {
+                    selection.remove("Decimal_Hexadecimal");
+                }
+                break;
 
-                case R.id.Binary_Hexadecimal:
-                    if(checked){
-                        selection.add("Binary_Hexadecimal");
-                    } else {
-                        selection.remove("Binary_Hexadecimal");
-                    }
-                    break;
+            case R.id.Binary_Hexadecimal:
+                if (checked) {
+                    selection.add("Binary_Hexadecimal");
+                } else {
+                    selection.remove("Binary_Hexadecimal");
+                }
+                break;
 
-                case R.id.Octal_Hexadecimal:
-                    if(checked){
-                        selection.add("Octal_Hexadecimal");
-                    } else {
-                        selection.remove("Octal_Hexadecimal");
-                    }
-                    break;
-            }
+            case R.id.Octal_Hexadecimal:
+                if (checked) {
+                    selection.add("Octal_Hexadecimal");
+                } else {
+                    selection.remove("Octal_Hexadecimal");
+                }
+                break;
+        }
     }
+
+    int numberQuestions = 5000;
 
     public void Qnum(View view) {
         // is the button checked?
@@ -112,23 +124,69 @@ public class Main3Activity extends Activity implements OnClickListener {
         //Which radio button clicked?
         switch (view.getId()) {
             case R.id.SixQs:
-                if (checked)
+                if (checked) {
+                    numberQuestions = 6;
                     // 6 questions
-                    break;
+                }
+                break;
             case R.id.TwelveQs:
-                if(checked)
+                if (checked) {
+                    numberQuestions = 12;
                     // 12 questions
+                }
                 break;
             case R.id.twenty4Qs:
-                if(checked)
+                if (checked) {
+                    numberQuestions = 24;
                     // 24 questions
+                }
                 break;
             case R.id.Endless:
-                if(checked)
+                if (checked)
                     // Endless
-                break;
+                    break;
         }
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Main3 Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://com.example.henry.mycalculator/http/host/path")
+        );
+        AppIndex.AppIndexApi.start(client, viewAction);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Main3 Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://com.example.henry.mycalculator/http/host/path")
+        );
+        AppIndex.AppIndexApi.end(client, viewAction);
+        client.disconnect();
     }
 
    /* @Override
