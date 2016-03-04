@@ -127,6 +127,7 @@ int numberQuestions = 0;
         myText.setText(String.valueOf(number));
         TextView test = (TextView) findViewById(R.id.tester);
         test.setText(String.valueOf(numberQuestions));
+
     }
 
 
