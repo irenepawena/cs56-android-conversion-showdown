@@ -39,8 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Welcome to Conversion Showdown! On the next screen is a simple calculator that you can tinker around with.
-        Afterwards you will be prompted with a menu with Quiz Choices. You choose a type of conversion that you feel like you need to work on and select the number of questions. This application is simply quiz to practice conversion. Enjoy!"
+        android:text="Welcome to Conversion Showdown! On the next screen is a simple calculator that you can tinker around with. Afterwards you will be prompted with a menu of Quiz Choices. You can choose a type of conversion that you feel like you need to work on and select the number of questions. This application is simply a quiz to practice conversion. Enjoy!"
         android:id="@+id/textView"
         android:textColor="#FFF"
         android:background="#2f5653"
