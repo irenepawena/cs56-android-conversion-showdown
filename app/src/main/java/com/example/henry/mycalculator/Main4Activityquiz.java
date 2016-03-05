@@ -111,6 +111,7 @@ float result = 0;
             TextView percent = (TextView) findViewById(R.id.PercentCorrect);
             percent.setText(String.valueOf(result + " %"));
 
+            // This part
             if(den == numberQuestions){
                 Intent activity = new Intent(this, ScoreReport.class);
                 activity.putExtra("result", result);
