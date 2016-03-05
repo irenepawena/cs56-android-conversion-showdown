@@ -26,7 +26,7 @@ import java.util.Random;
 public class Main4Activityquiz extends Activity implements OnClickListener {
 
 int numberQuestions = 0;
-
+float result = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +36,6 @@ int numberQuestions = 0;
         //ArrayList<String> step = getIntent().getExtras().getStringArrayList("selection");
 
     }
-
 
     public void onClick(View view) {
         Intent intent = new Intent(this, Main4Activityquiz.class);
@@ -108,9 +107,15 @@ int numberQuestions = 0;
             int n = Integer.parseInt(nu.getText().toString());
             float numer = (float) n;
 
-            float result = (numer/deno)*100;
+            result = (numer/deno)*100;
             TextView percent = (TextView) findViewById(R.id.PercentCorrect);
             percent.setText(String.valueOf(result + " %"));
+
+            if(den == numberQuestions){
+                Intent activity = new Intent(this, ScoreReport.class);
+                activity.putExtra("result", result);
+                startActivity(activity);
+            }
         }
     }
 

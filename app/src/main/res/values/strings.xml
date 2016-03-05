@@ -47,5 +47,6 @@
     <string name="ButtonFix">I got it</string>
 
 
-    <string name="TestAct">Test</string>
+    <string name="yourscore">Your Score</string>
+    <string name="title_activity_score_report">ScoreReport</string>
 </resources>
