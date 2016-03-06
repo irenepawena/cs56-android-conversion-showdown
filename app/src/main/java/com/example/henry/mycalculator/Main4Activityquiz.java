@@ -62,6 +62,8 @@ float result = 0;
         EditText answer = (EditText) findViewById(R.id.AnswerField);
         String sAnswer = answer.getText().toString();
 
+
+        //checks if a value is entered and that it is an appropriate value
         if(TextUtils.isEmpty(sAnswer)) {
             answer.setError("Put a value please");
             return;
@@ -72,8 +74,10 @@ float result = 0;
         if (checkBinary % 10 > 1 ) {
             answer.setError("You don't know what a binary is do you");
             return;
+        }
+        // above checks if value is entered and that it is an appropriate value
 
-        } else {
+        else {
 
             int binaryanswer = Integer.parseInt(answer.getText().toString(), 2);
             String binarytext = answer.getText().toString();
@@ -87,6 +91,7 @@ float result = 0;
             TextView numerator = (TextView) findViewById(R.id.NumCorrect);
             int num = Integer.parseInt(numerator.getText().toString());
 
+
             // compare the answer to the actual value
             if (binary == binaryanswer) {
                 num = num + 1;
@@ -99,6 +104,9 @@ float result = 0;
                 respond.setText(R.string.incorrect);
                 test.setText("@string/keepTrying");
             }
+            // above compares answer to actual value
+
+            // Makes the progress percent
             TextView de = (TextView) findViewById(R.id.NumAttempt);
             int d = Integer.parseInt(de.getText().toString());
             float deno = (float) d;
@@ -110,13 +118,16 @@ float result = 0;
             result = (numer/deno)*100;
             TextView percent = (TextView) findViewById(R.id.PercentCorrect);
             percent.setText(String.valueOf(result + " %"));
+            // above makes progress percent
 
-            // This part
+
+            // This part ends the test depending on test length asked for
             if(den == numberQuestions){
                 Intent activity = new Intent(this, ScoreReport.class);
                 activity.putExtra("result", result);
                 startActivity(activity);
             }
+            // above stops test depending on requested length
         }
     }
 

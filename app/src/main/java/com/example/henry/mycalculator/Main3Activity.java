@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class Main3Activity extends Activity implements OnClickListener {
 
-    ArrayList<String> selection = new ArrayList<String>();
+    ArrayList<Integer> selection = new ArrayList<Integer>();
     public int numberQuestions = 5000;
 
 
@@ -48,56 +48,82 @@ public class Main3Activity extends Activity implements OnClickListener {
         }
     }
 
-    //ArrayList<String> selection = new ArrayList<String>();
+    /*
+    Add to the array list of Integers KEY
+    1. Decimal to Binary conversion
+    2. Binary to Decimal conversion
+    3. Decimal to Octal conversion
+    4. Octal to Decimal conversion
+    5. Binary to Octal conversion
+    6. Octal to Binary conversion
+    7. Decimal to Hexadecimal conversion
+    8. Hexadecimal to Decimal conversion
+    9. Binary to Hexadecimal conversion
+    10. Hexadecimal to Binary conversion
+    11. Octal to Hexadecimal conversion
+    12. Hexadecimal to Octal conversion
+     */
 
     public void selectItem(View view) {
         boolean checked = ((CheckBox) view).isChecked();
         switch (view.getId()) {
             case R.id.Decimal_Binary:
                 if (checked) {
-                    selection.add("Decimal_Binary");
+                    selection.add(1);
+                    selection.add(2);
                 } else {
-                    selection.remove("Decimal_Binary");
+                    selection.remove(1);
+                    selection.remove(2);
                 }
                 break;
 
             case R.id.Decimal_Octal:
                 if (checked) {
-                    selection.add("Decimal_Octal");
+                    selection.add(3);
+                    selection.add(4);
                 } else {
-                    selection.remove("Decimal_Octal");
+                    selection.remove(3);
+                    selection.remove(4);
                 }
                 break;
 
             case R.id.Binary_Octal:
                 if (checked) {
-                    selection.add("Binary_Octal");
+                    selection.add(5);
+                    selection.add(6);
                 } else {
-                    selection.remove("Binary_Octal");
+                    selection.remove(5);
+                    selection.remove(6);
                 }
                 break;
 
             case R.id.Decimal_Hexadecimal:
                 if (checked) {
-                    selection.add("Decimal_Hexadecimal");
+                    selection.add(7);
+                    selection.add(8);
                 } else {
-                    selection.remove("Decimal_Hexadecimal");
+                    selection.remove(7);
+                    selection.remove(8);
                 }
                 break;
 
             case R.id.Binary_Hexadecimal:
                 if (checked) {
-                    selection.add("Binary_Hexadecimal");
+                    selection.add(9);
+                    selection.add(10);
                 } else {
-                    selection.remove("Binary_Hexadecimal");
+                    selection.remove(9);
+                    selection.remove(10);
                 }
                 break;
 
             case R.id.Octal_Hexadecimal:
                 if (checked) {
-                    selection.add("Octal_Hexadecimal");
+                    selection.add(11);
+                    selection.add(12);
                 } else {
-                    selection.remove("Octal_Hexadecimal");
+                    selection.remove(11);
+                    selection.remove(12);
                 }
                 break;
         }
