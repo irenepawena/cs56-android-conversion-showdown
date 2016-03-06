@@ -36,7 +36,7 @@ Screenshots of the running Application goes here.
 ![Alt text](screen1.png)
 ![Alt text](screen2.png)
 ![Alt text](screen3.png)
-![Alt text](screen4.JPG)
+![Alt text](screen4.png)
 
 ## Legacy Code Issues
 
