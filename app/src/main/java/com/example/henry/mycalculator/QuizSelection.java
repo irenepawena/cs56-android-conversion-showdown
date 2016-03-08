@@ -38,6 +38,7 @@ public class QuizSelection extends Activity implements OnClickListener {
         if (v.getId() == R.id.btnStartQuizActivity) {
             Intent i = new Intent(QuizSelection.this, Quiz.class);
             i.putExtra("numberQuestions", numberQuestions);
+            i.putExtra("selection", selection);
             startActivity(i);
         }
     }

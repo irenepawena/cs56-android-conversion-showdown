@@ -13,16 +13,18 @@ import java.util.Random;
 
 public class Quiz extends Activity implements OnClickListener {
 
+//int selectedOptions[] = new int[12];
 int numberQuestions = 0;
 float result = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz);
-
+        int selectedOption[] = getIntent().getIntArrayExtra("selection");
         numberQuestions = getIntent().getIntExtra("numberQuestions", -1);
         //ArrayList<String> step = getIntent().getExtras().getStringArrayList("selection");
     }
+
 
     public void onClick(View view) {
         Intent intent = new Intent(this, Quiz.class);
