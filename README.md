@@ -63,13 +63,15 @@ Will be present in the "Issues" tab of this repository. https://github.com/henry
 |  25          |  Leaving legacy code for next generation of students           | H.Y./P.F.        |
 | Total        |  1125 Points                                                   | -                |
 
-
+For Future Developers:
 
 | Points       | Topic                                                          | Driver/Nagivator |
 | -------------|----------------------------------------------------------------|------------------|
 |  100         |  Decimal to Octal Conversion                                   | P.F./H.Y.        |
 |  100         |  Binary to Octal Conversion                                    | P.F./H.Y.        |
 |  100         |  Decimal to Hexadecimal Conversion                             | P.F./H.Y.        |
+
+
 
 Learning Android Explanation: Beginning the app/learning how android studio works in regards to activities/manifest/xml
 
