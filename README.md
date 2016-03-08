@@ -64,6 +64,8 @@ Will be present in the "Issues" tab of this repository. https://github.com/henry
 | Total        |  1125 Points                                                   | -                |
 
 ~TBA
+| Points       | Topic                                                          | Driver/Nagivator |
+| -------------|----------------------------------------------------------------|------------------|
 |  100         |  Decimal to Octal Conversion                                   | P.F./H.Y.        |
 |  100         |  Binary to Octal Conversion                                    | P.F./H.Y.        |
 |  100         |  Decimal to Hexadecimal Conversion                             | P.F./H.Y.        |
