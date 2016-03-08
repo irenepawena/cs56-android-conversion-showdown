@@ -51,17 +51,22 @@ Will be present in the "Issues" tab of this repository. https://github.com/henry
 | -------------|----------------------------------------------------------------|------------------|
 |  150         |  README.md                                                     | H.Y./P.F.        |
 |  100         |  Learning Android                                              | H.Y./P.F.        |
-|  50          |  Intro Screen (2nd Activity)                                   | H.Y./P.F.        |
-|  100         |  Calculator                                                    | H.Y./P.F.        |
-|  150         |  (Inital) Binary to Decimal Conversion                         | P.F./H.Y.        |
+|  50          |  Graphical Welcome Screen (1st Activity)                       | H.Y./P.F.        |
+|  75          |  Introduction Screen (2nd Activity)                            | H.Y./P.F.        |
+|  100         |  Calculator (3rd Activity)                                     | H.Y./P.F.        |
+|  100         |  Quiz Selection Screen (4th Activity)                          | P.F./H.Y.        |
+|  200         |  (Initial) Binary to Decimal Conversion (5th Activity)         | P.F./H.Y.        |
+|  50          |  Score Report (6th Activity)                                   | P.F./H.Y.        |
+|  100         |  Basic App Logic/Structure (Quality Assurance)                 | H.Y./P.F.        |
+|  50          |  Transparency for the written code via Comments                | P.F./H.Y.        |
+|  100         |  Front End Aesthetics                                          | H.Y./P.F.        |
+|  25          |  Leaving legacy code for next generation of students           | H.Y./P.F.        |
+| Total        |  1125 Points                                                   | -                |
+
+~TBA
 |  100         |  Decimal to Octal Conversion                                   | P.F./H.Y.        |
 |  100         |  Binary to Octal Conversion                                    | P.F./H.Y.        |
 |  100         |  Decimal to Hexadecimal Conversion                             | P.F./H.Y.        |
-|  100         |  Graphical Intro Screen                                        | P.F./H.Y.        |
-|  100         |  Basic App Logic/Structure (Quality Assurance stuff)           | H.Y./P.F.        |
-|  50          |  Transparency for the written code via Comments                | P.F./H.Y.        |
-|  25          |  Leaving legacy code for next generation of students           | H.Y./P.F.        |
-| Total        |  1125 Points                                                   | -                |
 
 Learning Android Explanation: Beginning the app/learning how android studio works in regards to activities/manifest/xml
 
