@@ -33,6 +33,7 @@
     <string name="numerator">0</string>
     <string name="numcorrect"># correct:</string>
     <string name="numattempt"># attempts:</string>
+    <string name="abort">ABORT</string>
 
     <string name="correct">Correct!</string>
     <string name="incorrect">Incorrect</string>
@@ -46,4 +47,6 @@
 
     <string name="yourscore">Your Score</string>
     <string name="title_activity_score_report">ScoreReport</string>
+    <string name="newtest">Start a New Test</string>
+    <string name="goCalc">Use calculator</string>
 </resources>

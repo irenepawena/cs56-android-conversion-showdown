@@ -150,4 +150,13 @@
 
     </RadioGroup>
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorDisplay"
+        android:layout_alignTop="@+id/Decimal_Binary"
+        android:layout_alignParentRight="true"
+        android:textColor="#3498db"
+        android:background="@android:color/transparent"/>
+
 </RelativeLayout>

@@ -1,8 +1,10 @@
 package com.example.henry.mycalculator;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -32,6 +34,15 @@ public class ScoreReport extends Activity {
         }
     }
 
+    public void newTestSelection(View view){
+        Intent activity = new Intent(this, QuizSelection.class);
+        startActivity(activity);
+    }
+
+    public void goToCalculator(View view){
+        Intent activity = new Intent(this, Calculator.class);
+        startActivity(activity);
+    }
 
 
 }

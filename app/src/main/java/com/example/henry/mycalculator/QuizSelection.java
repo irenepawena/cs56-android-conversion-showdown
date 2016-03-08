@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 //import com.google.android.gms.appindexing.Action;
 //import com.google.android.gms.appindexing.AppIndex;
@@ -34,14 +36,32 @@ public class QuizSelection extends Activity implements OnClickListener {
         startActivity(intent);
     }
 
+    //int empty = 1;
+
     public void ButtonStartQuiz(View v) {
+        EditText makeError = (EditText) findViewById(R.id.errorDisplay);
+        int empty = 0;
         if (v.getId() == R.id.btnStartQuizActivity) {
             Intent i = new Intent(QuizSelection.this, Quiz.class);
             i.putExtra("numberQuestions", numberQuestions);
             i.putExtra("selection", selection);
-            startActivity(i);
-        }
+            for (int index = 0; index < 11; index++){
+                if(selection[index] != 0){
+                    empty = 1;
+                    break;
+                }
+            }
+            if (empty == 1){
+                startActivity(i);
+            }
+            else{
+                makeError.setError("You must check one");
+            }
+            }
+
+
     }
+
 
     /*
     Add to the array list of Integers KEY
@@ -152,7 +172,7 @@ public class QuizSelection extends Activity implements OnClickListener {
                 break;
             case R.id.Endless:
                 if (checked)
-                    // Endless
+                    numberQuestions = 5000;
                     break;
         }
 
