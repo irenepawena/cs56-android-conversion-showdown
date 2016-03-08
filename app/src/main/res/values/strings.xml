@@ -31,7 +31,6 @@
     <string name="percent">0/0</string>
     <string name="denominator">0</string>
     <string name="numerator">0</string>
-    <string name="keepTrying">Keep Trying</string>
     <string name="numcorrect"># correct:</string>
     <string name="numattempt"># attempts:</string>
 
@@ -44,7 +43,6 @@
     <string name="FixtIt3">Octal numbers use digits "0 to 7"</string>
     <string name="FixIt4">Hexadecimal numbers use "0 to 9" and "A to F"</string>
     <string name="ButtonFix">I got it</string>
-
 
     <string name="yourscore">Your Score</string>
     <string name="title_activity_score_report">ScoreReport</string>

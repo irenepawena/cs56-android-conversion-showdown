@@ -38,7 +38,6 @@ public class Introduction extends Activity implements OnClickListener {
     public void onClick(View view) {
 
         Intent intent = new Intent(this, Calculator.class);
-
         startActivity(intent);
     }
 
@@ -60,7 +59,6 @@ public class Introduction extends Activity implements OnClickListener {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

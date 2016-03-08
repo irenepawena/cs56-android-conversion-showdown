@@ -22,19 +22,15 @@ float result = 0;
 
         numberQuestions = getIntent().getIntExtra("numberQuestions", -1);
         //ArrayList<String> step = getIntent().getExtras().getStringArrayList("selection");
-
     }
 
     public void onClick(View view) {
         Intent intent = new Intent(this, Quiz.class);
-
         // Calling another activity Main4Activitytest start the quiz
-
         startActivity(intent);
     }
 
     public void TestResult(View view) {
-
 
         // Take number from text field and convert it to an integer
         TextView myText = (TextView) findViewById(R.id.decimal);
@@ -45,28 +41,25 @@ float result = 0;
         TextView test = (TextView) findViewById(R.id.test);
         TextView respond = (TextView) findViewById(R.id.RightOrWrong);
 
-
         // Take user answer from text field and convert it to binary number then an int
         EditText answer = (EditText) findViewById(R.id.AnswerField);
         String sAnswer = answer.getText().toString();
 
-
         //checks if a value is entered and that it is an appropriate value
         if(TextUtils.isEmpty(sAnswer)) {
-            answer.setError("Put a value please");
+            answer.setError("Please input a value.");
             return;
         }
 
         int checkBinary = Integer.parseInt(answer.getText().toString());
 
         if (checkBinary % 10 > 1 ) {
-            answer.setError("You don't know what a binary is do you");
+            answer.setError("That is not a binary number.");
             return;
         }
         // above checks if value is entered and that it is an appropriate value
 
         else {
-
             int binaryanswer = Integer.parseInt(answer.getText().toString(), 2);
             String binarytext = answer.getText().toString();
 
@@ -79,7 +72,6 @@ float result = 0;
             TextView numerator = (TextView) findViewById(R.id.NumCorrect);
             int num = Integer.parseInt(numerator.getText().toString());
 
-
             // compare the answer to the actual value
             if (binary == binaryanswer) {
                 num = num + 1;
@@ -90,7 +82,7 @@ float result = 0;
             } else {
 
                 respond.setText(R.string.incorrect);
-                test.setText("@string/keepTrying");
+                test.setText("Please Try Again!");
             }
             // above compares answer to actual value
 
@@ -108,7 +100,6 @@ float result = 0;
             percent.setText(String.valueOf(result + " %"));
             // above makes progress percent
 
-
             // This part ends the test depending on test length asked for
             if(den == numberQuestions){
                 Intent activity = new Intent(this, ScoreReport.class);
@@ -118,7 +109,6 @@ float result = 0;
             // above stops test depending on requested length
         }
     }
-
 
     public void changeDecimal(View view) {
         // create a Random number for the next problem

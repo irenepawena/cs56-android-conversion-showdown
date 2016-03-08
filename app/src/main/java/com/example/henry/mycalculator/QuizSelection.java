@@ -156,7 +156,4 @@ public class QuizSelection extends Activity implements OnClickListener {
         }
 
     }
-
-
-
 }
