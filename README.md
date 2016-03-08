@@ -71,7 +71,19 @@ For Future Developers:
 |  100         |  Binary to Octal Conversion                                    | P.F./H.Y.        |
 |  100         |  Decimal to Hexadecimal Conversion                             | P.F./H.Y.        |
 
+## Activity Descriptions:
 
+Graphical Welcome Screen (1st Activity): Landing page welcome screen with designed logo and button that directs user to the next page.
+
+Introduction Screen (2nd Activity): Introduction page that welcomes the user when the name is inputted. Directions are given a button direct user to the next page.
+
+Calculator (3rd Activity): A simple calculator that does addition, subtraction, multiplication, division. Division by zero is accounted for and empty inputs are also accounted for.
+
+Quiz Selection Screen (4th Activity): Selection screen for the quiz. There are checkboxes for the types of conversions. Unchecked/checked boxes are accounted for. Radio buttons are used to signify the length of the tests.
+
+(Initial) Binary to Decimal Conversion (5th Activity): The actual quiz itself. Does the math for the conversion. Invalid + no inputs are accounted for. A percentage score has been implemented as well.
+
+Score Report (6th Activity): Score report for the end of the quiz. Color corresponds to the user's score (ie. 100% = green. 50% = red).
 
 Learning Android Explanation: Beginning the app/learning how android studio works in regards to activities/manifest/xml
 
