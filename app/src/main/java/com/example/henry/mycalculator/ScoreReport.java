@@ -10,7 +10,7 @@ public class ScoreReport extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_score_report);
+        setContentView(R.layout.score_report);
         result = getIntent().getFloatExtra("result",0);
         TextView resultS = (TextView) findViewById(R.id.percentC);
         resultS.setText(String.valueOf(result + "%"));

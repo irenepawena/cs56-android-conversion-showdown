@@ -9,27 +9,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Welcome"
             android:label="Conversion Showdown!">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2" />
+            android:name=".Introduction"
+            android:label="Conversion Showdown!" />
         <activity
-            android:name=".Main3Activity"
-            android:label="@string/title_activity_main3" />
+            android:name=".Calculator"
+            android:label="Conversion Showdown!" />
         <activity
-            android:name=".Main4Activityquiz"
-            android:label="@string/title_activity_main4_activityquiz"
-            android:parentActivityName=".MainActivity">
+            android:name=".QuizSelection"
+            android:label="Conversion Showdown!" />
+        <activity
+            android:name=".Quiz"
+            android:label="Conversion Showdown!"
+            android:parentActivityName=".Introduction">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.henry.mycalculator.MainActivity" />
+                android:value=".Introduction" />
         </activity>
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -41,7 +43,7 @@
 
         <activity
             android:name=".ScoreReport"
-            android:label="@string/title_activity_score_report"></activity>
+            android:label="Conversion Showdown!" />
     </application>
 
 </manifest>
