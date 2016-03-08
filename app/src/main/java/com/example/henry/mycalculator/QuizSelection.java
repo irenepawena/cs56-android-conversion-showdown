@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class QuizSelection extends Activity implements OnClickListener {
 
-    ArrayList<Integer> selection = new ArrayList<Integer>();
+    int selection[] = new int[12];
     public int numberQuestions = 5000;
 
 
@@ -63,61 +63,61 @@ public class QuizSelection extends Activity implements OnClickListener {
         switch (view.getId()) {
             case R.id.Decimal_Binary:
                 if (checked) {
-                    selection.add(1);
-                    selection.add(2);
+                    selection[0] = 1;
+                    selection[1] = 2;
                 } else {
-                    selection.remove(1);
-                    selection.remove(2);
+                    selection[0] = 0;
+                    selection[1] = 0;
                 }
                 break;
 
             case R.id.Decimal_Octal:
                 if (checked) {
-                    selection.add(3);
-                    selection.add(4);
+                    selection[2] = 3;
+                    selection[3] = 4;
                 } else {
-                    selection.remove(3);
-                    selection.remove(4);
+                    selection[2] = 0;
+                    selection[3] = 0;
                 }
                 break;
 
             case R.id.Binary_Octal:
                 if (checked) {
-                    selection.add(5);
-                    selection.add(6);
+                    selection[4] = 5;
+                    selection[5] = 6;
                 } else {
-                    selection.remove(5);
-                    selection.remove(6);
+                    selection[4] = 0;
+                    selection[5] = 0;
                 }
                 break;
 
             case R.id.Decimal_Hexadecimal:
                 if (checked) {
-                    selection.add(7);
-                    selection.add(8);
+                    selection[6] = 7;
+                    selection[7] = 9;
                 } else {
-                    selection.remove(7);
-                    selection.remove(8);
+                    selection[6] = 0;
+                    selection[7] = 0;
                 }
                 break;
 
             case R.id.Binary_Hexadecimal:
                 if (checked) {
-                    selection.add(9);
-                    selection.add(10);
+                    selection[8] = 9;
+                    selection[9] = 10;
                 } else {
-                    selection.remove(9);
-                    selection.remove(10);
+                    selection[8] = 0;
+                    selection[9] = 0;
                 }
                 break;
 
             case R.id.Octal_Hexadecimal:
                 if (checked) {
-                    selection.add(11);
-                    selection.add(12);
+                    selection[10] = 11;
+                    selection[11] = 12;
                 } else {
-                    selection.remove(11);
-                    selection.remove(12);
+                    selection[10] = 0;
+                    selection[11] = 0;
                 }
                 break;
         }
