@@ -3,6 +3,7 @@ package com.example.henry.mycalculator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -127,9 +129,7 @@ public class Quiz extends Activity implements OnClickListener {
         // Take number from text field and convert it to an integer
         TextView myText = (TextView) findViewById(R.id.convertThis);
         String TxtString = myText.getText().toString();
-        /*Todo: use the array values to determine whether the problem number needs to be converted to
-         a decimal for comparison (use an if)
-        */
+
         int ProblemValue = 0;
         if (key == 1 || key == 3 || key == 7) {
             ProblemValue = Integer.parseInt(TxtString,10);           //convert number displayed to be converted to decimal
@@ -152,7 +152,6 @@ public class Quiz extends Activity implements OnClickListener {
         EditText answer = (EditText) findViewById(R.id.AnswerField);
         String sAnswer = answer.getText().toString();
 
-
         //checks if a value is entered and that it is an appropriate value
         if (TextUtils.isEmpty(sAnswer)) {
             answer.setError("Please input a value.");
@@ -165,26 +164,21 @@ public class Quiz extends Activity implements OnClickListener {
             answer.setError("Incorrect number type.");
             return;
         }
-        /*
-        if(radix == 2 && checkValueEntered % 2 > 1){
+        if (radix == 8 && checkValueEntered % 9 == 0){
             answer.setError("Incorrect number type.");
-            return;
         }
-        if(radix == 8 && checkValueEntered % 8 > 1){
-            answer.setError("Incorrect number type.");
-            return;
-        }
-        if(radix == 16 && checkValueEntered % 16 > 1) {
-            answer.setError("Incorrect number type.");
-            return;
-        }
-        */
         // above checks if value is entered and that it is an appropriate value
 
 
         else {
-            int userAnswer = Integer.parseInt(answer.getText().toString(), radix);
-            String answerUser = answer.getText().toString();
+            int userAnswer;
+            if(key == 7 || key == 9 || key == 11){
+                userAnswer = Integer.parseInt(sAnswer, 16);
+            }
+            else{
+                userAnswer = Integer.parseInt(answer.getText().toString(), radix);
+            }
+            //String answerUser = answer.getText().toString();
 
             //denominator always increases
             TextView denominator = (TextView) findViewById(R.id.NumAttempt);
@@ -201,11 +195,11 @@ public class Quiz extends Activity implements OnClickListener {
                 numerator.setText(String.valueOf(num));
 
                 respond.setText(R.string.correct);
-                test.setText(TxtString + " is the same as " + answerUser);
+                test.setText(TxtString + " is the same as " + sAnswer);
             } else {
 
                 respond.setText(R.string.incorrect);
-                test.setText(TxtString + "not same as" + answerUser);
+                test.setText(TxtString + "not same as" + sAnswer);
             }
             // above compares answer to actual value
 
