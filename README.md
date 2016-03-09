@@ -2,7 +2,7 @@
 
 ## W16 Final Remarks
 
-This is an Android application. To get started, you should familiarize a little bit with Android Studio and all the components that make up an Android application (ie. Manifest, XML files, Activities, etc.) The entirety of this application is described below in this README.md. Right now, we have fully implemented Binary to Decimal, Decimal to Octal, and Binary to Octal. The rest of the conversions still need to be fully implemented. The bone structure of the application has already been made. Some things that can be added on could be graphics/animations, a splash screen, and transitions between activities to make the application even more enjoyable. A few bugs that exist currently are: 
+This is an Android application. To get started, you should familiarize a little bit with Android Studio and all the components that make up an Android application (ie. Manifest, XML files, Activities, etc.) The entirety of this application is described below in this README.md. Right now, we have fully implemented Binary to Decimal, Decimal to Octal, and Binary to Octal. The rest of the conversions still need to be fully implemented. The bone structure of the application has already been made. Some things that can be added on could be graphics/animations, a splash screen, and transitions between activities to make the application even more enjoyable. Also when git cloning this repository, an error would occur. It is because the SDK on my personal computer is different from yours. Android Studio should fix the problem itself. A screenshot of the error is located in this file: error.jpg. A few bugs that exist currently are: 
 
 ## Brief Update March 3rd, 2016
 
