@@ -33,7 +33,7 @@ Run the app by clicking Run on Android Studio. Choose any Android Device as your
 @TODO
 Screenshots of the running Application goes here.
 
-![Alt text](Welcome.png =100x20)
+![Alt text](Welcome.png =20x20)
 ![Alt text](screen1.png)
 ![Alt text](screen2.png)
 ![Alt text](screen3.png)
