@@ -33,11 +33,12 @@ Run the app by clicking Run on Android Studio. Choose any Android Device as your
 @TODO
 Screenshots of the running Application goes here.
 
-![Alt text](Welcome.png =20x20)
 ![Alt text](screen1.png)
 ![Alt text](screen2.png)
 ![Alt text](screen3.png)
 ![Alt text](screen4.png)
+![Alt text](screen5.png)
+![Alt text](screen6.png)
 
 ## Legacy Code Issues
 
@@ -55,37 +56,33 @@ Will be present in the "Issues" tab of this repository. https://github.com/henry
 |  75          |  Introduction Screen (2nd Activity)                            | H.Y./P.F.        |
 |  100         |  Calculator (3rd Activity)                                     | H.Y./P.F.        |
 |  100         |  Quiz Selection Screen (4th Activity)                          | P.F./H.Y.        |
-|  200         |  (Initial) Binary to Decimal Conversion (5th Activity)         | P.F./H.Y.        |
+|  250         |  (Initial) Binary to Decimal Conversion (5th Activity)         | P.F./H.Y.        |
+|  100         |  Decimal to Octal                                              | P.F./H.Y.        |
+|  100         |  Binary to Octal                                               | P.F./H.Y.        |
+|  50          |  Decimal to Hex, Binary to Hex, Octal to Hex                   | P.F./H.Y.        |
 |  75          |  Score Report (6th Activity)                                   | P.F./H.Y.        |
 |  100         |  Basic App Logic/Structure (Quality Assurance)                 | H.Y./P.F.        |
 |  50          |  Transparency for the written code via Comments                | P.F./H.Y.        |
 |  100         |  Front End Aesthetics                                          | H.Y./P.F.        |
-|  25          |  Leaving legacy code for next generation of students           | H.Y./P.F.        |
-| Total        |  1125 Points                                                   | -                |
-
-For Future Developers:
-
-| Points       | Topic                                                          | Driver/Nagivator |
-| -------------|----------------------------------------------------------------|------------------|
-|  100         |  Decimal to Octal Conversion                                   | P.F./H.Y.        |
-|  100         |  Binary to Octal Conversion                                    | P.F./H.Y.        |
-|  100         |  Decimal to Hexadecimal Conversion                             | P.F./H.Y.        |
+| Total        |  1400 Points                                                   | -                |
 
 ## Activity Descriptions:
 
+Learning Android Explanation: Beginning the app/learning how android studio works in regards to activities/manifest/xml
+
 Graphical Welcome Screen (1st Activity): Landing page welcome screen with designed logo and button that directs user to the next page.
 
-Introduction Screen (2nd Activity): Introduction page that welcomes the user when the name is inputted. Directions are given a button direct user to the next page.
+Introduction Screen (2nd Activity): Introduction page that welcomes the user when the name is inputted. Directions are given and a button directs user to the next page.
 
 Calculator (3rd Activity): A simple calculator that does addition, subtraction, multiplication, division. Division by zero is accounted for and empty inputs are also accounted for.
 
 Quiz Selection Screen (4th Activity): Selection screen for the quiz. There are checkboxes for the types of conversions. Unchecked/checked boxes are accounted for. Radio buttons are used to signify the length of the tests.
 
-(Initial) Binary to Decimal Conversion (5th Activity): The actual quiz itself. Does the math for the conversion. Invalid + no inputs are accounted for. A percentage score has been implemented as well.
+(Initial) Binary to Decimal Conversion (5th Activity): The actual quiz itself. Does the math for the conversion. Invalid + no inputs are accounted for. A percentage score has been implemented as well. Abort button implemented to export current score (directs user to score report screen)
 
-Score Report (6th Activity): Score report for the end of the quiz. Color corresponds to the user's score (ie. 100% = green. 50% = red).
+Decimal to Octal, Binary to Octal: Implemented different conversions for the quiz.
 
-Learning Android Explanation: Beginning the app/learning how android studio works in regards to activities/manifest/xml
+Score Report (6th Activity): Score report for the end of the quiz. Color corresponds to the user's score (ie. 100% = green. 50% = red). User can start a new quiz or go back to the calculator screen.
 
 Basic App Logic/Structure Explanation: ie. Making sure text boxes are not empty, check boxes are checked, radio buttons are clicked. Making sure buttons go to the right activity, error handling, etc. making sure works on multiple android devices, etc.
 
