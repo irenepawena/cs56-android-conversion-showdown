@@ -49,4 +49,21 @@
     <string name="title_activity_score_report">ScoreReport</string>
     <string name="newtest">Start a New Test</string>
     <string name="goCalc">Use calculator</string>
+
+    <string name="questionKey1">Convert Decimal to Binary</string>
+    <string name="questionKey2">Convert Binary to Decimal</string>
+    <string name="questionKey3">Convert Decimal to Octal</string>
+    <string name="questionKey4">Convert Octal to Decimal</string>
+    <string name="questionKey5">Convert Binary to Octal</string>
+    <string name="questionKey6">Convert Octal to Binary</string>
+    <string name="questionKey7">Convert Decimal to Hexadecimal</string>
+    <string name="questionKey8">Convert Hexadecimal to Decimal</string>
+    <string name="questionKey9">Convert Binary to Hexadecimal</string>
+    <string name="questionKey10">Convert Hexadecimal to Binary</string>
+    <string name="questionKey11">Convert Octal to Hexadecimal</string>
+    <string name="questionKey12">Convert Hexadecimal to Octal</string>
+
+
+
+
 </resources>

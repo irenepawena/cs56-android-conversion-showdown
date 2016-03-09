@@ -115,7 +115,7 @@ public class QuizSelection extends Activity implements OnClickListener {
             case R.id.Decimal_Hexadecimal:
                 if (checked) {
                     selection[6] = 7;
-                    selection[7] = 9;
+                    selection[7] = 8;
                 } else {
                     selection[6] = 0;
                     selection[7] = 0;

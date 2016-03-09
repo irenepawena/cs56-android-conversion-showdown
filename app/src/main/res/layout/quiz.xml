@@ -42,7 +42,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:onClick="changeDecimal" />
+        android:onClick="changeNumber" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -82,8 +82,7 @@
         android:layout_width="wrap_content"
         android:editable="true"
         android:layout_height="wrap_content"
-        android:hint="Enter binary #"
-        android:inputType="number"
+        android:hint="Enter #"
         android:ems="10"
         android:textColor="#FFFFFF"
         android:id="@+id/AnswerField"
