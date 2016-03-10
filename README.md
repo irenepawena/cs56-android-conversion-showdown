@@ -35,21 +35,17 @@ Run the app by clicking Run on Android Studio. Choose any Android Device as your
 
 @TODO
 Screenshots of the running Application goes here. <br />
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/EntryScreen.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/WelcomeScreen.PNG)
 ![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/Calculator.PNG)
-!Alt tag](https://github.com/henryhyu/android-quiz/blob/master/EntryScreen.PNG)
-!Alt tag]()
-!Alt tag]()
-!Alt tag]()
-!Alt tag]()
-!Alt tag]()
-!Alt tag]()
-!Alt tag]()
-![Alt text](screen1.png)
-![Alt text](screen2.png)
-![Alt text](screen3.png)
-![Alt text](screen4.png)
-![Alt text](screen5.png)
-![Alt text](screen6.png)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/TestSelection.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/QuizBasic.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/QuizBinaryE.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/QuizOctalE.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/QuizIncorrect.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/ResultBad.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/ResultGood.PNG)
+
 
 ## Legacy Code Issues
 
