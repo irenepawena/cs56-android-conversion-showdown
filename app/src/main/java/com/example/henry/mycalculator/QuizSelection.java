@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class QuizSelection extends Activity implements OnClickListener {
 
-    int selection[] = new int[12];
+    int selection[] = new int[12];       //array to hold keys, key values listed in comment below
     public int numberQuestions = 5000;
 
 
@@ -25,28 +25,23 @@ public class QuizSelection extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_selection);
-        //Intent i = new Intent(QuizSelection.this, Quiz.class);
-
     }
 
     @Override
     public void onClick(View view) {
         Intent intent = new Intent(this, QuizSelection.class);
-        //intent.putStringArrayListExtra("selection", selection);
         startActivity(intent);
     }
-
-    //int empty = 1;
 
     public void ButtonStartQuiz(View v) {
         EditText makeError = (EditText) findViewById(R.id.errorDisplay);
         int empty = 0;
         if (v.getId() == R.id.btnStartQuizActivity) {
             Intent i = new Intent(QuizSelection.this, Quiz.class);
-            i.putExtra("numberQuestions", numberQuestions);
-            i.putExtra("selection", selection);
+            i.putExtra("numberQuestions", numberQuestions);        //gives user desired test length to test activity
+            i.putExtra("selection", selection);                    //gives array of keys to test activity
             for (int index = 0; index < 11; index++){
-                if(selection[index] != 0){
+                if(selection[index] != 0){            //checks that user clicked a checkbox before generating next activity
                     empty = 1;
                     break;
                 }
@@ -79,6 +74,7 @@ public class QuizSelection extends Activity implements OnClickListener {
     12. Hexadecimal to Octal conversion
      */
 
+    //Depending on what check box is selected add the key value into an array
     public void selectItem(View view) {
         boolean checked = ((CheckBox) view).isChecked();
         switch (view.getId()) {
@@ -151,7 +147,7 @@ public class QuizSelection extends Activity implements OnClickListener {
         boolean checked = ((RadioButton) view).isChecked();
 
         //Which radio button clicked?
-        switch (view.getId()) {
+        switch (view.getId()) {      // this makes it so only one radiobutton can be selected
             case R.id.SixQs:
                 if (checked) {
                     numberQuestions = 6;
@@ -175,6 +171,5 @@ public class QuizSelection extends Activity implements OnClickListener {
                     numberQuestions = 5000;
                     break;
         }
-
     }
 }
