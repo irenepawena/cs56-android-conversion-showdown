@@ -112,6 +112,6 @@ Only issue is when the user enters a hex letter (any letter) the app test will s
 5) Score Report Screen displays the users final score and will change the background depending on the percentage the user got on the quiz. It also has two buttons that allow the user to use the calculator or create a new test.
 
 ## W16 Final Remarks
-https://github.com/UCSB-CS56-Projects/cs56-android-getting-started/tree/master/docs/tutorial
+https://github.com/UCSB-CS56-Projects/cs56-android-getting-started/tree/master/docs/tutorial /n
 We would recommend that the next students who decide to work on this project look at the link above to help them get a basic understanding of coding for android if they have no prior experience. This application works entirely and will only shut down if a hex letter or any keyboard symbol is entered in the AnswerField of the Quiz Activity. Exceptions were created for the other numeric conversions, but we could not find out how to create an exception for invalid inputs of Hex numbers. If the user inputs a Hex number that doesn't have a letter in it, the comparison will still work properly. A few things we would have liked to do if we had more time includes making the layout of the display for when the app is rotated horizontally so that it keeps functionality, make the exceptions that restrict the user from putting invalid inputs into the Answerfield for Hex answers, and making the app provide more detalied feedback that could analyze the users strengths and weaknesses if they select multiple conversion types.
 
