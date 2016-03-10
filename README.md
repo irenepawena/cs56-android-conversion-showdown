@@ -2,7 +2,7 @@
 
 ## W16 Final Remarks
 
-This is an Android application. To get started, you should familiarize a little bit with Android Studio and all the components that make up an Android application (ie. Manifest, XML files, Activities, etc.) The entirety of this application is described below in this README.md. Right now, we have fully implemented Binary to Decimal, Decimal to Octal, and Binary to Octal. The rest of the conversions still need to be fully implemented. The bone structure of the application has already been made. Some things that can be added on could be graphics/animations, a splash screen, and transitions between activities to make the application even more enjoyable. Also when git cloning this repository, an error would occur. It is because the SDK on my personal computer is different from yours. Android Studio should fix the problem itself. A screenshot of the error is located in this file: error.jpg. A few bugs that exist currently are: 
+This is an Android application. To get started, you should familiarize a little bit with Android Studio and all the components that make up an Android application (ie. Manifest, XML files, Activities, etc.) The entirety of this application is described below in this README.md. We have got a full runnning implementation of the following tests: Decimal to Binary, Binary to Decimal, Decimal to Octal, Octal to Decimal, Binary to Octal, Octal to Binary, Hexadecimal to Decimal, Hexadecmial to Binary, and Hexadecimal to Octal. The Tests that work partially are Decimal to Hexadecimal, Binary to Hexadecimal, and Octal to Hexadecimal. These three test work only if the Hex number entered by the user does not have letters (even Hex letters) in the answer. Some things that can be added on could be graphics/animations, a splash screen, and transitions between activities to make the application even more enjoyable. Also when git cloning this repository, an error would occur. It is because the SDK on my personal computer is different from yours. Android Studio should fix the problem itself. A screenshot of the error is located in this file: error.jpg. A few bugs that exist currently are: 
 
 ## Brief Update March 3rd, 2016
 
@@ -96,12 +96,15 @@ Downloaded Android Studio. Familiarized with Java files vs. XML files.
 
 Configured Android Manifest file. Familiarized with Layouts, Listeners, Widgets, etc.
 
-Created 3 Activities:
+Created 5 Activities:
 
 1) Welcome Screen in which it prompts the user to enter their name. After pressing enter, their name will show up as a welcome message. There is a button that directs the user to the next screen.
 
 2) Calculator Screen in which it is a simple calculator application with Addition, Subtraction, Multiplication, Division. There is a button that directs the user to the next screen.
 
-3) Quiz Intro Screen that prompts the user for what they would like to be quizzed on. We still need to figure out how to make sure the display looks the same on different devices. On smaller screen simulators there is some overlap in the text. It works on an andorid device properly (HTC ONE M8).
+3) Quiz Intro Screen that prompts the user for what they would like to be quizzed on. We still need to figure out how to make sure the display looks the same on different devices. On smaller screen simulators there is some overlap in the text (resolved). It works on an andorid device properly (HTC ONE M8).
 
-4) Quiz Activity which tests the users knowledge of numeric conversions (still in progress, only does Decimal to Binary)
+4) Quiz Activity which tests the users knowledge of numeric conversions (still in progress, does all conversions)
+Only issue is when the user enters a hex letter (any letter) the app test will stop. We couldn't find a way to make an exception for this and using the method parseInt(string, 16) does not work on converting the user answer to decimal for comparison.
+
+5) Score Report Screen displays the users final score and will change the background depending on the percentage the user got on the quiz. It also has two buttons that allow the user to use the calculator or create a new test.
