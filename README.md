@@ -96,7 +96,7 @@ Downloaded Android Studio. Familiarized with Java files vs. XML files.
 
 Configured Android Manifest file. Familiarized with Layouts, Listeners, Widgets, etc.
 
-Created 5 Activities:
+Created 3 Activities:
 
 1) Welcome Screen in which it prompts the user to enter their name. After pressing enter, their name will show up as a welcome message. There is a button that directs the user to the next screen.
 
@@ -104,7 +104,11 @@ Created 5 Activities:
 
 3) Quiz Intro Screen that prompts the user for what they would like to be quizzed on. We still need to figure out how to make sure the display looks the same on different devices. On smaller screen simulators there is some overlap in the text (resolved). It works on an andorid device properly (HTC ONE M8).
 
+## Finished Activities:
+
 4) Quiz Activity which tests the users knowledge of numeric conversions (still in progress, does all conversions)
 Only issue is when the user enters a hex letter (any letter) the app test will stop. We couldn't find a way to make an exception for this and using the method parseInt(string, 16) does not work on converting the user answer to decimal for comparison.
 
 5) Score Report Screen displays the users final score and will change the background depending on the percentage the user got on the quiz. It also has two buttons that allow the user to use the calculator or create a new test.
+
+
