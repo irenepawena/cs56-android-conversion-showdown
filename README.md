@@ -29,7 +29,6 @@ Run the app by clicking Run on Android Studio. Choose any Android Device as your
 
 ## Screenshots
 
-@TODO
 Screenshots of the running Application goes here. <br />
 ![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/EntryScreen.PNG)
 ![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/WelcomeScreen.PNG)
@@ -45,7 +44,6 @@ Screenshots of the running Application goes here. <br />
 
 ## Legacy Code Issues
 
-@TODO
 Will be present in the "Issues" tab of this repository. https://github.com/henryhyu/android-quiz/issues
 
 
