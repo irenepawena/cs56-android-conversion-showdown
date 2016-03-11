@@ -62,12 +62,12 @@ Will be present in the "Issues" tab of this repository. https://github.com/henry
 |  250         |  (Initial) Binary to Decimal Conversion (5th Activity)         | P.F./H.Y.        |
 |  100         |  Decimal to Octal                                              | P.F./H.Y.        |
 |  100         |  Binary to Octal                                               | P.F./H.Y.        |
-|  50          |  Decimal to Hex, Binary to Hex, Octal to Hex                   | P.F./H.Y.        |
+|  150         |  Hex to Decimal, Hex to Binary, Hex to Octal                   | P.F./H.Y.        |
 |  75          |  Score Report (6th Activity)                                   | P.F./H.Y.        |
 |  100         |  Basic App Logic/Structure (Quality Assurance)                 | H.Y./P.F.        |
 |  50          |  Transparency for the written code via Comments                | P.F./H.Y.        |
 |  100         |  Front End Aesthetics                                          | H.Y./P.F.        |
-| Total        |  1400 Points                                                   | -                |
+| Total        |  1500 Points                                                   | -                |
 
 ## Activity Descriptions:
 
