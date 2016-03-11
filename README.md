@@ -1,9 +1,5 @@
 # cs56-android-quiz
 
-## W16 Final Remarks
-
-This is an Android application. To get started, you should familiarize a little bit with Android Studio and all the components that make up an Android application (ie. Manifest, XML files, Activities, etc.) The entirety of this application is described below in this README.md. We have got a full runnning implementation of the following tests: Decimal to Binary, Binary to Decimal, Decimal to Octal, Octal to Decimal, Binary to Octal, Octal to Binary, Hexadecimal to Decimal, Hexadecmial to Binary, and Hexadecimal to Octal. The Tests that work partially are Decimal to Hexadecimal, Binary to Hexadecimal, and Octal to Hexadecimal. These three test work only if the Hex number entered by the user does not have letters (even Hex letters) in the answer. Some things that can be added on could be graphics/animations, a splash screen, and transitions between activities to make the application even more enjoyable. Also when git cloning this repository, an error would occur. It is because the SDK on my personal computer is different from yours. Android Studio should fix the problem itself. A screenshot of the error is located in this file: error.jpg. A few bugs that exist currently are: 
-
 ## Brief Update March 3rd, 2016
 
 Fixed if button was pressed, no input was given, application would crash. Implemented a percentage score for quiz. Revamped README.md. 
