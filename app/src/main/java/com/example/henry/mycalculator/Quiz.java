@@ -21,8 +21,7 @@ public class Quiz extends Activity implements OnClickListener {
 
     int numberQuestions = 0;       // test length
     float result = 0;              // for calculating percentage correct
-
-    ArrayList<Integer> arrayOfKeys = new ArrayList<Integer>();   //stores all keys
+    ArrayList<Integer> arrayOfKeys = new ArrayList<>();   //stores all keys
     int key = 0;     //determines type of problem
      /*
     KEY
@@ -58,29 +57,30 @@ public class Quiz extends Activity implements OnClickListener {
 
         TextView problemString = (TextView) findViewById(R.id.convertstring);  // variable to change problem String
         TextView problemNumber = (TextView) findViewById(R.id.convertThis);    // variable to change problem number
-        TextView changeQuestion = (TextView) findViewById(R.id.textView3);     // problem description
+        TextView questionDescription = (TextView) findViewById(R.id.textView3);     // problem description
         EditText editkeyboard = (EditText) findViewById(R.id.AnswerField);     //allows keyboard type to change for the problem
 
         //initial problems for each checkbox that could be clicked
+        /*
         if (selectedOptions[0] == 1) {
             key = 1;      //Decimal to Binary conversion
             problemString.setText("Decimal:");
             problemNumber.setText("5");
-            changeQuestion.setText(R.string.questionKey1);
+            questionDescription.setText(R.string.questionKey1);
             editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);    //keyboard only numbers
         }
         if (selectedOptions[2] == 3) {
             key = 3;      //Decimal to Octal conversion
             problemString.setText("Decimal:");
             problemNumber.setText("5");
-            changeQuestion.setText(R.string.questionKey3);
+            questionDescription.setText(R.string.questionKey3);
             editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
         }
         if (selectedOptions[4] == 5) {
             key = 5;      //Binary to Octal conversion
             problemString.setText("Binary:");
             problemNumber.setText("101");
-            changeQuestion.setText(R.string.questionKey5);
+            questionDescription.setText(R.string.questionKey5);
             editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
         }
 
@@ -88,24 +88,63 @@ public class Quiz extends Activity implements OnClickListener {
             key = 7;      //Decimal to Hexadecimal conversion
             problemString.setText("Decimal:");
             problemNumber.setText("5");
-            changeQuestion.setText(R.string.questionKey7);
+            questionDescription.setText(R.string.questionKey7);
             editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);     //keyboard has letters & numbers
         }
         if (selectedOptions[8] == 9) {
             key = 9;      //Binary to Hexadecimal conversion
             problemString.setText("Binary:");
             problemNumber.setText("101");
-            changeQuestion.setText(R.string.questionKey9);
+            questionDescription.setText(R.string.questionKey9);
             editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
         }
         if (selectedOptions[10] == 11) {
             key = 11;      //Octal to Hexadecimal conversion
             problemString.setText("Octal:");
             problemNumber.setText("03");
-            changeQuestion.setText(R.string.questionKey11);
+            questionDescription.setText(R.string.questionKey11);
             editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
         }
+        */
 
+        if (selectedOptions[0] == 1) {
+            key = 1;      //Decimal to Binary conversion
+            problemString.setText("Decimal:");
+            questionDescription.setText(R.string.questionKey1);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);    //keyboard only numbers
+        }
+        if (selectedOptions[2] == 3) {
+            key = 3;      //Decimal to Octal conversion
+            problemString.setText("Decimal:");
+            questionDescription.setText(R.string.questionKey3);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
+        }
+        if (selectedOptions[4] == 5) {
+            key = 5;      //Binary to Octal conversion
+            problemString.setText("Binary:");
+            questionDescription.setText(R.string.questionKey5);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
+        }
+
+        if (selectedOptions[6] == 7) {
+            key = 7;      //Decimal to Hexadecimal conversion
+            problemString.setText("Decimal:");
+            questionDescription.setText(R.string.questionKey7);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);     //keyboard has letters & numbers
+        }
+        if (selectedOptions[8] == 9) {
+            key = 9;      //Binary to Hexadecimal conversion
+            problemString.setText("Binary:");
+            questionDescription.setText(R.string.questionKey9);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
+        }
+        if (selectedOptions[10] == 11) {
+            key = 11;      //Octal to Hexadecimal conversion
+            problemString.setText("Octal:");
+            questionDescription.setText(R.string.questionKey11);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
+        }
+        changeNumber(null);
     }
 
 
@@ -244,15 +283,18 @@ public class Quiz extends Activity implements OnClickListener {
     int IndexArrayKeys = 0;    // variable to track index of the ArrayList with key values
 
     public void changeNumber(View view) {
-
+        /*
+        Sorry, following codes are restructured for initial random number. 
         if (IndexArrayKeys == length-1) {  //variable length created in onCreate method, tells length of ArrayList
             IndexArrayKeys = 0;            //make sure that when changing key/problem type you don't go out of bounds
         }
         else{ IndexArrayKeys = IndexArrayKeys + 1; }  //changes the key/problem type
+        */
         key = arrayOfKeys.get(IndexArrayKeys);
+        IndexArrayKeys = IndexArrayKeys % length;
 
         EditText editkeyboard = (EditText) findViewById(R.id.AnswerField);      //allows change of keyboard when user clicks AnswerField
-        TextView changeQuestion = (TextView) findViewById(R.id.textView3);      //allows change of question phrase at the top
+        TextView questionDescription = (TextView) findViewById(R.id.textView3);      //allows change of question phrase at the top
         TextView problemString = (TextView) findViewById(R.id.convertstring);   //allows change of string in format "NumberType:"
 
         TextView change = (TextView) findViewById(R.id.convertThis);    //allows change of number to be converted
@@ -265,11 +307,11 @@ public class Quiz extends Activity implements OnClickListener {
             change.setText(String.valueOf(number));  //changes number to be converted to Decimal
             problemString.setText("Decimal:");
 
-            if(key == 1){ changeQuestion.setText(R.string.questionKey1);
+            if(key == 1){ questionDescription.setText(R.string.questionKey1);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);}        //makes the user keyboard only numbers
-            if(key == 3){ changeQuestion.setText(R.string.questionKey3);
+            if(key == 3){ questionDescription.setText(R.string.questionKey3);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);}
-            if(key == 7){ changeQuestion.setText(R.string.questionKey7);
+            if(key == 7){ questionDescription.setText(R.string.questionKey7);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);}          //makes user keyboard allow letters
         }
 
@@ -280,11 +322,11 @@ public class Quiz extends Activity implements OnClickListener {
             change.setText(b);                       //changes number to be converted to Binary
             problemString.setText("Binary:");
 
-            if(key == 2){ changeQuestion.setText(R.string.questionKey2);
+            if(key == 2){ questionDescription.setText(R.string.questionKey2);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);}
-            if(key == 5){ changeQuestion.setText(R.string.questionKey5);
+            if(key == 5){ questionDescription.setText(R.string.questionKey5);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);}
-            if(key == 9){ changeQuestion.setText(R.string.questionKey9);
+            if(key == 9){ questionDescription.setText(R.string.questionKey9);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);}
 
         }
@@ -295,11 +337,11 @@ public class Quiz extends Activity implements OnClickListener {
             change.setText(b);                      //changes number to be converted to Octal
             problemString.setText("Octal:");
 
-            if(key == 4){ changeQuestion.setText(R.string.questionKey4);
+            if(key == 4){ questionDescription.setText(R.string.questionKey4);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);}
-            if(key == 6){ changeQuestion.setText(R.string.questionKey6);
+            if(key == 6){ questionDescription.setText(R.string.questionKey6);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);}
-            if(key == 11){ changeQuestion.setText(R.string.questionKey11);
+            if(key == 11){ questionDescription.setText(R.string.questionKey11);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);}
 
         }
@@ -310,11 +352,11 @@ public class Quiz extends Activity implements OnClickListener {
             change.setText(b);                    //changes number to be converted to Hex
             problemString.setText("Hexadecimal:");
 
-            if(key == 8){ changeQuestion.setText(R.string.questionKey8);
+            if(key == 8){ questionDescription.setText(R.string.questionKey8);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);}
-            if(key == 10){ changeQuestion.setText(R.string.questionKey10);
+            if(key == 10){ questionDescription.setText(R.string.questionKey10);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);}
-            if(key == 12){ changeQuestion.setText(R.string.questionKey12);
+            if(key == 12){ questionDescription.setText(R.string.questionKey12);
                 editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);}
         }
     }
