@@ -8,6 +8,7 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -23,6 +24,7 @@ public class Quiz extends Activity implements OnClickListener {
     float result = 0;              // for calculating percentage correct
     ArrayList<Integer> arrayOfKeys = new ArrayList<>();   //stores all keys
     int key = 0;     //determines type of problem
+    int difficulty =  1;
      /*
     KEY
     1. Decimal to Binary conversion
@@ -40,6 +42,12 @@ public class Quiz extends Activity implements OnClickListener {
      */
 
     int length = 0;
+    public void hideSoftKeyBoard(View view){
+        if ( view != null ) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,7 +165,7 @@ public class Quiz extends Activity implements OnClickListener {
     int radix = 10;   //default value for radix to be manipulated
 
     public void TestResult(View view) {
-
+        hideSoftKeyBoard(view);
         //set the radix based on key, user entry determines the radix number
         if (key == 1 || key == 6 || key == 10) {
             radix = 2;

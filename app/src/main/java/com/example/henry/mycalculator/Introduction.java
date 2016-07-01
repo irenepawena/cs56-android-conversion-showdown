@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.content.Intent;
@@ -14,6 +15,13 @@ import android.widget.TextView;
 public class Introduction extends Activity implements OnClickListener {
 
     Button btnStartAnotherActivity;
+
+    public void hideSoftKeyBoard(View view){
+        if ( view != null ) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +34,7 @@ public class Introduction extends Activity implements OnClickListener {
                 EditText name = (EditText) findViewById(R.id.user_name);
                 String str = "Welcome " + name.getText().toString() + " !";
                 resp.setText(str);
+                hideSoftKeyBoard(v);
             }
         });
 

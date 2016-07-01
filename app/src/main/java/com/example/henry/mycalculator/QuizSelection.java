@@ -3,6 +3,7 @@ package com.example.henry.mycalculator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.CheckBox;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 
 public class QuizSelection extends Activity implements OnClickListener {
 
-    int selection[] = new int[12];       //array to hold keys, key values listed in comment below
+    int selection[] = new int[13];       //array to hold keys, key values listed in comment below
     public int numberQuestions = 5000;
 
 
@@ -31,6 +32,11 @@ public class QuizSelection extends Activity implements OnClickListener {
     public void onClick(View view) {
         Intent intent = new Intent(this, QuizSelection.class);
         startActivity(intent);
+    }
+
+    public void chooseDifficulty(View v) {
+            String id = v.getTag();
+            Log.i(id);
     }
 
     public void ButtonStartQuiz(View v) {
@@ -72,6 +78,7 @@ public class QuizSelection extends Activity implements OnClickListener {
     10. Hexadecimal to Binary conversion
     11. Octal to Hexadecimal conversion
     12. Hexadecimal to Octal conversion
+    length-1.(last one) Difficulty
      */
 
     //Depending on what check box is selected add the key value into an array

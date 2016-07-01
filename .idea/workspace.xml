@@ -11,9 +11,17 @@
   <component name="ChangeListManager">
     <list default="true" id="e160df88-535c-416d-a2af-e45f1e6f7581" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/M16_lab02.md" afterPath="$PROJECT_DIR$/M16_lab02.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Introduction.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Introduction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Quiz.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Quiz.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/QuizSelection.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/QuizSelection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Welcome.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Welcome.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/quiz_selection.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/quiz_selection.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="cs56-android-conversion-showdown.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,21 +63,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="proguard-rules.pro" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+      <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Calculator.java">
+      <file leaf-file-name="ScoreReport.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/ScoreReport.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -79,18 +87,11 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Introduction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Welcome.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Welcome.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="23" selection-end-column="5" />
+              <folding>
+                <element signature="e#1042#1431#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,8 +99,55 @@
       <file leaf-file-name="Quiz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Quiz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="6" selection-start-line="1" selection-start-column="0" selection-end-line="19" selection-end-column="6" />
+            <state vertical-scroll-proportion="-13.83871">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5036#5057#0" expanded="true" />
+                <element signature="e#5347#5368#0" expanded="true" />
+                <element signature="e#5629#5650#0" expanded="true" />
+                <element signature="e#5920#5941#0" expanded="true" />
+                <element signature="e#6243#6264#0" expanded="true" />
+                <element signature="e#6530#6552#0" expanded="true" />
+                <element signature="e#10703#10719#0" expanded="true" />
+                <element signature="e#10848#10866#0" expanded="true" />
+                <element signature="e#13777#13798#0" expanded="true" />
+                <element signature="e#13974#13995#0" expanded="true" />
+                <element signature="e#14125#14146#0" expanded="true" />
+                <element signature="e#14638#14659#0" expanded="true" />
+                <element signature="e#14789#14810#0" expanded="true" />
+                <element signature="e#14940#14961#0" expanded="true" />
+                <element signature="e#15405#15426#0" expanded="true" />
+                <element signature="e#15556#15577#0" expanded="true" />
+                <element signature="e#15708#15730#0" expanded="true" />
+                <element signature="e#16177#16198#0" expanded="true" />
+                <element signature="e#16329#16351#0" expanded="true" />
+                <element signature="e#16482#16504#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quiz.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/quiz.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="24.266233">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="23" />
+              <folding>
+                <element signature="e#363#398#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.02">
+              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -119,42 +167,50 @@
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/example/henry/mycalculator/ApplicationTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quiz.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/quiz.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="29" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuizSelection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuizSelection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/QuizSelection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.843342">
-              <caret line="174" column="1" selection-start-line="174" selection-start-column="1" selection-end-line="174" selection-end-column="1" />
+            <state vertical-scroll-proportion="-12.241936">
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quiz_selection.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/quiz_selection.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49709725">
+              <caret line="192" column="45" selection-start-line="192" selection-start-column="45" selection-end-line="192" selection-end-column="45" />
               <folding>
-                <element signature="method#Qnum#0;class#QuizSelection#0" expanded="false" />
+                <element signature="e#305#338#0" expanded="true" />
+                <element signature="e#363#398#0" expanded="true" />
+                <element signature="e#424#459#0" expanded="true" />
+                <element signature="e#483#516#0" expanded="true" />
+                <element signature="e#758#773#0" expanded="true" />
+                <element signature="e#1005#1028#0" expanded="true" />
+                <element signature="e#1410#1432#0" expanded="true" />
+                <element signature="e#1818#1839#0" expanded="true" />
+                <element signature="e#2229#2250#0" expanded="true" />
+                <element signature="e#2634#2654#0" expanded="true" />
+                <element signature="e#3050#3069#0" expanded="true" />
+                <element signature="e#3508#3528#0" expanded="true" />
+                <element signature="e#3969#3988#0" expanded="true" />
+                <element signature="e#4684#4699#0" expanded="true" />
+                <element signature="e#4898#4916#0" expanded="true" />
+                <element signature="e#5150#5172#0" expanded="true" />
+                <element signature="e#5407#5424#0" expanded="true" />
+                <element signature="e#6930#6954#0" expanded="true" />
+                <element signature="e#7217#7241#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1721,8 +1777,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/QuizSelection.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Welcome.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Introduction.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Quiz.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/quiz_selection.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/QuizSelection.java" />
       </list>
     </option>
   </component>
@@ -2214,6 +2274,7 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40953544" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2236,7 +2297,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990316" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2315,7 +2375,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#1042#1431#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2323,7 +2386,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5036#5057#0" expanded="true" />
+            <element signature="e#5347#5368#0" expanded="true" />
+            <element signature="e#5629#5650#0" expanded="true" />
+            <element signature="e#5920#5941#0" expanded="true" />
+            <element signature="e#6243#6264#0" expanded="true" />
+            <element signature="e#6530#6552#0" expanded="true" />
+            <element signature="e#10703#10719#0" expanded="true" />
+            <element signature="e#10848#10866#0" expanded="true" />
+            <element signature="e#13777#13798#0" expanded="true" />
+            <element signature="e#13974#13995#0" expanded="true" />
+            <element signature="e#14125#14146#0" expanded="true" />
+            <element signature="e#14638#14659#0" expanded="true" />
+            <element signature="e#14789#14810#0" expanded="true" />
+            <element signature="e#14940#14961#0" expanded="true" />
+            <element signature="e#15405#15426#0" expanded="true" />
+            <element signature="e#15556#15577#0" expanded="true" />
+            <element signature="e#15708#15730#0" expanded="true" />
+            <element signature="e#16177#16198#0" expanded="true" />
+            <element signature="e#16329#16351#0" expanded="true" />
+            <element signature="e#16482#16504#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2334,7 +2419,9 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="e#363#398#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2350,9 +2437,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="174" column="1" selection-start-line="174" selection-start-column="1" selection-end-line="174" selection-end-column="1" />
-          <folding>
-            <element signature="method#Qnum#0;class#QuizSelection#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2391,6 +2476,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2433,21 +2519,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Welcome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="29" />
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/quiz.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Introduction.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#1042#1431#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/ScoreReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -2460,52 +2554,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/example/henry/mycalculator/ApplicationTest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Quiz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="-13.83871">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5036#5057#0" expanded="true" />
+            <element signature="e#5347#5368#0" expanded="true" />
+            <element signature="e#5629#5650#0" expanded="true" />
+            <element signature="e#5920#5941#0" expanded="true" />
+            <element signature="e#6243#6264#0" expanded="true" />
+            <element signature="e#6530#6552#0" expanded="true" />
+            <element signature="e#10703#10719#0" expanded="true" />
+            <element signature="e#10848#10866#0" expanded="true" />
+            <element signature="e#13777#13798#0" expanded="true" />
+            <element signature="e#13974#13995#0" expanded="true" />
+            <element signature="e#14125#14146#0" expanded="true" />
+            <element signature="e#14638#14659#0" expanded="true" />
+            <element signature="e#14789#14810#0" expanded="true" />
+            <element signature="e#14940#14961#0" expanded="true" />
+            <element signature="e#15405#15426#0" expanded="true" />
+            <element signature="e#15556#15577#0" expanded="true" />
+            <element signature="e#15708#15730#0" expanded="true" />
+            <element signature="e#16177#16198#0" expanded="true" />
+            <element signature="e#16329#16351#0" expanded="true" />
+            <element signature="e#16482#16504#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Introduction.java">
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/example/henry/mycalculator/ApplicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Welcome.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="-12.02">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/Quiz.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/quiz.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="6" selection-start-line="1" selection-start-column="0" selection-end-line="19" selection-end-column="6" />
-          <folding />
+        <state vertical-scroll-proportion="24.266233">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="23" />
+          <folding>
+            <element signature="e#363#398#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/henry/mycalculator/QuizSelection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.843342">
-          <caret line="174" column="1" selection-start-line="174" selection-start-column="1" selection-end-line="174" selection-end-column="1" />
+        <state vertical-scroll-proportion="-12.241936">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/quiz_selection.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49709725">
+          <caret line="192" column="45" selection-start-line="192" selection-start-column="45" selection-end-line="192" selection-end-column="45" />
           <folding>
-            <element signature="method#Qnum#0;class#QuizSelection#0" expanded="false" />
+            <element signature="e#305#338#0" expanded="true" />
+            <element signature="e#363#398#0" expanded="true" />
+            <element signature="e#424#459#0" expanded="true" />
+            <element signature="e#483#516#0" expanded="true" />
+            <element signature="e#758#773#0" expanded="true" />
+            <element signature="e#1005#1028#0" expanded="true" />
+            <element signature="e#1410#1432#0" expanded="true" />
+            <element signature="e#1818#1839#0" expanded="true" />
+            <element signature="e#2229#2250#0" expanded="true" />
+            <element signature="e#2634#2654#0" expanded="true" />
+            <element signature="e#3050#3069#0" expanded="true" />
+            <element signature="e#3508#3528#0" expanded="true" />
+            <element signature="e#3969#3988#0" expanded="true" />
+            <element signature="e#4684#4699#0" expanded="true" />
+            <element signature="e#4898#4916#0" expanded="true" />
+            <element signature="e#5150#5172#0" expanded="true" />
+            <element signature="e#5407#5424#0" expanded="true" />
+            <element signature="e#6930#6954#0" expanded="true" />
+            <element signature="e#7217#7241#0" expanded="true" />
           </folding>
         </state>
       </provider>
