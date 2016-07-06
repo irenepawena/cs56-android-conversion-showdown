@@ -64,6 +64,9 @@
     <string name="questionKey12">Convert Hexadecimal to Octal</string>
 
     <string name="difficulty_low">low</string>
+    <string name="difficulty_text">Difficulty</string>
+    <string name="difficulty_medium">medium</string>
+    <string name="difficulty_high">high</string>
 
 
 </resources>

@@ -174,23 +174,30 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-        android:layout_above="@+id/btnStartQuizActivity"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/radioGroup3">
+        android:id="@+id/radioGroup3"
+        android:layout_above="@+id/radioGroup"
 
-        <RadioButton android:id="@+id/radio_ninjas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton android:id="@+id/radio_difficulty_low"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/difficulty_low"
             android:onClick="chooseDifficulty"
-            android:checked="false" />
+            android:checked="true" />
 
-        <RadioButton android:id="@+id/radio_pirates"
+        <RadioButton android:id="@+id/radio_difficulty_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/difficulty_low"
+            android:text="@string/difficulty_medium"
             android:onClick="chooseDifficulty" />
+        <RadioButton android:id="@+id/radio_difficulty_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/difficulty_high"
+            android:onClick="chooseDifficulty"
+            android:checked="false" />
     </RadioGroup>
 
     <TextView
@@ -198,7 +205,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Difficulty"
+        android:text="@string/difficulty_text"
         android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_above="@+id/radioGroup3"

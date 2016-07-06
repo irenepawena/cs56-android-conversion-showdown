@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -20,6 +21,7 @@ public class QuizSelection extends Activity implements OnClickListener {
 
     int selection[] = new int[13];       //array to hold keys, key values listed in comment below
     public int numberQuestions = 5000;
+    int difficulty = 0;
 
 
     @Override
@@ -35,8 +37,14 @@ public class QuizSelection extends Activity implements OnClickListener {
     }
 
     public void chooseDifficulty(View v) {
-            String id = v.getTag();
-            Log.i(id);
+        if (v == findViewById(R.id.radio_difficulty_low)) {
+            difficulty = 0;
+        } else if (v == findViewById(R.id.radio_difficulty_medium)) {
+            difficulty = 1;
+        } else if (v == findViewById(R.id.radio_difficulty_high)) {
+            difficulty = 2;
+        }
+        //Log.i("diffculty:", (new Integer(difficulty)).toString());
     }
 
     public void ButtonStartQuiz(View v) {
@@ -45,20 +53,20 @@ public class QuizSelection extends Activity implements OnClickListener {
         if (v.getId() == R.id.btnStartQuizActivity) {
             Intent i = new Intent(QuizSelection.this, Quiz.class);
             i.putExtra("numberQuestions", numberQuestions);        //gives user desired test length to test activity
-            i.putExtra("selection", selection);                    //gives array of keys to test activity
-            for (int index = 0; index < 11; index++){
-                if(selection[index] != 0){            //checks that user clicked a checkbox before generating next activity
+            i.putExtra("selection", selection) ;                    //gives array of keys to test activity
+            i.putExtra("difficulty", difficulty) ;
+            for (int index = 0; index < 11; index++) {
+                if (selection[index] != 0) {            //checks that user clicked a checkbox before generating next activity
                     empty = 1;
                     break;
                 }
             }
-            if (empty == 1){
+            if (empty == 1) {
                 startActivity(i);
-            }
-            else{
+            } else {
                 makeError.setError("You must check one");
             }
-            }
+        }
 
 
     }

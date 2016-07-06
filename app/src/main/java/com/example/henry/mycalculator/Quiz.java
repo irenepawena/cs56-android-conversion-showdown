@@ -25,6 +25,8 @@ public class Quiz extends Activity implements OnClickListener {
     ArrayList<Integer> arrayOfKeys = new ArrayList<>();   //stores all keys
     int key = 0;     //determines type of problem
     int difficulty =  1;
+    final static int[] range_min = new int[]{0, 1000, 100000};
+    final static int[] range_max = new int[]{999, 9999, 999999};
      /*
     KEY
     1. Decimal to Binary conversion
@@ -54,6 +56,7 @@ public class Quiz extends Activity implements OnClickListener {
         setContentView(R.layout.quiz);
         int selectedOptions[] = getIntent().getIntArrayExtra("selection");  //receives array of key values
         numberQuestions = getIntent().getIntExtra("numberQuestions", -1);   //receives user desired test length
+        difficulty = getIntent().getIntExtra("difficulty", 0);
 
         //adds key values taken from selection activity into ArrayList
         for (int j = 0; j < 11; j++) {
@@ -290,9 +293,17 @@ public class Quiz extends Activity implements OnClickListener {
 
     int IndexArrayKeys = 0;    // variable to track index of the ArrayList with key values
 
+    public int generateQuestionNumber(){
+        int min_num = range_min[difficulty] ;
+        int max_num = range_max[difficulty] ;
+        int res = (int) ( Math.random()*(max_num-min_num) ) + min_num;
+        return res;
+
+    }
+
     public void changeNumber(View view) {
         /*
-        Sorry, following codes are restructured for initial random number. 
+        Sorry, following codes are restructured for initial random number.
         if (IndexArrayKeys == length-1) {  //variable length created in onCreate method, tells length of ArrayList
             IndexArrayKeys = 0;            //make sure that when changing key/problem type you don't go out of bounds
         }
@@ -307,7 +318,7 @@ public class Quiz extends Activity implements OnClickListener {
 
         TextView change = (TextView) findViewById(R.id.convertThis);    //allows change of number to be converted
         Random rand = new Random();                                     //need this to make a random number
-        int number = rand.nextInt(200);                                 //assign random number to variable int
+        int number = generateQuestionNumber();                                 //assign random number to variable int
 
         if (key == 1 || key == 3 || key == 7){
             //radix 10
