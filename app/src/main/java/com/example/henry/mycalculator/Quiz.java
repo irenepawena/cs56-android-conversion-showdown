@@ -56,7 +56,7 @@ public class Quiz extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quiz);
+        setContentView( R.layout.quiz );
         int selectedOptions[] = getIntent().getIntArrayExtra("selection");  //receives array of key values
         numberQuestions = getIntent().getIntExtra("numberQuestions", -1);   //receives user desired test length
         difficulty = getIntent().getIntExtra("difficulty", 0);

@@ -10,8 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Welcome"
-            android:label="Conversion Showdown!"
-            android:screenOrientation="portrait">
+            android:label="Conversion Showdown!">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -19,29 +18,24 @@
         </activity>
         <activity
             android:name=".Introduction"
-            android:label="Conversion Showdown!"
-            android:screenOrientation="portrait"/>
+            android:label="Conversion Showdown!"/>
         <activity
             android:name=".Calculator"
-            android:label="Conversion Showdown!"
-            android:screenOrientation="portrait"/>
+            android:label="Conversion Showdown!"/>
         <activity
             android:name=".QuizSelection"
-            android:label="Conversion Showdown!"
-            android:screenOrientation="portrait"/>
+            android:label="Conversion Showdown!"/>
         <activity
             android:name=".Quiz"
             android:label="Conversion Showdown!"
-            android:parentActivityName=".Introduction"
-            android:screenOrientation="portrait">
+            android:parentActivityName=".Introduction" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Introduction" />
         </activity>
         <activity
             android:name=".ScoreReport"
-            android:label="Conversion Showdown!"
-            android:screenOrientation="portrait"/>
+            android:label="Conversion Showdown!"/>
     </application>
 
 </manifest>

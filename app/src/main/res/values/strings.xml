@@ -67,6 +67,7 @@
     <string name="difficulty_text">Difficulty</string>
     <string name="difficulty_medium">medium</string>
     <string name="difficulty_high">high</string>
+    <string name="base">Base</string>
 
 
 </resources>
