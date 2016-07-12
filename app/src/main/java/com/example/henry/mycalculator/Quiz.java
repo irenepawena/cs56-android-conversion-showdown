@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
@@ -16,6 +17,7 @@ import org.w3c.dom.Text;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Quiz extends Activity implements OnClickListener {
@@ -25,8 +27,9 @@ public class Quiz extends Activity implements OnClickListener {
     ArrayList<Integer> arrayOfKeys = new ArrayList<>();   //stores all keys
     int key = 0;     //determines type of problem
     int difficulty =  1;
-    final static int[] range_min = new int[]{0, 1000, 100000};
-    final static int[] range_max = new int[]{999, 9999, 999999};
+    final static int[] range_min = new int[]{0, 200, 1000};
+    final static int[] range_max = new int[]{200, 1000, 5000};
+
      /*
     KEY
     1. Decimal to Binary conversion
@@ -166,6 +169,58 @@ public class Quiz extends Activity implements OnClickListener {
     }
 
     int radix = 10;   //default value for radix to be manipulated
+    final public static ArrayList<Character> symbols = new ArrayList<Character>( Arrays.asList(new Character[]{
+            '0', '1', '2', '3' , '4' , '5', '6' , '7' , '8' , '9',
+            'A', 'B', 'C', 'D', 'E', 'F'
+    }));
+
+    public boolean sanity_check( EditText answer, int radix ){
+        String sAnswer = answer.getText().toString();
+        //checks if a value is entered and that it is an appropriate value
+        if (TextUtils.isEmpty(sAnswer)) {
+            answer.setError("Please input a value.");
+            return false;
+        }
+
+        char[] answerChars = sAnswer.toCharArray();
+
+        boolean isValid = false;
+        for(char c : answerChars ) {
+            isValid = false;
+            for (int i = 0 ; i < radix ; ++i ) {
+                if (symbols.get(i).equals(c)) {
+                    isValid = true;
+                    break;
+                }
+            }
+            if (!isValid)
+                break;
+        }
+
+
+        if (radix == 2 && !isValid) {
+            answer.setError("Binary is only 1 and 0");
+            return false;
+        }
+        if (radix == 8 && !isValid ) {
+            answer.setError("Octal doesn't have 8 or 9");
+            return false;
+        }
+        // above checks if value is entered and that it is an appropriate value
+        Log.i("IN SANITY CHECK", ((Boolean)isValid).toString() );
+        if ( (key == 7 || key == 9 || key == 11 ) && !isValid ) {
+                /*Todo: make user input of Hex letters convert properly without error
+                This most likely needs to separate from the other conversion types when a solution
+                is found. Only doing parseInt(string,16) doesn't convert the user's input of Hex
+                letters properly. 100pt value for next programmers to resolve the issue.
+                 */
+            answer.setError("Hex number format wrong");
+            return false;
+        }
+
+        return true;
+
+    }
 
     public void TestResult(View view) {
         hideSoftKeyBoard(view);
@@ -190,15 +245,15 @@ public class Quiz extends Activity implements OnClickListener {
         int ProblemValue = 0;
         //Below: takes number that user needs to convert and makes it a decimal to compare to user answer
         if (key == 1 || key == 3 || key == 7) {
-            ProblemValue = Integer.parseInt(TxtString,10);
+            ProblemValue = Integer.parseInt(TxtString, 10);
         }
-        if (key == 2 || key == 5 || key == 9){
+        if (key == 2 || key == 5 || key == 9) {
             ProblemValue = Integer.parseInt(TxtString, 2);
         }
-        if (key == 4 || key == 6 || key == 11){
+        if (key == 4 || key == 6 || key == 11) {
             ProblemValue = Integer.parseInt(TxtString, 8);
         }
-        if (key == 8 || key == 10 || key == 12){
+        if (key == 8 || key == 10 || key == 12) {
             ProblemValue = Integer.parseInt(TxtString, 16);
         }
         //depending on problem type, convert problem number to decimal
@@ -210,85 +265,59 @@ public class Quiz extends Activity implements OnClickListener {
         // Take user answer from text field and make it a string
         EditText answer = (EditText) findViewById(R.id.AnswerField);
         String sAnswer = answer.getText().toString();
-
-        //checks if a value is entered and that it is an appropriate value
-        if (TextUtils.isEmpty(sAnswer)) {
-            answer.setError("Please input a value.");
-            return;
+        if ( ! this.sanity_check( answer, radix ) ) {
+            return ;
         }
-        int checkValueEntered = Integer.parseInt(answer.getText().toString());
 
-        if (radix == 2 && checkValueEntered % 10 > 1) {
-            answer.setError("Binary is only 1 and 0");
-            return;
+        //user Answer is the answer from the user.
+        int userAnswer;
+        userAnswer = Integer.parseInt(answer.getText().toString(), radix);
+        //denominator always increases
+        TextView denominator = (TextView) findViewById(R.id.NumAttempt);
+        int den = Integer.parseInt(denominator.getText().toString());
+        den = den + 1;
+        denominator.setText(String.valueOf(den));
+
+        TextView numerator = (TextView) findViewById(R.id.NumCorrect);
+        int num = Integer.parseInt(numerator.getText().toString());
+
+        // compare the answer to the actual value
+        if (ProblemValue == userAnswer) {
+            num = num + 1;
+            numerator.setText(String.valueOf(num));
+
+            respond.setText(R.string.correct);
+            test.setText(TxtString + " is the same as " + sAnswer);
+        } else {
+
+            respond.setText(R.string.incorrect);
+            test.setText(TxtString + " not same as " + sAnswer);
         }
-        if(radix == 8 && (sAnswer.contains("8") || sAnswer.contains("9"))){
-            answer.setError("Octal doesn't have 8 or 9");
-            return;
+        // above compares answer to actual value
+
+        // Makes the progress percent
+        TextView de = (TextView) findViewById(R.id.NumAttempt);
+        int d = Integer.parseInt(de.getText().toString());
+        float deno = (float) d;
+
+        TextView nu = (TextView) findViewById(R.id.NumCorrect);
+        int n = Integer.parseInt(nu.getText().toString());
+        float numer = (float) n;
+
+        result = (numer / deno) * 100;
+        TextView percent = (TextView) findViewById(R.id.PercentCorrect);
+        percent.setText(String.valueOf(result + " %"));
+        // above makes progress percent
+
+        // This part ends the test depending on test length asked for
+        if (den == numberQuestions) {
+            Intent activity = new Intent(this, ScoreReport.class);
+            activity.putExtra("result", result);
+            startActivity(activity);
         }
-        // above checks if value is entered and that it is an appropriate value
+        // above stops test depending on requested length
 
-        else {
-            int userAnswer;
-            if(key == 7 || key == 9 || key == 11){
-                /*Todo: make user input of Hex letters convert properly without error
-                This most likely needs to separate from the other conversion types when a solution
-                is found. Only doing parseInt(string,16) doesn't convert the user's input of Hex
-                letters properly. 100pt value for next programmers to resolve the issue.
-                 */
-                userAnswer = Integer.parseInt(sAnswer, 16);
-            }
-            else{
-                userAnswer = Integer.parseInt(answer.getText().toString(), radix);
-            }
-
-            //denominator always increases
-            TextView denominator = (TextView) findViewById(R.id.NumAttempt);
-            int den = Integer.parseInt(denominator.getText().toString());
-            den = den + 1;
-            denominator.setText(String.valueOf(den));
-
-            TextView numerator = (TextView) findViewById(R.id.NumCorrect);
-            int num = Integer.parseInt(numerator.getText().toString());
-
-            // compare the answer to the actual value
-            if (ProblemValue == userAnswer) {
-                num = num + 1;
-                numerator.setText(String.valueOf(num));
-
-                respond.setText(R.string.correct);
-                test.setText(TxtString + " is the same as " + sAnswer);
-            } else {
-
-                respond.setText(R.string.incorrect);
-                test.setText(TxtString + " not same as " + sAnswer);
-            }
-            // above compares answer to actual value
-
-            // Makes the progress percent
-            TextView de = (TextView) findViewById(R.id.NumAttempt);
-            int d = Integer.parseInt(de.getText().toString());
-            float deno = (float) d;
-
-            TextView nu = (TextView) findViewById(R.id.NumCorrect);
-            int n = Integer.parseInt(nu.getText().toString());
-            float numer = (float) n;
-
-            result = (numer / deno) * 100;
-            TextView percent = (TextView) findViewById(R.id.PercentCorrect);
-            percent.setText(String.valueOf(result + " %"));
-            // above makes progress percent
-
-            // This part ends the test depending on test length asked for
-            if (den == numberQuestions) {
-                Intent activity = new Intent(this, ScoreReport.class);
-                activity.putExtra("result", result);
-                startActivity(activity);
-            }
-            // above stops test depending on requested length
-
-            changeNumber(null);    //change the problem type/number after entering answer
-        }
+        changeNumber(null);    //change the problem type/number after entering answer
     }
 
     int IndexArrayKeys = 0;    // variable to track index of the ArrayList with key values
