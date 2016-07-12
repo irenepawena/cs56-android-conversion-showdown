@@ -174,13 +174,12 @@ public class Quiz extends Activity implements OnClickListener {
             'A', 'B', 'C', 'D', 'E', 'F'
     }));
 
-    public boolean sanity_check( EditText answer, int radix ){
-        String sAnswer = answer.getText().toString();
+    public static boolean sanity_check( String sAnswer, int radix ){
         //checks if a value is entered and that it is an appropriate value
-        if (TextUtils.isEmpty(sAnswer)) {
-            answer.setError("Please input a value.");
+        if (sAnswer.length() == 0 ){
             return false;
         }
+
 
         char[] answerChars = sAnswer.toCharArray();
 
@@ -188,7 +187,10 @@ public class Quiz extends Activity implements OnClickListener {
         for(char c : answerChars ) {
             isValid = false;
             for (int i = 0 ; i < radix ; ++i ) {
-                if (symbols.get(i).equals(c)) {
+                Character target = symbols.get(i);
+                //lower cases and upper cases are both okay
+                if ( (target.equals(c)) |
+                        (target.isLetter(target) && Character.toLowerCase(target) == c) ) {
                     isValid = true;
                     break;
                 }
@@ -196,31 +198,30 @@ public class Quiz extends Activity implements OnClickListener {
             if (!isValid)
                 break;
         }
-
-
-        if (radix == 2 && !isValid) {
-            answer.setError("Binary is only 1 and 0");
-            return false;
-        }
-        if (radix == 8 && !isValid ) {
-            answer.setError("Octal doesn't have 8 or 9");
-            return false;
-        }
-        // above checks if value is entered and that it is an appropriate value
-        Log.i("IN SANITY CHECK", ((Boolean)isValid).toString() );
-        if ( (key == 7 || key == 9 || key == 11 ) && !isValid ) {
-                /*Todo: make user input of Hex letters convert properly without error
-                This most likely needs to separate from the other conversion types when a solution
-                is found. Only doing parseInt(string,16) doesn't convert the user's input of Hex
-                letters properly. 100pt value for next programmers to resolve the issue.
-                 */
-            answer.setError("Hex number format wrong");
-            return false;
-        }
-
-        return true;
+        return isValid;
 
     }
+    private void set_input_error(TextView answer, int radix){
+        if ( answer.getText().toString().equals("") ) {
+            answer.setError("Please input a value.");
+            return;
+        }
+        if (radix == 2 ) {
+            answer.setError("Binary is only 1 and 0");
+            return;
+        }
+        if (radix == 8 ) {
+            answer.setError("Octal doesn't have 8 or 9");
+            return;
+        }
+        // above checks if value is entered and that it is an appropriate value
+        if ( radix == 16 ) {
+            answer.setError("Hex number format wrong");
+            return;
+        }
+
+    }
+
 
     public void TestResult(View view) {
         hideSoftKeyBoard(view);
@@ -265,7 +266,8 @@ public class Quiz extends Activity implements OnClickListener {
         // Take user answer from text field and make it a string
         EditText answer = (EditText) findViewById(R.id.AnswerField);
         String sAnswer = answer.getText().toString();
-        if ( ! this.sanity_check( answer, radix ) ) {
+        if ( ! this.sanity_check( sAnswer, radix ) ) {
+            set_input_error( answer, radix );
             return ;
         }
 
