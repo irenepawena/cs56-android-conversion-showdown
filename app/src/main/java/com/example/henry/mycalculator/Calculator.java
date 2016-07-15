@@ -15,12 +15,6 @@ public class Calculator extends Activity implements OnClickListener {
 
         Button btnStartAnotherActivity;
 
-        public void hideSoftKeyBoard(View view){
-            if ( view != null ) {
-                InputMethodManager imm = (InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-            }
-        }
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +32,7 @@ public class Calculator extends Activity implements OnClickListener {
         }
 
         public void onButtonClick(View v){
-            hideSoftKeyBoard( v );
+            MyUtils.hideSoftKeyBoard( v, (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE) );
             // 2 text fields - Edit Text
             EditText a1 = (EditText)findViewById(R.id.TFnum1);
             EditText a2 = (EditText)findViewById(R.id.TFnum2);

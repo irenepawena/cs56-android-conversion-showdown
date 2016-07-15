@@ -33,7 +33,7 @@ public class QuizSelection extends Activity implements OnClickListener {
     @Override
     public void onClick(View view) {
         Intent intent = new Intent(this, QuizSelection.class);
-        startActivity(intent);
+        MyUtils.startNoHistoryAcitivity( this, intent );
     }
 
     public void chooseDifficulty(View v) {
@@ -62,7 +62,7 @@ public class QuizSelection extends Activity implements OnClickListener {
                 }
             }
             if (empty == 1) {
-                startActivity(i);
+                MyUtils.startNoHistoryAcitivity( this , i );
             } else {
                 makeError.setError("You must check one");
             }

@@ -9,7 +9,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context=".Introduction">
+    tools:context=".Introduction"
+    android:weightSum="1">
 
     <TextView
         android:layout_width="match_parent"
@@ -52,5 +53,11 @@
         android:layout_marginTop="26dp"
         android:layout_centerHorizontal="true"
         android:text="Start Calculator" />
+
+    <Button
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:text="Start Quiz"
+        android:id="@+id/startQuizButton" />
 
 </LinearLayout>

@@ -40,8 +40,8 @@ public class ScoreReport extends Activity {
     }
 
     public void goToCalculator(View view){
-        Intent activity = new Intent(this, Calculator.class);
-        startActivity(activity);
+        Intent activity = new Intent(this, ExpressionActivity.class);
+        MyUtils.startNoHistoryAcitivity(this, activity);
     }
 
 

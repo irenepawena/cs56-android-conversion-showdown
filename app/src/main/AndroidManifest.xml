@@ -36,6 +36,11 @@
         <activity
             android:name=".ScoreReport"
             android:label="Conversion Showdown!"/>
+
+        <activity
+            android:name=".ExpressionActivity"
+            android:label="Conversion Showdown!">
+        </activity>
     </application>
 
 </manifest>

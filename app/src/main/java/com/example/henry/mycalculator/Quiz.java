@@ -47,12 +47,7 @@ public class Quiz extends Activity implements OnClickListener {
      */
 
     int length = 0;
-    public void hideSoftKeyBoard(View view){
-        if ( view != null ) {
-            InputMethodManager imm = (InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -165,7 +160,7 @@ public class Quiz extends Activity implements OnClickListener {
     public void onClick(View view) {
         Intent intent = new Intent(this, Quiz.class);
         // Calling another activity Main4Activitytest start the quiz
-        startActivity(intent);
+        MyUtils.startNoHistoryAcitivity( this, intent );
     }
 
     int radix = 10;   //default value for radix to be manipulated
@@ -224,7 +219,7 @@ public class Quiz extends Activity implements OnClickListener {
 
 
     public void TestResult(View view) {
-        hideSoftKeyBoard(view);
+        MyUtils.hideSoftKeyBoard( view, (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE) );
         //set the radix based on key, user entry determines the radix number
         if (key == 1 || key == 6 || key == 10) {
             radix = 2;
@@ -315,7 +310,7 @@ public class Quiz extends Activity implements OnClickListener {
         if (den == numberQuestions) {
             Intent activity = new Intent(this, ScoreReport.class);
             activity.putExtra("result", result);
-            startActivity(activity);
+            MyUtils.startNoHistoryAcitivity(this, activity);
         }
         // above stops test depending on requested length
 
@@ -414,7 +409,8 @@ public class Quiz extends Activity implements OnClickListener {
     public void Abort(View view){
         Intent activity = new Intent(this, ScoreReport.class);  //goes to ScoreReport Activity
         activity.putExtra("result", result);                    //give percent correct to ScoreReport Activity
-        startActivity(activity);
+
+        MyUtils.startNoHistoryAcitivity(this, activity);
     }
 
 

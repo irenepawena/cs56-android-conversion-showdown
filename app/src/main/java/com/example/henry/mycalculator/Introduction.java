@@ -28,14 +28,24 @@ public class Introduction extends Activity implements OnClickListener {
         setContentView(R.layout.introduction);
 
         Button b = (Button)this.findViewById(R.id.click_btn);
+        Button startQuizButton = (Button) findViewById( R.id.startQuizButton);
         b.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 TextView resp = (TextView) findViewById(R.id.response);
                 EditText name = (EditText) findViewById(R.id.user_name);
                 String str = "Welcome " + name.getText().toString() + " !";
                 resp.setText(str);
-                hideSoftKeyBoard(v);
+                MyUtils.hideSoftKeyBoard( v, (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE) );
             }
+        });
+
+        startQuizButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), QuizSelection.class);
+                MyUtils.startNoHistoryAcitivity( getActivity(), intent );
+            }
+
         });
 
         btnStartAnotherActivity = (Button) findViewById(R.id.btnStartAnotherActivity);
@@ -43,11 +53,15 @@ public class Introduction extends Activity implements OnClickListener {
         btnStartAnotherActivity.setOnClickListener(this);
     }
 
+    public Activity getActivity(){
+        return this;
+    }
+
     @Override
     public void onClick(View view) {
 
-        Intent intent = new Intent(this, Calculator.class);
-        startActivity(intent);
+        Intent intent = new Intent(this, ExpressionActivity.class);
+        MyUtils.startNoHistoryAcitivity( this, intent );
     }
 
     @Override
