@@ -11,6 +11,10 @@
         <activity
             android:name=".Welcome"
             android:label="Conversion Showdown!">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Introduction"
@@ -21,10 +25,6 @@
         <activity
             android:name=".QuizSelection"
             android:label="Conversion Showdown!">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
 

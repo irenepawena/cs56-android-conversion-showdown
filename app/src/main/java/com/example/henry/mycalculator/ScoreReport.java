@@ -75,6 +75,8 @@ public class ScoreReport extends Activity {
 
 
         //////////////////////////////////////
+        lLayout.setBackgroundColor(Color.parseColor("#00FF00"));
+        /*
         if (result > 90){
             lLayout.setBackgroundColor(Color.parseColor("#00FF00"));
         }
@@ -86,7 +88,7 @@ public class ScoreReport extends Activity {
         }
         if (result < 54){
             lLayout.setBackgroundColor(Color.parseColor("#FF0000"));
-        }
+        }*/
     }
 
     public void newTestSelection(View view){

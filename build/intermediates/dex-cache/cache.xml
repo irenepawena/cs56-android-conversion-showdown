@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\UMARU\Documents\GitHub\cs56-android-conversion-showdown\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="adf01a335a58b6c5de137357e8c0306e0b173cc7">
+        <dex dex="C:\Users\UMARU\Documents\GitHub\cs56-android-conversion-showdown\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d508e767cad81787fd4cba62e3cfd5d7f13d0c99\classes.dex" />
+    </item>
+
+</items>
