@@ -23,7 +23,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/user_name"
         android:textColor="#FFF"
-        android:textSize="24dp" />
+        android:textSize="24dp"
+        android:singleLine="true" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
