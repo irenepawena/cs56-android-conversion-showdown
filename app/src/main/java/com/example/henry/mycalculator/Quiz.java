@@ -3,6 +3,7 @@ package com.example.henry.mycalculator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -29,7 +30,7 @@ public class Quiz extends Activity implements OnClickListener {
     int difficulty =  1;
     final static int[] range_min = new int[]{0, 200, 1000};
     final static int[] range_max = new int[]{200, 1000, 5000};
-
+    int IndexArrayKeys = 0;    // variable to track index of the ArrayList with key values
      /*
     KEY
     1. Decimal to Binary conversion
@@ -46,11 +47,51 @@ public class Quiz extends Activity implements OnClickListener {
     12. Hexadecimal to Octal conversion
      */
 
+
+    //Following variables are defined by dummyindex
     int length = 0;
+    final public static int DEC_TO_BIN = 1;
+    final public static int BIN_TO_DEC = 2;
+    final public static int DEC_TO_OCT = 3;
+    final public static int OCT_TO_DEC = 4;
+    final public static int BIN_TO_OCT = 5;
+    final public static int OCT_TO_BIN = 6;
+    final public static int DEC_TO_HEX = 7;
+    final public static int HEX_TO_DEC = 8;
+    final public static int BIN_TO_HEX = 9;
+    final public static int HEX_TO_BIN = 10;
+    final public static int OCT_TO_HEX = 11;
+    final public static int HEX_TO_OCT = 12;
+    static public String[] key2type = new String[]{
+            "",
+            "DEC_TO_BIN",
+            "BIN_TO_DEC",
+            "DEC_TO_OCT",
+            "OCT_TO_DEC",
+            "BIN_TO_OCT",
+            "OCT_TO_BIN",
+            "DEC_TO_HEX",
+            "HEX_TO_DEC",
+            "BIN_TO_HEX",
+            "HEX_TO_BIN",
+            "OCT_TO_HEX",
+            "HEX_TO_OCT"
+
+    };
+    int[] scoreBoardByKey = new int[13];
+    private ArrayList<Question> wrongQuestions = new ArrayList<Question>();
+
+    private void initializeScoreBoard(){
+        for(int i = 0 ; i < scoreBoardByKey.length ; ++i){
+            scoreBoardByKey[i] = 0;
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initializeScoreBoard();
         setContentView( R.layout.quiz );
         int selectedOptions[] = getIntent().getIntArrayExtra("selection");  //receives array of key values
         numberQuestions = getIntent().getIntExtra("numberQuestions", -1);   //receives user desired test length
@@ -69,52 +110,6 @@ public class Quiz extends Activity implements OnClickListener {
         TextView questionDescription = (TextView) findViewById(R.id.textView3);     // problem description
         EditText editkeyboard = (EditText) findViewById(R.id.AnswerField);     //allows keyboard type to change for the problem
 
-        //initial problems for each checkbox that could be clicked
-        /*
-        if (selectedOptions[0] == 1) {
-            key = 1;      //Decimal to Binary conversion
-            problemString.setText("Decimal:");
-            problemNumber.setText("5");
-            questionDescription.setText(R.string.questionKey1);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);    //keyboard only numbers
-        }
-        if (selectedOptions[2] == 3) {
-            key = 3;      //Decimal to Octal conversion
-            problemString.setText("Decimal:");
-            problemNumber.setText("5");
-            questionDescription.setText(R.string.questionKey3);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
-        }
-        if (selectedOptions[4] == 5) {
-            key = 5;      //Binary to Octal conversion
-            problemString.setText("Binary:");
-            problemNumber.setText("101");
-            questionDescription.setText(R.string.questionKey5);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
-        }
-
-        if (selectedOptions[6] == 7) {
-            key = 7;      //Decimal to Hexadecimal conversion
-            problemString.setText("Decimal:");
-            problemNumber.setText("5");
-            questionDescription.setText(R.string.questionKey7);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);     //keyboard has letters & numbers
-        }
-        if (selectedOptions[8] == 9) {
-            key = 9;      //Binary to Hexadecimal conversion
-            problemString.setText("Binary:");
-            problemNumber.setText("101");
-            questionDescription.setText(R.string.questionKey9);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
-        }
-        if (selectedOptions[10] == 11) {
-            key = 11;      //Octal to Hexadecimal conversion
-            problemString.setText("Octal:");
-            problemNumber.setText("03");
-            questionDescription.setText(R.string.questionKey11);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
-        }
-        */
 
         if (selectedOptions[0] == 1) {
             key = 1;      //Decimal to Binary conversion
@@ -168,16 +163,16 @@ public class Quiz extends Activity implements OnClickListener {
             '0', '1', '2', '3' , '4' , '5', '6' , '7' , '8' , '9',
             'A', 'B', 'C', 'D', 'E', 'F'
     }));
+    class IntOverFlow extends Exception{
 
-    public static boolean sanity_check( String sAnswer, int radix ){
+    }
+
+    public boolean sanity_check( String sAnswer, int radix ) throws IntOverFlow{
         //checks if a value is entered and that it is an appropriate value
-        if (sAnswer.length() == 0 ){
-            return false;
+        if (sAnswer.length() == 0 || sAnswer.length() > 7){
+            throw new IntOverFlow();
         }
-
-
         char[] answerChars = sAnswer.toCharArray();
-
         boolean isValid = false;
         for(char c : answerChars ) {
             isValid = false;
@@ -215,6 +210,13 @@ public class Quiz extends Activity implements OnClickListener {
             return;
         }
 
+    }
+
+    private void set_input_error( int error_code, TextView answer){
+        switch (error_code) {
+            case(0):
+                answer.setError("number too large");
+        }
     }
 
 
@@ -261,14 +263,20 @@ public class Quiz extends Activity implements OnClickListener {
         // Take user answer from text field and make it a string
         EditText answer = (EditText) findViewById(R.id.AnswerField);
         String sAnswer = answer.getText().toString();
-        if ( ! this.sanity_check( sAnswer, radix ) ) {
-            set_input_error( answer, radix );
-            return ;
+        try {
+            if (!this.sanity_check(sAnswer, radix)) {
+                set_input_error(answer, radix);
+                return;
+            }
+        }
+        catch(IntOverFlow e){
+            set_input_error( 0, answer);
+            return;
         }
 
         //user Answer is the answer from the user.
         int userAnswer;
-        userAnswer = Integer.parseInt(answer.getText().toString(), radix);
+        userAnswer = Integer.parseInt( sAnswer, radix);
         //denominator always increases
         TextView denominator = (TextView) findViewById(R.id.NumAttempt);
         int den = Integer.parseInt(denominator.getText().toString());
@@ -281,6 +289,7 @@ public class Quiz extends Activity implements OnClickListener {
         // compare the answer to the actual value
         if (ProblemValue == userAnswer) {
             num = num + 1;
+            scoreBoardByKey[key] += 1;
             numerator.setText(String.valueOf(num));
 
             respond.setText(R.string.correct);
@@ -289,6 +298,11 @@ public class Quiz extends Activity implements OnClickListener {
 
             respond.setText(R.string.incorrect);
             test.setText(TxtString + " not same as " + sAnswer);
+            wrongQuestions.add( new Question(
+                    ((TextView) findViewById(R.id.convertThis)).getText().toString(),
+                    numerator.getText().toString(),
+                    key2type[key]
+                )) ;
         }
         // above compares answer to actual value
 
@@ -308,16 +322,39 @@ public class Quiz extends Activity implements OnClickListener {
 
         // This part ends the test depending on test length asked for
         if (den == numberQuestions) {
-            Intent activity = new Intent(this, ScoreReport.class);
-            activity.putExtra("result", result);
-            MyUtils.startNoHistoryAcitivity(this, activity);
+            endQuiz();
         }
         // above stops test depending on requested length
 
         changeNumber(null);    //change the problem type/number after entering answer
     }
 
-    int IndexArrayKeys = 0;    // variable to track index of the ArrayList with key values
+    private void parcelWrongQuestions(Intent intent){
+        String[] from = new String[ wrongQuestions.size() ];
+        String[] to = new String[ from.length ];
+        String[] questionType = new String[ from.length ];
+        for( int i = 0 ; i < wrongQuestions.size() ; ++i){
+            from[i] = wrongQuestions.get(i).getFrom();
+            to[i] = wrongQuestions.get(i).getTo();
+            questionType[i] = wrongQuestions.get(i).getQuestionType();
+        }
+        intent.putExtra("from", from);
+        intent.putExtra("to", to);
+        intent.putExtra("questionType", questionType);
+    }
+
+
+
+    private void endQuiz(){
+        Intent activity = new Intent(this, ScoreReport.class);
+        activity.putExtra("result", result);
+        activity.putExtra("scoreBoardByKey", scoreBoardByKey );
+        activity.putExtra("arrayOfKeys", new ArrayList<Integer>(arrayOfKeys) );
+        activity.putExtra("wrongQuestions", wrongQuestions);
+        //parcelWrongQuestions( activity );
+        MyUtils.startNoHistoryAcitivity(this, activity);
+        //startActivity( activity );
+    }
 
     public int generateQuestionNumber(){
         int min_num = range_min[difficulty] ;
@@ -336,7 +373,7 @@ public class Quiz extends Activity implements OnClickListener {
         else{ IndexArrayKeys = IndexArrayKeys + 1; }  //changes the key/problem type
         */
         key = arrayOfKeys.get(IndexArrayKeys);
-        IndexArrayKeys = IndexArrayKeys % length;
+        IndexArrayKeys = (IndexArrayKeys  + 1)% length;
 
         EditText editkeyboard = (EditText) findViewById(R.id.AnswerField);      //allows change of keyboard when user clicks AnswerField
         TextView questionDescription = (TextView) findViewById(R.id.textView3);      //allows change of question phrase at the top
@@ -407,10 +444,7 @@ public class Quiz extends Activity implements OnClickListener {
     }
 
     public void Abort(View view){
-        Intent activity = new Intent(this, ScoreReport.class);  //goes to ScoreReport Activity
-        activity.putExtra("result", result);                    //give percent correct to ScoreReport Activity
-
-        MyUtils.startNoHistoryAcitivity(this, activity);
+        endQuiz();
     }
 
 

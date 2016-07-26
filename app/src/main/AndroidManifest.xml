@@ -11,10 +11,6 @@
         <activity
             android:name=".Welcome"
             android:label="Conversion Showdown!">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Introduction"
@@ -24,7 +20,14 @@
             android:label="Conversion Showdown!"/>
         <activity
             android:name=".QuizSelection"
-            android:label="Conversion Showdown!"/>
+            android:label="Conversion Showdown!">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
         <activity
             android:name=".Quiz"
             android:label="Conversion Showdown!"
@@ -33,6 +36,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Introduction" />
         </activity>
+
         <activity
             android:name=".ScoreReport"
             android:label="Conversion Showdown!"/>
@@ -40,6 +44,14 @@
         <activity
             android:name=".ExpressionActivity"
             android:label="Conversion Showdown!">
+        </activity>
+
+        <activity android:name=".TestActivity1">
+
+        </activity>
+
+        <activity android:name=".TestActivity2">
+
         </activity>
     </application>
 
