@@ -29,6 +29,8 @@ public class Introduction extends Activity implements OnClickListener {
 
         Button b = (Button)this.findViewById(R.id.click_btn);
         Button startQuizButton = (Button) findViewById( R.id.startQuizButton);
+        Button startConverterButton = (Button) findViewById( R.id.startConverterButton );
+
         b.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 TextView resp = (TextView) findViewById(R.id.response);
@@ -39,6 +41,7 @@ public class Introduction extends Activity implements OnClickListener {
             }
         });
 
+
         startQuizButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +49,14 @@ public class Introduction extends Activity implements OnClickListener {
                 MyUtils.startNoHistoryAcitivity( getActivity(), intent );
             }
 
+        });
+
+        startConverterButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ConverterActivity.class);
+                MyUtils.startNoHistoryAcitivity( getActivity(), intent );
+            }
         });
 
         btnStartAnotherActivity = (Button) findViewById(R.id.btnStartAnotherActivity);

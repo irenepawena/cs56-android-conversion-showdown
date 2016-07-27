@@ -44,23 +44,31 @@
         android:textColor="#FFF"
         android:layout_gravity="center_vertical|right" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
     <Button
         android:id="@+id/btnStartAnotherActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="0dp"
         android:layout_centerHorizontal="true"
         android:text="Start Calculator" />
 
     <Button
-        android:layout_width="157dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start Quiz"
-        android:id="@+id/startQuizButton"
-        android:layout_gravity="center_horizontal" />
-        </RelativeLayout>
+        android:id="@+id/startQuizButton" />
+
+    <Button
+        android:id="@+id/startConverterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:text="Start Converter" />
+</LinearLayout>
+
 </LinearLayout>

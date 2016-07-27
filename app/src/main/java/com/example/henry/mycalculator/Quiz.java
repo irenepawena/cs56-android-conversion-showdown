@@ -159,38 +159,7 @@ public class Quiz extends Activity implements OnClickListener {
     }
 
     int radix = 10;   //default value for radix to be manipulated
-    final public static ArrayList<Character> symbols = new ArrayList<Character>( Arrays.asList(new Character[]{
-            '0', '1', '2', '3' , '4' , '5', '6' , '7' , '8' , '9',
-            'A', 'B', 'C', 'D', 'E', 'F'
-    }));
-    class IntOverFlow extends Exception{
 
-    }
-
-    public boolean sanity_check( String sAnswer, int radix ) throws IntOverFlow{
-        //checks if a value is entered and that it is an appropriate value
-        if (sAnswer.length() == 0 || sAnswer.length() > 7){
-            throw new IntOverFlow();
-        }
-        char[] answerChars = sAnswer.toCharArray();
-        boolean isValid = false;
-        for(char c : answerChars ) {
-            isValid = false;
-            for (int i = 0 ; i < radix ; ++i ) {
-                Character target = symbols.get(i);
-                //lower cases and upper cases are both okay
-                if ( (target.equals(c)) |
-                        (target.isLetter(target) && Character.toLowerCase(target) == c) ) {
-                    isValid = true;
-                    break;
-                }
-            }
-            if (!isValid)
-                break;
-        }
-        return isValid;
-
-    }
     private void set_input_error(TextView answer, int radix){
         if ( answer.getText().toString().equals("") ) {
             answer.setError("Please input a value.");
@@ -241,18 +210,23 @@ public class Quiz extends Activity implements OnClickListener {
         String TxtString = myText.getText().toString();
 
         int ProblemValue = 0;
+        int fromBase = -1;
         //Below: takes number that user needs to convert and makes it a decimal to compare to user answer
         if (key == 1 || key == 3 || key == 7) {
             ProblemValue = Integer.parseInt(TxtString, 10);
+            fromBase = 10;
         }
         if (key == 2 || key == 5 || key == 9) {
             ProblemValue = Integer.parseInt(TxtString, 2);
+            fromBase = 2;
         }
         if (key == 4 || key == 6 || key == 11) {
             ProblemValue = Integer.parseInt(TxtString, 8);
+            fromBase = 8;
         }
         if (key == 8 || key == 10 || key == 12) {
             ProblemValue = Integer.parseInt(TxtString, 16);
+            fromBase = 16;
         }
         //depending on problem type, convert problem number to decimal
 
@@ -264,7 +238,7 @@ public class Quiz extends Activity implements OnClickListener {
         EditText answer = (EditText) findViewById(R.id.AnswerField);
         String sAnswer = answer.getText().toString();
         try {
-            if (!this.sanity_check(sAnswer, radix)) {
+            if (!MyUtils.sanity_check(sAnswer, radix)) {
                 set_input_error(answer, radix);
                 return;
             }
@@ -298,9 +272,17 @@ public class Quiz extends Activity implements OnClickListener {
 
             respond.setText(R.string.incorrect);
             test.setText(TxtString + " not same as " + sAnswer);
+            String origin = ((TextView) findViewById(R.id.convertThis)).getText().toString();
+            String target = "";
+            try{
+                target = (new Converter(origin, fromBase)).toBase(radix);
+            }
+            catch( IntOverFlow e ){
+
+            }
             wrongQuestions.add( new Question(
-                    ((TextView) findViewById(R.id.convertThis)).getText().toString(),
-                    numerator.getText().toString(),
+                    origin,
+                    target,
                     key2type[key]
                 )) ;
         }

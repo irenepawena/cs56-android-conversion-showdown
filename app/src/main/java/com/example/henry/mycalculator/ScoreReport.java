@@ -59,15 +59,6 @@ public class ScoreReport extends Activity {
         int[] scoreBoardByKey = intent.getIntArrayExtra( "scoreBoardByKey" );
         ArrayList<Integer> arrayOfKeys = intent.getIntegerArrayListExtra("arrayOfKeys");
         wrongQuestions = intent.getParcelableArrayListExtra("wrongQuestions");
-        if (scoreBoardByKey == null ){
-            Log.i("ERROR", "SCORE BOARD ISNULL");
-        }
-        if ( wrongQuestions == null ){
-            Log.i("ERROR", "WRONG QUESTIONS ISNULL");
-        }
-        if ( arrayOfKeys == null ){
-            Log.i("ERROR", "arrayOfKeys ISNULL");
-        }
 
         Log.i("value of result", ""+result);
         set_wrongQuestions();

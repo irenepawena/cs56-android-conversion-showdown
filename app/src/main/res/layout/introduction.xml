@@ -56,9 +56,15 @@
         android:text="Start Calculator" />
 
     <Button
-        android:layout_width="157dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:text="Start Quiz"
         android:id="@+id/startQuizButton" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Start Converter"
+        android:id="@+id/startConverterButton" />
 
 </LinearLayout>

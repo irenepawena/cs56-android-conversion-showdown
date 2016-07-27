@@ -32,7 +32,7 @@ public class Question implements Parcelable{
     public void writeToParcel(Parcel dest, int flags) {
         Bundle b = new Bundle();
         b.putString("from", from);
-        b.putString("to", from);
+        b.putString("to", to);
         b.putString("questionType", questionType);
         dest.writeBundle( b );
     }
@@ -61,4 +61,12 @@ public class Question implements Parcelable{
         return to;
     }
 
+    public boolean equals( Object obj ){
+            if (! (obj instanceof Question ) )
+                return false;
+            return ((Question) obj).getFrom().equals(from) &&
+                    ((Question) obj).getTo().equals(to) &&
+                    ((Question) obj).getQuestionType().equals( questionType );
+
+    }
 }
