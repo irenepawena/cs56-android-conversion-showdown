@@ -22,8 +22,6 @@ public class QuizSelection extends Activity implements OnClickListener {
     int selection[] = new int[13];       //array to hold keys, key values listed in comment below
     public int numberQuestions = 5000;
     int difficulty = 0;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +60,7 @@ public class QuizSelection extends Activity implements OnClickListener {
                 }
             }
             if (empty == 1) {
-                MyUtils.startNoHistoryAcitivity( this , i );
+                startActivity( i );
             } else {
                 makeError.setError("You must check one");
             }
