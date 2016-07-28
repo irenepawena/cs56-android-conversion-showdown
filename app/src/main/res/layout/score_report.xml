@@ -69,7 +69,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large TextLarge Text\n\nLa\n\nrge TextLarge TextLarge Large TextLarge Text\n\nLa\n\nrge TextLarge TextLarge Large TextLarge Text\n\nLa\n\nrge TextLarge TextLarge Large TextLarge Text\n\nLa\n\nrge TextLarge TextLarge Large TextLarge Text\n\nLa\n\nrge TextLarge TextLarge Large TextLarge Text\n\nLa\n\nrge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge TextLarge Text"
             android:id="@+id/wrongQuestions"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
