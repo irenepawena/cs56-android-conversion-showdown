@@ -38,8 +38,7 @@
             android:layout_weight="0.55"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="30dp"
-            android:textAlignment="gravity"
-            android:text="test" />
+            android:textAlignment="gravity" />
         <TextView
             android:id="@+id/toText"
             android:layout_width="0dp"
