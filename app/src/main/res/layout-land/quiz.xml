@@ -182,14 +182,5 @@
         android:layout_alignParentRight="true"
         android:onClick="Abort"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CHEAT"
-        android:id="@+id/startSwiperButton"
-        android:layout_alignTop="@+id/test"
-        android:layout_alignRight="@+id/NumCorrect"
-        android:layout_alignEnd="@+id/NumCorrect" />
-
 
 </RelativeLayout>
