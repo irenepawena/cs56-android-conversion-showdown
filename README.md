@@ -9,7 +9,11 @@ If it is your first time view this repo, please skip this section. This seciont 
 A brand-new expression calculator.
 I used JEval library. Please read their documentation to understand my code( a wrapper ), though it is extremely easy. 
 PageViewer for swipe.
-A new Convertor wrote on my own without extra library. 
+A new Convertor written on my own without extra library. 
+The "MyUtil" class I created contains a bunch of useful helper methods to do frequent jobs.
+
+I separate calculator classes and activity classes. Please follow this style.
+
 
 ###Possible New Features:
 They are listed in the issue list.
@@ -18,18 +22,13 @@ Linear Algebra Calculator is really a cool thing you can create. I recommend, li
 
 
 ###General Issues (For refactor) :
-(Comments, may be skipped) This code was messy when I got it, with several misterious long methods and implementations. Now it is still messy. However, the logic is simple, so do not freak out, just read through their code. Refactor, of course, is necessary, but I did not do that this quarter.
+(Comments, may be skipped) This code was messy when I got it, with several misterious long methods and implementations. Now it is still a little messy. However, the logic is simple, so please do not freak out, just read through their code. Refactor, of course, is necessary, but I did not do that this quarter.
 
 You may find some onClickListener declared in XML layout files, not programmatically, and others set programmatically in onCreate file. It is nice of you to use the same styles. ( I prefer programmtically set with setOnClickListener.) 
-
-The "MyUtil" class I created contains a bunch of useful helper methods to do frequent jobs.
-
-I separate calculator classes and activity classes. Please follow this style.
 
 The Convertor Activity and Expression Activity currently are not related to their corresponding framents. You may refactor by using FragmentActivity.
 
 I have fixed most of the bugs and awkward code that I cannot tolerate. One of them took me 3 hours. PLEASE UTILIZE ANDROID STUDIO'S DEBUG MODE, WHICH MAY SAVE YOUR LIFE.
-
 
 
 
