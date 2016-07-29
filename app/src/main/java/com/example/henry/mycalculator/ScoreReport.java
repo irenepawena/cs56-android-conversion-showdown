@@ -1,25 +1,73 @@
 package com.example.henry.mycalculator;
 
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Map;
+
 public class ScoreReport extends Activity {
 
     float result = 0;
+    private ArrayList<Question> wrongQuestions;
+
+
+    private void set_wrongQuestions(){
+
+        String content = "";
+        assert wrongQuestions != null;
+        //Log.i("SET WRONG QUESTIONS", "" + wrongQuestions.size());
+        for(Question q : wrongQuestions ){
+                content += q.getQuestionType() + "  from:" + q.getFrom() + "  to:" + q.getTo() + "\n";
+        }
+        TextView wrongQuestionTextView = (TextView) findViewById( R.id.wrongQuestions );
+        if( wrongQuestionTextView == null){
+            Log.i("ERROR", "TextView NULL");
+        }
+        wrongQuestionTextView.setText( content );
+    }
+
+    public ArrayList<Question> rebuildWrongQuestions( Intent intent ){
+        String[] from = intent.getStringArrayExtra( "from" );
+        String[] to = intent.getStringArrayExtra( "to" );
+        String[] questionType = intent.getStringArrayExtra( "questionType" );
+        ArrayList<Question> res = new ArrayList<Question>();
+        for(int i = 0 ; i < from.length ; ++i){
+            res.add( new Question( from[i], to[i], questionType[i] ));
+        }
+        return res;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.score_report);
         RelativeLayout lLayout = (RelativeLayout) findViewById(R.id.scorereport);
-        result = getIntent().getFloatExtra("result",0);
-        TextView resultS = (TextView) findViewById(R.id.percentC);
+        TextView resultS = (TextView) findViewById(R.id.scorePercentage);
         resultS.setText(String.valueOf(result + "%"));
 
+        //dummyindex's code
+        Intent intent = getIntent();
+        result = intent.getFloatExtra("result",0);
+        int[] scoreBoardByKey = intent.getIntArrayExtra( "scoreBoardByKey" );
+        ArrayList<Integer> arrayOfKeys = intent.getIntegerArrayListExtra("arrayOfKeys");
+        wrongQuestions = intent.getParcelableArrayListExtra("wrongQuestions");
+
+        Log.i("value of result", ""+result);
+        set_wrongQuestions();
+
+
+
+        //////////////////////////////////////
+        lLayout.setBackgroundColor(Color.parseColor("#00FF00"));
+        /*
         if (result > 90){
             lLayout.setBackgroundColor(Color.parseColor("#00FF00"));
         }
@@ -31,7 +79,7 @@ public class ScoreReport extends Activity {
         }
         if (result < 54){
             lLayout.setBackgroundColor(Color.parseColor("#FF0000"));
-        }
+        }*/
     }
 
     public void newTestSelection(View view){
@@ -40,8 +88,8 @@ public class ScoreReport extends Activity {
     }
 
     public void goToCalculator(View view){
-        Intent activity = new Intent(this, Calculator.class);
-        startActivity(activity);
+        Intent activity = new Intent(this, ExpressionActivity.class);
+        MyUtils.startNoHistoryAcitivity(this, activity);
     }
 
 

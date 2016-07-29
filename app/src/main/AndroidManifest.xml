@@ -7,11 +7,10 @@
         android:icon="@mipmap/icon"
         android:label="Conversion Showdown!"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name=".Welcome"
-            android:label="Conversion Showdown!"
-            android:screenOrientation="portrait">
+            android:label="Conversion Showdown!">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -19,29 +18,52 @@
         </activity>
         <activity
             android:name=".Introduction"
-            android:label="Conversion Showdown!"
-            android:screenOrientation="portrait"/>
+            android:label="Conversion Showdown!"/>
         <activity
             android:name=".Calculator"
-            android:label="Conversion Showdown!"
-            android:screenOrientation="portrait"/>
+            android:label="Conversion Showdown!"/>
         <activity
             android:name=".QuizSelection"
-            android:label="Conversion Showdown!"
-            android:screenOrientation="portrait"/>
+            android:label="Conversion Showdown!">
+
+        </activity>
+
         <activity
             android:name=".Quiz"
             android:label="Conversion Showdown!"
-            android:parentActivityName=".Introduction"
-            android:screenOrientation="portrait">
+            android:parentActivityName=".Introduction" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Introduction" />
         </activity>
+
         <activity
             android:name=".ScoreReport"
-            android:label="Conversion Showdown!"
-            android:screenOrientation="portrait"/>
+            android:label="Conversion Showdown!"/>
+
+        <activity
+            android:name=".ExpressionActivity"
+            android:label="Conversion Showdown!">
+        </activity>
+
+        <activity android:name=".TestActivity1">
+
+        </activity>
+
+        <activity android:name=".TestActivity2">
+
+        </activity>
+
+        <activity android:name=".SwiperCalculatorActivity">
+        </activity>
+
+
+        <activity android:name=".ConverterActivity">
+        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.content.Intent;
@@ -14,18 +15,47 @@ import android.widget.TextView;
 public class Introduction extends Activity implements OnClickListener {
 
     Button btnStartAnotherActivity;
+
+    public void hideSoftKeyBoard(View view){
+        if ( view != null ) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.introduction);
 
         Button b = (Button)this.findViewById(R.id.click_btn);
+        Button startQuizButton = (Button) findViewById( R.id.startQuizButton);
+        Button startConverterButton = (Button) findViewById( R.id.startConverterButton );
+
         b.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 TextView resp = (TextView) findViewById(R.id.response);
                 EditText name = (EditText) findViewById(R.id.user_name);
                 String str = "Welcome " + name.getText().toString() + " !";
                 resp.setText(str);
+                MyUtils.hideSoftKeyBoard( v, (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE) );
+            }
+        });
+
+
+        startQuizButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), QuizSelection.class);
+                MyUtils.startNoHistoryAcitivity( getActivity(), intent );
+            }
+
+        });
+
+        startConverterButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ConverterActivity.class);
+                MyUtils.startNoHistoryAcitivity( getActivity(), intent );
             }
         });
 
@@ -34,11 +64,15 @@ public class Introduction extends Activity implements OnClickListener {
         btnStartAnotherActivity.setOnClickListener(this);
     }
 
+    public Activity getActivity(){
+        return this;
+    }
+
     @Override
     public void onClick(View view) {
 
-        Intent intent = new Intent(this, Calculator.class);
-        startActivity(intent);
+        Intent intent = new Intent(this, ExpressionActivity.class);
+        MyUtils.startNoHistoryAcitivity( this, intent );
     }
 
     @Override
