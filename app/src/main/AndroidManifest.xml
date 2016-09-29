@@ -55,6 +55,7 @@
         </activity>
 
         <activity android:name=".SwiperCalculatorActivity">
+            <!-- Requires fragments to allow user to switch calculator by swiping -->
         </activity>
 
 
