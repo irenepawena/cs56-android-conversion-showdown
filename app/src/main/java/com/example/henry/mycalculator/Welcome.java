@@ -24,7 +24,7 @@ public class Welcome extends Activity implements OnClickListener{
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(this, Introduction.class);
+        Intent intent = new Intent(this, Welcome.class);
        startActivity( intent );
     }
 

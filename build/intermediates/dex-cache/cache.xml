@@ -1,3 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.1.0_f373f712ec203e49a9e3fe8885407e56f1d6d2b7.jar" />
+    </item>
+    <item
+        jar="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0_330beafd95fea35421d6d9b15aec7c3e2460423f.jar" />
+    </item>
+    <item
+        jar="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.1.0_2f8d3bf7c4182c89b671340f3a1ac83c560a15ba.jar" />
+    </item>
+    <item
+        jar="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-21.0.3_362f85eb9bd227f9c2d8a3d88a9358bb685513d7.jar" />
+    </item>
+    <item
+        jar="/Users/irenepatt/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0_f45c1bce6e8242dbb245d5804cadd40ad0c65ad8.jar" />
+    </item>
+    <item
+        jar="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-22.2.0_6e53a08984f5f73feeff362412a1cfb7ebb5d3f9.jar" />
+    </item>
+    <item
+        jar="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/lib/jeval.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="584be0ac1655138c7bb513aeb5043b5c39039af4">
+        <dex dex="/Users/irenepatt/Desktop/cs56-android-conversion-showdown/app/build/intermediates/pre-dexed/debug/jeval_a2224402fb1f726ce5ccb9307baa19bbe0afdd9a.jar" />
+    </item>
+
+</items>

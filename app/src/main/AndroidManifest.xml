@@ -13,58 +13,49 @@
             android:label="Conversion Showdown!">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Introduction"
-            android:label="Conversion Showdown!"/>
+            android:label="Conversion Showdown!" />
         <activity
             android:name=".Calculator"
-            android:label="Conversion Showdown!"/>
+            android:label="Conversion Showdown!" />
         <activity
             android:name=".QuizSelection"
-            android:label="Conversion Showdown!">
-
-        </activity>
-
+            android:label="Conversion Showdown!"></activity>
         <activity
             android:name=".Quiz"
             android:label="Conversion Showdown!"
-            android:parentActivityName=".Introduction" >
+            android:parentActivityName=".Introduction">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Introduction" />
         </activity>
-
         <activity
             android:name=".ScoreReport"
-            android:label="Conversion Showdown!"/>
-
+            android:label="Conversion Showdown!" />
         <activity
             android:name=".ExpressionActivity"
-            android:label="Conversion Showdown!">
-        </activity>
-
-        <activity android:name=".TestActivity1">
-
-        </activity>
-
-        <activity android:name=".TestActivity2">
-
-        </activity>
-
+            android:label="Conversion Showdown!"></activity>
+        <activity android:name=".TestActivity1"></activity>
+        <activity android:name=".TestActivity2"></activity>
         <activity android:name=".SwiperCalculatorActivity">
+
             <!-- Requires fragments to allow user to switch calculator by swiping -->
         </activity>
-
-
-        <activity android:name=".ConverterActivity">
-        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <activity android:name=".ConverterActivity"></activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".SplashScreen"></activity>
     </application>
 
 </manifest>
