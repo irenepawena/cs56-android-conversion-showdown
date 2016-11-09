@@ -89,7 +89,8 @@
             android:textAlignment="center"
             android:textIsSelectable="false"
             android:text="Result"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:freezesText="true" />
     </LinearLayout>
 
     <Button

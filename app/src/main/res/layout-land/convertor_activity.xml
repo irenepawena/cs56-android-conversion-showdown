@@ -91,7 +91,8 @@
             android:textIsSelectable="false"
             android:text="Result"
             android:textSize="24sp"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:freezesText="true" />
     </LinearLayout>
 
     <Button
