@@ -64,21 +64,19 @@ public class ScoreReport extends Activity {
 
 
 
-        //////////////////////////////////////
-        lLayout.setBackgroundColor(Color.parseColor("#00FF00"));
-        /*
-        if (result > 90){
-            lLayout.setBackgroundColor(Color.parseColor("#00FF00"));
+        //Make score sheet background color dependent on score results
+        if (result >= 90){
+            lLayout.setBackgroundColor(Color.parseColor("#99ff99")); //green
         }
-        if (result < 89 && result > 75){
-            lLayout.setBackgroundColor(Color.parseColor("#FFA500"));
+        else if (result < 90 && result >= 75){
+            lLayout.setBackgroundColor(Color.parseColor("#ffff99")); //yellow
         }
-        if (result < 74 && result > 55){
-            lLayout.setBackgroundColor(Color.parseColor("#DC143C"));
+        else if (result < 75 && result >= 55){
+            lLayout.setBackgroundColor(Color.parseColor("#ff9933")); //orange
         }
-        if (result < 54){
-            lLayout.setBackgroundColor(Color.parseColor("#FF0000"));
-        }*/
+        else if (result < 55) {
+            lLayout.setBackgroundColor(Color.parseColor("#ff3300")); //red
+        }
     }
 
     public void newTestSelection(View view){

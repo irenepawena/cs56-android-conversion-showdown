@@ -3,46 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3498db"
+    android:background="#86E2D5"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".QuizSelection">
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/TestQ"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/radioGroup2"
-        android:layout_toEndOf="@+id/radioGroup2" />
-    <TextView
-        android:id="@+id/base"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/base"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:paddingTop="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/DecimalBinary"
-        android:id="@+id/Decimal_Binary"
-        android:textColor="#FFFFFF"
-        android:onClick="selectItem"
-        android:layout_below="@+id/base"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -64,62 +30,9 @@
         android:textColor="#FFFFFF"
         android:onClick="selectItem"
         android:layout_below="@+id/Decimal_Octal"
-        android:layout_alignParentLeft="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/BinaryOctal"
-        android:id="@+id/Binary_Octal"
-        android:layout_alignParentStart="true"
-        android:textColor="#FFFFFF"
-        android:onClick="selectItem"
-        android:layout_below="@+id/Decimal_Hexadecimal"
-        android:layout_alignParentLeft="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/BinaryHexa"
-        android:id="@+id/Binary_Hexadecimal"
-        android:layout_alignParentStart="true"
-        android:textColor="#FFFFFF"
-        android:onClick="selectItem"
-        android:layout_below="@+id/Binary_Octal"
-        android:layout_alignParentLeft="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/OctalHexa"
-        android:id="@+id/Octal_Hexadecimal"
-        android:layout_alignParentStart="true"
-        android:textColor="#FFFFFF"
-        android:onClick="selectItem"
-        android:layout_below="@+id/Binary_Hexadecimal"
-        android:layout_alignParentLeft="true" />
-
-    <Button
-        android:id="@+id/btnStartQuizActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/TestButton"
-        android:textColor="#FFFFFF"
-        android:onClick="ButtonStartQuiz"
-        android:layout_alignBottom="@+id/radioGroup2"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_alignEnd="@+id/textView1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/AskLength"
-        android:textColor="#FFFFFF"
-        android:id="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/Octal_Hexadecimal"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@+id/textView7"
+        android:layout_alignEnd="@+id/Binary_Hexadecimal" />
 
     <RadioGroup android:layout_width="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="wrap_content"
@@ -129,40 +42,7 @@
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true">
 
-        <RadioButton
-            android:id="@+id/SixQs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/SixQs"
-            android:textColor="#FFFFFF"
-            android:onClick="Qnum" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/TwelveQs"
-            android:id="@+id/TwelveQs"
-            android:textColor="#FFFFFF"
-            android:onClick="Qnum" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/TwentyfourQs"
-            android:id="@+id/twenty4Qs"
-            android:textColor="#FFFFFF"
-            android:onClick="Qnum" />
-
     </RadioGroup>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/errorDisplay"
-        android:layout_alignTop="@+id/Decimal_Binary"
-        android:layout_alignParentRight="true"
-        android:textColor="#3498db"
-        android:background="@android:color/transparent"/>
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
@@ -175,56 +55,38 @@
         android:id="@+id/radioGroup">
 
     </RadioGroup>
-    <TextView
-        android:id="@+id/difficulty"
-        android:layout_width="111dp"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/difficulty_text"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_below="@+id/base"
-        android:layout_centerHorizontal="true" />
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/radioGroup3"
+        android:text="@string/OctalHexa"
+        android:id="@+id/Octal_Hexadecimal"
+        android:textColor="#FFFFFF"
+        android:onClick="selectItem"
+        android:layout_below="@+id/Binary_Hexadecimal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-        android:layout_above="@+id/Binary_Hexadecimal"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_marginLeft="65dp"
-        android:layout_marginStart="65dp">
-        <RadioButton android:id="@+id/radio_difficulty_low"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/difficulty_low"
-            android:onClick="chooseDifficulty"
-            android:checked="true"
-            android:layout_below="@+id/difficulty"
-            android:layout_alignRight="@+id/textView1"
-            android:layout_marginRight="61dp" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BinaryOctal"
+        android:id="@+id/Binary_Octal"
+        android:textColor="#FFFFFF"
+        android:onClick="selectItem"
+        android:layout_below="@+id/Decimal_Hexadecimal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-        <RadioButton android:id="@+id/radio_difficulty_medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/difficulty_medium"
-            android:onClick="chooseDifficulty"
-            android:layout_below="@+id/radio_difficulty_low"
-            android:layout_alignLeft="@+id/radio_difficulty_low"
-            android:layout_alignStart="@+id/radio_difficulty_low" />
-
-        <RadioButton android:id="@+id/radio_difficulty_high"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/difficulty_high"
-            android:onClick="chooseDifficulty"
-            android:checked="false"
-            android:layout_below="@+id/textView2"
-            android:layout_alignLeft="@+id/radio_difficulty_medium"
-            android:layout_alignStart="@+id/radio_difficulty_medium" />
-    </RadioGroup>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TwentyfourQs"
+        android:id="@+id/twenty4Qs"
+        android:textColor="#FFFFFF"
+        android:onClick="Qnum"
+        android:layout_below="@+id/TwelveQs"
+        android:layout_centerHorizontal="true" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -233,10 +95,181 @@
         android:id="@+id/Endless"
         android:onClick="Qnum"
         android:textColor="#FFFFFF"
+        android:checked="false"
+        android:layout_below="@+id/twenty4Qs"
+        android:layout_alignRight="@+id/twenty4Qs"
+        android:layout_alignEnd="@+id/twenty4Qs"
+        android:layout_alignLeft="@+id/twenty4Qs"
+        android:layout_alignStart="@+id/twenty4Qs" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TwelveQs"
+        android:id="@+id/TwelveQs"
+        android:textColor="#FFFFFF"
+        android:onClick="Qnum"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorDisplay"
+        android:textColor="#3498db"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/base"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/base"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:paddingTop="20dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignRight="@+id/Binary_Octal"
+        android:layout_alignEnd="@+id/Binary_Octal" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BinaryHexa"
+        android:id="@+id/Binary_Hexadecimal"
+        android:textColor="#FFFFFF"
+        android:onClick="selectItem"
+        android:layout_below="@+id/Binary_Octal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DecimalBinary"
+        android:id="@+id/Decimal_Binary"
+        android:textColor="#FFFFFF"
+        android:onClick="selectItem"
+        android:layout_below="@+id/radioGroup3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/radioGroup3"
+
+        android:layout_above="@+id/SixQs"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7">
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/TestQ"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/radioGroup2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/difficulty_text"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/errorDisplay"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_alignEnd="@+id/textView1" />
+
+    <Button
+        android:id="@+id/btnStartQuizActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TestButton"
+        android:textColor="#FFFFFF"
+        android:onClick="ButtonStartQuiz"
+        android:layout_below="@+id/Binary_Hexadecimal"
+        android:layout_centerHorizontal="true" />
+
+    <RadioButton
+        android:id="@+id/SixQs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SixQs"
+        android:textColor="#FFFFFF"
+        android:onClick="Qnum"
+        android:layout_above="@+id/TwelveQs"
         android:checked="true"
-        android:layout_below="@+id/textView2"
-        android:layout_toRightOf="@+id/Decimal_Octal"
-        android:layout_toEndOf="@+id/Decimal_Octal" />
+        android:layout_alignLeft="@+id/TwelveQs"
+        android:layout_alignStart="@+id/TwelveQs"
+        android:layout_alignRight="@+id/TwelveQs"
+        android:layout_alignEnd="@+id/TwelveQs" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/AskLength"
+        android:textColor="#FFFFFF"
+        android:id="@+id/textView7"
+        android:layout_marginBottom="18dp"
+        android:layout_above="@+id/SixQs"
+        android:layout_toRightOf="@+id/Octal_Hexadecimal"
+        android:layout_toEndOf="@+id/Octal_Hexadecimal" />
+
+    <RadioButton
+        android:id="@+id/radio_difficulty_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/difficulty_medium"
+        android:onClick="chooseDifficulty"
+        tools:textColor="@color/common_signin_btn_dark_text_pressed"
+        android:layout_below="@+id/radio_difficulty_low"
+        android:layout_alignLeft="@+id/radio_difficulty_low"
+        android:layout_alignStart="@+id/radio_difficulty_low"
+        android:layout_marginTop="13dp" />
+
+    <RadioButton
+        android:id="@+id/radio_difficulty_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/difficulty_low"
+        android:onClick="chooseDifficulty"
+        android:checked="true"
+        android:textColor="@color/common_signin_btn_dark_text_pressed"
+        android:layout_below="@+id/radioGroup3"
+        android:layout_alignLeft="@+id/textView15"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_marginTop="12dp" />
+
+    <RadioButton
+        android:id="@+id/radio_difficulty_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/difficulty_high"
+        android:onClick="chooseDifficulty"
+        android:checked="false"
+        android:textColor="@color/common_signin_btn_dark_text_pressed"
+        android:layout_below="@+id/Decimal_Hexadecimal"
+        android:layout_alignLeft="@+id/radio_difficulty_medium"
+        android:layout_alignStart="@+id/radio_difficulty_medium"
+        android:layout_marginStart="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp" />
 
 
 </RelativeLayout>

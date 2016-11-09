@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3498db"
+    android:background="#86E2D5"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -28,7 +28,8 @@
         android:onClick="selectItem"
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:freezesText="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -39,7 +40,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#FFFFFF"
-        android:onClick="selectItem" />
+        android:onClick="selectItem"
+        android:freezesText="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -50,7 +52,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#FFFFFF"
-        android:onClick="selectItem" />
+        android:onClick="selectItem"
+        android:freezesText="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -61,7 +64,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#FFFFFF"
-        android:onClick="selectItem" />
+        android:onClick="selectItem"
+        android:freezesText="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -72,7 +76,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#FFFFFF"
-        android:onClick="selectItem" />
+        android:onClick="selectItem"
+        android:freezesText="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -83,7 +88,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#FFFFFF"
-        android:onClick="selectItem" />
+        android:onClick="selectItem"
+        android:freezesText="true" />
 
     <Button
         android:id="@+id/btnStartQuizActivity"
@@ -170,36 +176,6 @@
 
     </RadioGroup>
 
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-        android:id="@+id/radioGroup3"
-        android:layout_above="@+id/radioGroup"
-
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <RadioButton android:id="@+id/radio_difficulty_low"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/difficulty_low"
-            android:onClick="chooseDifficulty"
-            android:checked="true" />
-
-        <RadioButton android:id="@+id/radio_difficulty_medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/difficulty_medium"
-            android:onClick="chooseDifficulty" />
-        <RadioButton android:id="@+id/radio_difficulty_high"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/difficulty_high"
-            android:onClick="chooseDifficulty"
-            android:checked="false" />
-    </RadioGroup>
-
     <TextView
         android:id="@+id/difficulty"
         android:layout_width="match_parent"
@@ -211,4 +187,37 @@
         android:layout_above="@+id/radioGroup3"
         android:layout_alignRight="@+id/errorDisplay"
         android:layout_alignEnd="@+id/errorDisplay" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+        android:id="@+id/radioGroup3"
+
+        android:layout_above="@+id/radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton android:id="@+id/radio_difficulty_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/difficulty_low"
+            android:onClick="chooseDifficulty"
+            android:checked="true"
+            android:textColor="@color/common_signin_btn_dark_text_pressed" />
+
+        <RadioButton android:id="@+id/radio_difficulty_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/difficulty_medium"
+            android:onClick="chooseDifficulty"
+            android:textColor="@color/common_signin_btn_dark_text_pressed" />
+        <RadioButton android:id="@+id/radio_difficulty_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/difficulty_high"
+            android:onClick="chooseDifficulty"
+            android:checked="false"
+            android:textColor="@color/common_signin_btn_dark_text_pressed" />
+    </RadioGroup>
 </RelativeLayout>

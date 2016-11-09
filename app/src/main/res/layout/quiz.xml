@@ -54,7 +54,8 @@
         android:layout_marginTop="37dp"
         android:layout_below="@+id/textView3"
         android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:freezesText="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -66,7 +67,8 @@
         android:layout_below="@+id/textView3"
         android:layout_marginTop="10dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:freezesText="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -78,7 +80,8 @@
         android:layout_marginBottom="31dp"
         android:layout_above="@+id/submitAnswer"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:freezesText="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -101,7 +104,8 @@
         android:id="@+id/RightOrWrong"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="31dp"
-        android:layout_below="@+id/submitAnswer" />
+        android:layout_below="@+id/submitAnswer"
+        android:freezesText="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -110,7 +114,8 @@
         android:textColor="#FFFFFF"
         android:layout_above="@+id/ChangeNumber"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="47dp" />
+        android:layout_marginBottom="47dp"
+        android:freezesText="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -121,7 +126,8 @@
         android:id="@+id/PercentCorrect"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:freezesText="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -134,7 +140,8 @@
         android:layout_above="@+id/NumAttempt"
         android:layout_alignLeft="@+id/numbercorrect"
         android:layout_alignStart="@+id/numbercorrect"
-        android:layout_marginLeft="75dp"/>
+        android:layout_marginLeft="75dp"
+        android:freezesText="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -146,7 +153,8 @@
         android:textColor="#FFFFFF"
         android:layout_above="@+id/PercentCorrect"
         android:layout_alignLeft="@+id/numberattempts"
-        android:layout_marginLeft="75dp"/>
+        android:layout_marginLeft="75dp"
+        android:freezesText="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -156,7 +164,8 @@
         android:textColor="#FFFFFF"
         android:id="@+id/numbercorrect"
         android:layout_above="@+id/numberattempts"
-        android:layout_alignParentLeft="true"/>
+        android:layout_alignParentLeft="true"
+        android:freezesText="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -166,7 +175,8 @@
         android:textColor="#FFFFFF"
         android:id="@+id/numberattempts"
         android:layout_above="@+id/PercentCorrect"
-        android:layout_alignParentLeft="true"/>
+        android:layout_alignParentLeft="true"
+        android:freezesText="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"

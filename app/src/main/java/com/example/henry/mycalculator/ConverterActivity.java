@@ -93,29 +93,29 @@ public class ConverterActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.convertor_activity);
-        mFromButton = (Button) findViewById(R.id.fromButton);
-        mToButton = (Button) findViewById(R.id.toButton);
-        mFromText = (EditText) findViewById(R.id.fromText);
-        mToText = (TextView) findViewById(R.id.toText);
-        mConvertButton = (Button) findViewById(R.id.convertButton);
-        inputMethodManager = (InputMethodManager) getSystemService( INPUT_METHOD_SERVICE );
 
+            mFromButton = (Button) findViewById(R.id.fromButton);
+            mToButton = (Button) findViewById(R.id.toButton);
+            mFromText = (EditText) findViewById(R.id.fromText);
+            mToText = (TextView) findViewById(R.id.toText);
+            mConvertButton = (Button) findViewById(R.id.convertButton);
+            inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
         mConvertButton.setOnClickListener(new convertButtonOnClickListener());
         mFromButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showPopup(v, true);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    showPopup(v, true);
+                }
+            });
         mToButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showPopup(v, false);
-            }
-        });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+                @Override
+                public void onClick(View v) {
+                    showPopup(v, false);
+                }
+            });
+            // ATTENTION: This was auto-generated to implement the App Indexing API.
+            // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 

@@ -105,72 +105,70 @@ public class Quiz extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         initializeScoreBoard();
         setContentView(R.layout.quiz);
-        int selectedOptions[] = getIntent().getIntArrayExtra("selection");  //receives array of key values
-        numberQuestions = getIntent().getIntExtra("numberQuestions", -1);   //receives user desired test length
-        difficulty = getIntent().getIntExtra("difficulty", 0);
 
-        //adds key values taken from selection activity into ArrayList
-        for (int j = 0; j < 11; j++) {
-            if (selectedOptions[j] != 0) {
-                arrayOfKeys.add(selectedOptions[j]);
+            int selectedOptions[] = getIntent().getIntArrayExtra("selection");  //receives array of key values
+            numberQuestions = getIntent().getIntExtra("numberQuestions", -1);   //receives user desired test length
+            difficulty = getIntent().getIntExtra("difficulty", 0);
+
+            //adds key values taken from selection activity into ArrayList
+            for (int j = 0; j < 11; j++) {
+                if (selectedOptions[j] != 0) {
+                    arrayOfKeys.add(selectedOptions[j]);
+                }
             }
-        }
-        length = arrayOfKeys.size();
+            length = arrayOfKeys.size();
 
-        TextView problemString = (TextView) findViewById(R.id.convertstring);  // variable to change problem String
-        TextView problemNumber = (TextView) findViewById(R.id.convertThis);    // variable to change problem number
-        TextView questionDescription = (TextView) findViewById(R.id.textView3);     // problem description
-        EditText editkeyboard = (EditText) findViewById(R.id.AnswerField);     //allows keyboard type to change for the problem
-        Button startSwiperButton = (Button) findViewById(R.id.startSwiperButton);
-        startSwiperButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Quiz.this, SwiperCalculatorActivity.class);
-                startActivityForResult(intent, 0);
+            TextView problemString = (TextView) findViewById(R.id.convertstring);  // variable to change problem String
+            TextView problemNumber = (TextView) findViewById(R.id.convertThis);    // variable to change problem number
+            TextView questionDescription = (TextView) findViewById(R.id.textView3);     // problem description
+            EditText editkeyboard = (EditText) findViewById(R.id.AnswerField);     //allows keyboard type to change for the problem
+            Button startSwiperButton = (Button) findViewById(R.id.startSwiperButton);
+            startSwiperButton.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Quiz.this, SwiperCalculatorActivity.class);
+                    startActivityForResult(intent, 0);
+                }
+            });
+            if (selectedOptions[0] == 1) {
+                key = 1;      //Decimal to Binary conversion
+                problemString.setText("Decimal:");
+                questionDescription.setText(R.string.questionKey1);
+                editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);    //keyboard only numbers
             }
-        });
+            if (selectedOptions[2] == 3) {
+                key = 3;      //Decimal to Octal conversion
+                problemString.setText("Decimal:");
+                questionDescription.setText(R.string.questionKey3);
+                editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
+            }
+            if (selectedOptions[4] == 5) {
+                key = 5;      //Binary to Octal conversion
+                problemString.setText("Binary:");
+                questionDescription.setText(R.string.questionKey5);
+                editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
+            }
+            if (selectedOptions[6] == 7) {
+                key = 7;      //Decimal to Hexadecimal conversion
+                problemString.setText("Decimal:");
+                questionDescription.setText(R.string.questionKey7);
+                editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);     //keyboard has letters & numbers
+            }
+            if (selectedOptions[8] == 9) {
+                key = 9;      //Binary to Hexadecimal conversion
+                problemString.setText("Binary:");
+                questionDescription.setText(R.string.questionKey9);
+                editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
+            }
+            if (selectedOptions[10] == 11) {
+                key = 11;      //Octal to Hexadecimal conversion
+                problemString.setText("Octal:");
+                questionDescription.setText(R.string.questionKey11);
+                editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
+            }
 
-
-
-        if (selectedOptions[0] == 1) {
-            key = 1;      //Decimal to Binary conversion
-            problemString.setText("Decimal:");
-            questionDescription.setText(R.string.questionKey1);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);    //keyboard only numbers
+            changeNumber(null);
         }
-        if (selectedOptions[2] == 3) {
-            key = 3;      //Decimal to Octal conversion
-            problemString.setText("Decimal:");
-            questionDescription.setText(R.string.questionKey3);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
-        }
-        if (selectedOptions[4] == 5) {
-            key = 5;      //Binary to Octal conversion
-            problemString.setText("Binary:");
-            questionDescription.setText(R.string.questionKey5);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
-        }
-
-        if (selectedOptions[6] == 7) {
-            key = 7;      //Decimal to Hexadecimal conversion
-            problemString.setText("Decimal:");
-            questionDescription.setText(R.string.questionKey7);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);     //keyboard has letters & numbers
-        }
-        if (selectedOptions[8] == 9) {
-            key = 9;      //Binary to Hexadecimal conversion
-            problemString.setText("Binary:");
-            questionDescription.setText(R.string.questionKey9);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
-        }
-        if (selectedOptions[10] == 11) {
-            key = 11;      //Octal to Hexadecimal conversion
-            problemString.setText("Octal:");
-            questionDescription.setText(R.string.questionKey11);
-            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
-        }
-        changeNumber(null);
-    }
 
 
     public void onClick(View view) {
@@ -306,7 +304,6 @@ public class Quiz extends Activity implements OnClickListener {
             ));
         }
         // above compares answer to actual value
-
 
         Float attempts = (float) den;
         Float correct = (float) num;
