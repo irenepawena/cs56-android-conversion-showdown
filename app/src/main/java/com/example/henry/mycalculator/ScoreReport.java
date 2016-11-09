@@ -15,7 +15,6 @@ import java.util.Map;
 
 public class ScoreReport extends Activity {
 
-    float result = 0;
     private ArrayList<Question> wrongQuestions;
 
 
@@ -51,11 +50,11 @@ public class ScoreReport extends Activity {
         setContentView(R.layout.score_report);
         RelativeLayout lLayout = (RelativeLayout) findViewById(R.id.scorereport);
         TextView resultS = (TextView) findViewById(R.id.scorePercentage);
-        resultS.setText(String.valueOf(result + "%"));
 
-        //dummyindex's code
+        //dummyindex's code -- minor fix by JordanAng
         Intent intent = getIntent();
-        result = intent.getFloatExtra("result",0);
+        float result = intent.getFloatExtra("result",0);
+        resultS.setText(String.valueOf(result + "%"));
         int[] scoreBoardByKey = intent.getIntArrayExtra( "scoreBoardByKey" );
         ArrayList<Integer> arrayOfKeys = intent.getIntegerArrayListExtra("arrayOfKeys");
         wrongQuestions = intent.getParcelableArrayListExtra("wrongQuestions");

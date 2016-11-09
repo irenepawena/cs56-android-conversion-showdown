@@ -25,7 +25,7 @@ import java.util.Random;
 public class Quiz extends Activity implements OnClickListener {
 
     int numberQuestions = 0;       // test length
-    float result = 0;              // for calculating percentage correct
+    public static float result = 0;              // for calculating percentage correct
     ArrayList<Integer> arrayOfKeys = new ArrayList<>();   //stores all keys
     int key = 0;     //determines type of problem
     int difficulty = 1;
@@ -307,16 +307,10 @@ public class Quiz extends Activity implements OnClickListener {
         }
         // above compares answer to actual value
 
-        // Makes the progress percent
-        TextView de = (TextView) findViewById(R.id.NumAttempt);
-        int d = Integer.parseInt(de.getText().toString());
-        float deno = (float) d;
 
-        TextView nu = (TextView) findViewById(R.id.NumCorrect);
-        int n = Integer.parseInt(nu.getText().toString());
-        float numer = (float) n;
-
-        result = (numer / deno) * 100;
+        Float attempts = (float) den;
+        Float correct = (float) num;
+        result = (correct/attempts) * 100;
         TextView percent = (TextView) findViewById(R.id.PercentCorrect);
         percent.setText(String.valueOf(result + " %"));
         // above makes progress percent
