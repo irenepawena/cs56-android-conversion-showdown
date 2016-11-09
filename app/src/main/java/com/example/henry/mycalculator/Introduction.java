@@ -27,19 +27,14 @@ public class Introduction extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.introduction);
 
-        Button b = (Button)this.findViewById(R.id.click_btn);
         Button startQuizButton = (Button) findViewById( R.id.startQuizButton);
         Button startConverterButton = (Button) findViewById( R.id.startConverterButton );
 
-        b.setOnClickListener(new Button.OnClickListener() {
-            public void onClick(View v) {
-                TextView resp = (TextView) findViewById(R.id.response);
-                EditText name = (EditText) findViewById(R.id.user_name);
-                String str = "Welcome " + name.getText().toString() + " !";
-                resp.setText(str);
-                MyUtils.hideSoftKeyBoard( v, (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE) );
-            }
-        });
+        TextView resp = (TextView) findViewById(R.id.response);
+        Intent intent = getIntent();
+        String name = intent.getStringExtra(Welcome.EXTRA_NAME);
+        String str = "Welcome " + name + "!";
+        resp.setText(str);
 
 
         startQuizButton.setOnClickListener(new OnClickListener() {

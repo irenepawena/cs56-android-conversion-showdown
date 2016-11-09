@@ -9,10 +9,12 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.content.Intent;
+import android.widget.EditText;
 
 public class Welcome extends Activity implements OnClickListener{
 
     Button btnStartAnotherActivity;
+    public final static String EXTRA_NAME = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +26,10 @@ public class Welcome extends Activity implements OnClickListener{
 
     @Override
     public void onClick(View view) {
+        EditText nameUser = (EditText) findViewById(R.id.user_name); //Define widget and set to variable
+        String name = nameUser.getText().toString(); //Set value of field to 'name' variable
         Intent intent = new Intent(this, Introduction.class);
+        intent.putExtra(EXTRA_NAME, name); //Pass name of user to next activity
        startActivity( intent );
     }
 
