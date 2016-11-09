@@ -20,12 +20,20 @@ import java.util.ArrayList;
 public class QuizSelection extends Activity implements OnClickListener {
 
     int selection[] = new int[13];       //array to hold keys, key values listed in comment below
-    public int numberQuestions = 5000;
+    public int numberQuestions = 6;
     int difficulty = 0;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_selection);
+
+        if(savedInstanceState == null){
+            selection[0] = 1;
+            selection[1] = 2;
+        }
     }
 
     @Override

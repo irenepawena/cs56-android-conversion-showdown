@@ -10,128 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Quiz">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Convert Decimal to Binary"
-        android:id="@+id/textView3"
-        android:textColor="#00ff00"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/submit"
-        android:id="@+id/submitAnswer"
-        android:onClick="TestResult"
-        android:layout_alignBottom="@+id/test"
-        android:layout_toRightOf="@+id/test"
-        android:layout_toEndOf="@+id/test" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/changeDecimal"
-        android:id="@+id/ChangeNumber"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="changeNumber" />
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="37dp">
-        <TextView
-            android:id="@+id/convertstring"
-            android:layout_width="376dp"
-            android:layout_height="wrap_content"
-            android:text="@string/convertstring"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF"
-            android:layout_alignBottom="@+id/convertThis"
-            android:layout_toRightOf="@+id/PercentCorrect"
-            android:layout_toEndOf="@+id/PercentCorrect"
-            android:freezesText="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/generate"
-            android:id="@+id/convertThis"
-            android:textColor="#FFFFFF"
-            android:textSize="50sp"
-            android:layout_below="@+id/linearLayout"
-            android:layout_alignRight="@+id/linearLayout"
-            android:layout_alignEnd="@+id/linearLayout"
-            android:freezesText="true" />
-    </LinearLayout>
-    <TextView
-        android:id="@+id/AnswerString"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/AnswerString"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#FFFFFF"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:freezesText="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:editable="true"
-        android:layout_height="wrap_content"
-        android:hint="Enter #"
-        android:ems="10"
-        android:textColor="#FFFFFF"
-        android:id="@+id/AnswerField"
-        android:layout_alignTop="@+id/AnswerString"
-        android:layout_toRightOf="@+id/RightOrWrong"
-        android:layout_toEndOf="@+id/RightOrWrong" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=""
-        android:textColor="#FFFFFF"
-        android:id="@+id/RightOrWrong"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/submitAnswer"
-        android:freezesText="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/test"
-        android:textColor="#FFFFFF"
-        android:layout_above="@+id/ChangeNumber"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="47dp"
-        android:freezesText="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/percent"
-        android:textColor="#FFFFFF"
-        android:id="@+id/PercentCorrect"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:freezesText="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -182,24 +60,158 @@
         android:layout_alignParentLeft="true"
         android:freezesText="true" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/convertstring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/convertstring"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:layout_alignBottom="@+id/convertThis"
+            android:layout_toLeftOf="@+id/convertThis"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/generate"
+            android:id="@+id/convertThis"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_toRightOf="@+id/convertstring"
+            android:layout_alignRight="@+id/linearLayout"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:freezesText="true" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/AnswerString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AnswerString"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/percent"
+        android:textColor="#FFFFFF"
+        android:id="@+id/PercentCorrect"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/numbercorrect"
+        android:layout_alignEnd="@+id/numbercorrect"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:freezesText="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:id="@+id/submitAnswer"
+        android:onClick="TestResult"
+        android:layout_below="@+id/AnswerField"
+        android:layout_alignLeft="@+id/AnswerField"
+        android:layout_alignStart="@+id/AnswerField"
+        android:layout_marginTop="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:editable="true"
+        android:layout_height="wrap_content"
+        android:hint="Enter #"
+        android:ems="10"
+        android:textColor="#FFFFFF"
+        android:id="@+id/AnswerField"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_alignBaseline="@+id/AnswerString"
+        android:layout_alignBottom="@+id/AnswerString"
+        android:layout_toRightOf="@+id/AnswerString"
+        android:layout_toEndOf="@+id/AnswerString" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test"
+        android:textColor="#FFFFFF"
+        android:autoText="false"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_toRightOf="@+id/submitAnswer"
+        android:layout_toEndOf="@+id/submitAnswer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Convert Decimal to Binary"
+        android:id="@+id/textView3"
+        android:textColor="#00ff00"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/abort"
         android:id="@+id/abort"
-        android:layout_above="@+id/ChangeNumber"
-        android:layout_alignParentRight="true"
-        android:onClick="Abort"/>
+        android:onClick="Abort"
+        android:layout_alignBaseline="@+id/ChangeNumber"
+        android:layout_alignBottom="@+id/ChangeNumber"
+        android:layout_toRightOf="@+id/startSwiperButton"
+        android:layout_toEndOf="@+id/startSwiperButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/changeDecimal"
+        android:id="@+id/ChangeNumber"
+        android:onClick="changeNumber"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/submitAnswer"
+        android:layout_toRightOf="@+id/abort"
+        android:layout_toEndOf="@+id/abort" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CHEAT"
         android:id="@+id/startSwiperButton"
-        android:layout_alignTop="@+id/test"
-        android:layout_alignRight="@+id/NumCorrect"
-        android:layout_alignEnd="@+id/NumCorrect" />
+        android:layout_alignBaseline="@+id/abort"
+        android:layout_alignBottom="@+id/abort"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:id="@+id/RightOrWrong"
+        android:layout_alignBaseline="@+id/ChangeNumber"
+        android:layout_alignBottom="@+id/ChangeNumber"
+        android:layout_toRightOf="@+id/test"
+        android:layout_toEndOf="@+id/test" />
 
 
 </RelativeLayout>

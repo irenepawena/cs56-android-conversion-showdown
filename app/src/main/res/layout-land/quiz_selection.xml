@@ -13,17 +13,6 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/DecimalOctal"
-        android:id="@+id/Decimal_Octal"
-        android:layout_alignParentStart="true"
-        android:textColor="#FFFFFF"
-        android:onClick="selectItem"
-        android:layout_below="@+id/Decimal_Binary"
-        android:layout_alignParentLeft="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/DecimalHexa"
         android:id="@+id/Decimal_Hexadecimal"
         android:layout_alignParentStart="true"
@@ -32,7 +21,8 @@
         android:layout_below="@+id/Decimal_Octal"
         android:layout_alignParentLeft="true"
         android:layout_toStartOf="@+id/textView7"
-        android:layout_alignEnd="@+id/Binary_Hexadecimal" />
+        android:layout_alignEnd="@+id/Binary_Hexadecimal"
+        android:freezesText="true" />
 
     <RadioGroup android:layout_width="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="wrap_content"
@@ -59,24 +49,14 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/OctalHexa"
-        android:id="@+id/Octal_Hexadecimal"
-        android:textColor="#FFFFFF"
-        android:onClick="selectItem"
-        android:layout_below="@+id/Binary_Hexadecimal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/BinaryOctal"
         android:id="@+id/Binary_Octal"
         android:textColor="#FFFFFF"
         android:onClick="selectItem"
         android:layout_below="@+id/Decimal_Hexadecimal"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:freezesText="true" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -86,7 +66,8 @@
         android:textColor="#FFFFFF"
         android:onClick="Qnum"
         android:layout_below="@+id/TwelveQs"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:freezesText="true" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -100,7 +81,8 @@
         android:layout_alignRight="@+id/twenty4Qs"
         android:layout_alignEnd="@+id/twenty4Qs"
         android:layout_alignLeft="@+id/twenty4Qs"
-        android:layout_alignStart="@+id/twenty4Qs" />
+        android:layout_alignStart="@+id/twenty4Qs"
+        android:freezesText="true" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -110,7 +92,8 @@
         android:textColor="#FFFFFF"
         android:onClick="Qnum"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:freezesText="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -145,19 +128,8 @@
         android:onClick="selectItem"
         android:layout_below="@+id/Binary_Octal"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/DecimalBinary"
-        android:id="@+id/Decimal_Binary"
-        android:textColor="#FFFFFF"
-        android:onClick="selectItem"
-        android:layout_below="@+id/radioGroup3"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:checked="true" />
+        android:freezesText="true" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -217,7 +189,8 @@
         android:layout_alignLeft="@+id/TwelveQs"
         android:layout_alignStart="@+id/TwelveQs"
         android:layout_alignRight="@+id/TwelveQs"
-        android:layout_alignEnd="@+id/TwelveQs" />
+        android:layout_alignEnd="@+id/TwelveQs"
+        android:freezesText="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -241,7 +214,8 @@
         android:layout_below="@+id/radio_difficulty_low"
         android:layout_alignLeft="@+id/radio_difficulty_low"
         android:layout_alignStart="@+id/radio_difficulty_low"
-        android:layout_marginTop="13dp" />
+        android:layout_marginTop="13dp"
+        android:freezesText="true" />
 
     <RadioButton
         android:id="@+id/radio_difficulty_low"
@@ -254,7 +228,8 @@
         android:layout_below="@+id/radioGroup3"
         android:layout_alignLeft="@+id/textView15"
         android:layout_alignStart="@+id/textView15"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="12dp"
+        android:freezesText="true" />
 
     <RadioButton
         android:id="@+id/radio_difficulty_high"
@@ -269,7 +244,46 @@
         android:layout_alignStart="@+id/radio_difficulty_medium"
         android:layout_marginStart="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:freezesText="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DecimalBinary"
+        android:id="@+id/Decimal_Binary"
+        android:textColor="#FFFFFF"
+        android:onClick="selectItem"
+        android:checked="true"
+        android:layout_alignBaseline="@+id/SixQs"
+        android:layout_alignBottom="@+id/SixQs"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:freezesText="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DecimalOctal"
+        android:id="@+id/Decimal_Octal"
+        android:textColor="#FFFFFF"
+        android:onClick="selectItem"
+        android:layout_below="@+id/Decimal_Binary"
+        android:layout_toRightOf="@+id/radioGroup2"
+        android:layout_toEndOf="@+id/radioGroup2"
+        android:freezesText="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/OctalHexa"
+        android:id="@+id/Octal_Hexadecimal"
+        android:textColor="#FFFFFF"
+        android:onClick="selectItem"
+        android:layout_below="@+id/Binary_Hexadecimal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:freezesText="true" />
 
 
 </RelativeLayout>
