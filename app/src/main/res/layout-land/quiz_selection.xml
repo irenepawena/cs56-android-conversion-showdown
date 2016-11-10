@@ -210,12 +210,12 @@
         android:layout_height="wrap_content"
         android:text="@string/difficulty_medium"
         android:onClick="chooseDifficulty"
-        tools:textColor="@color/common_signin_btn_dark_text_pressed"
         android:layout_below="@+id/radio_difficulty_low"
         android:layout_alignLeft="@+id/radio_difficulty_low"
         android:layout_alignStart="@+id/radio_difficulty_low"
         android:layout_marginTop="13dp"
-        android:freezesText="true" />
+        android:freezesText="true"
+        android:textColor="@color/bright_foreground_inverse_material_light" />
 
     <RadioButton
         android:id="@+id/radio_difficulty_low"
