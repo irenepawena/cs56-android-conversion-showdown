@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_splash_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.henry.mycalculator.SplashScreen"
+    android:background="@color/background_material_dark">
+
+    <TextView
+        android:text="LEGACY"
+        android:layout_width="265dp"
+        android:layout_height="34dp"
+        tools:layout_editor_absoluteY="321dp"
+        tools:layout_editor_absoluteX="60dp"
+        android:id="@+id/textView8"
+        android:textColor="@color/bright_foreground_inverse_material_light"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:typeface="normal"
+        android:layout_below="@+id/textView5"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:text="UCSB"
+        android:layout_width="265dp"
+        android:layout_height="105dp"
+        android:id="@+id/textView5"
+        android:freezesText="true"
+        android:textColor="@color/bright_foreground_disabled_material_dark"
+        android:textSize="90sp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:typeface="serif"
+        tools:layout_editor_absoluteY="208dp"
+        tools:layout_editor_absoluteX="60dp"
+        android:layout_marginTop="221dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
