@@ -25,11 +25,11 @@ import java.util.zip.Inflater;
 /**
  * Created by UMARU on 7/27/2016.
  */
+
+//Fragment class for converting in the application
 public class ConverterFragment extends Fragment {
     Integer fromBase = 10, toBase = 2;
-    private Button mFromButton;
-    private Button mToButton;
-    private Button mConvertButton;
+    private Button mFromButton, mToButton, mConvertButton;
     private EditText mFromText;
     private TextView mToText;
     private InputMethodManager inputMethodManager;
@@ -79,7 +79,6 @@ public class ConverterFragment extends Fragment {
                                                          break;
                                                      default:
                                                          return false;
-
                                                  }
                                                  return true;
                                              }
@@ -135,7 +134,6 @@ public class ConverterFragment extends Fragment {
             } catch (IntOverFlow e) {
                 mFromText.setError("Input Number Too Large");
             }
-
 
         }
     }

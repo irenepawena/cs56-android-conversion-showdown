@@ -12,9 +12,11 @@ import java.util.TreeSet;
 /**
  * Created by UMARU on 7/15/2016.
  */
+
+//Checks appropriate input
 public class MyUtils {
 
-    final public static ArrayList<Character> symbols = new ArrayList<Character>( Arrays.asList(new Character[]{
+    final public static ArrayList<Character> symbols = new ArrayList<>( Arrays.asList(new Character[]{
             '0', '1', '2', '3' , '4' , '5', '6' , '7' , '8' , '9',
             'A', 'B', 'C', 'D', 'E', 'F'
     }));

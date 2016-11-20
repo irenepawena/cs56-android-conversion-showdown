@@ -16,14 +16,12 @@ import android.widget.TextView;
 //import com.google.android.gms.appindexing.AppIndex;
 
 import java.util.ArrayList;
-
+//Page where you customize your own quiz
 public class QuizSelection extends Activity implements OnClickListener {
 
     int selection[] = new int[13];       //array to hold keys, key values listed in comment below
     public int numberQuestions = 6;
     int difficulty = 0;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +48,6 @@ public class QuizSelection extends Activity implements OnClickListener {
         } else if (v == findViewById(R.id.radio_difficulty_high)) {
             difficulty = 2;
         }
-        //Log.i("diffculty:", (new Integer(difficulty)).toString());
     }
 
     public void ButtonStartQuiz(View v) {
@@ -73,8 +70,6 @@ public class QuizSelection extends Activity implements OnClickListener {
                 makeError.setError("You must check one");
             }
         }
-
-
     }
 
 
@@ -161,7 +156,6 @@ public class QuizSelection extends Activity implements OnClickListener {
         }
     }
 
-    //int numberQuestions = 5000;
 
     public void Qnum(View view) {
         // is the button checked?
@@ -190,6 +184,7 @@ public class QuizSelection extends Activity implements OnClickListener {
             case R.id.Endless:
                 if (checked)
                     numberQuestions = 5000;
+                    //5000 questions for Endless
                     break;
         }
     }

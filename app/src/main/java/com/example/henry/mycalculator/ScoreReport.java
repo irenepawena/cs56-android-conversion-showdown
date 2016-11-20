@@ -22,7 +22,6 @@ public class ScoreReport extends Activity {
 
         String content = "";
         assert wrongQuestions != null;
-        //Log.i("SET WRONG QUESTIONS", "" + wrongQuestions.size());
         for(Question q : wrongQuestions ){
                 content += q.getQuestionType() + "  from:" + q.getFrom() + "  to:" + q.getTo() + "\n";
         }
@@ -37,7 +36,7 @@ public class ScoreReport extends Activity {
         String[] from = intent.getStringArrayExtra( "from" );
         String[] to = intent.getStringArrayExtra( "to" );
         String[] questionType = intent.getStringArrayExtra( "questionType" );
-        ArrayList<Question> res = new ArrayList<Question>();
+        ArrayList<Question> res = new ArrayList<>();
         for(int i = 0 ; i < from.length ; ++i){
             res.add( new Question( from[i], to[i], questionType[i] ));
         }

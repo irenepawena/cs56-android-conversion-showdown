@@ -18,27 +18,25 @@ import java.util.ArrayList;
 /**
  * Created by UMARU on 7/27/2016.
  */
+
+
 public class SwiperCalculatorActivity extends ActionBarActivity {
-    ViewPager mViewPager;
+    ViewPager SwipePage; //Layout manager that allows user to swipe left and right through pages
     CustomAdapter mCustomAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mViewPager = new ViewPager(this);
-        mViewPager.setId(R.id.container);
-        setContentView(mViewPager);
-        mCustomAdapter = new CustomAdapter(this, mViewPager);
-        mViewPager.setAdapter(mCustomAdapter);
-
+        SwipePage = new ViewPager(this);
+        SwipePage.setId(R.id.container);
+        setContentView(SwipePage);
+        mCustomAdapter = new CustomAdapter(this, SwipePage);
+        SwipePage.setAdapter(mCustomAdapter);
     }
-
-
-    public static class CustomAdapter extends FragmentPagerAdapter
-            implements ViewPager.OnPageChangeListener {
+    //class CustomAdapter defined in SwiperCalculatorActivity
+    public static class CustomAdapter extends FragmentPagerAdapter implements ViewPager.OnPageChangeListener {
         interface FragmentFactory {
-            public Fragment createFragment();
+            Fragment createFragment();
         }
 
         class ExpressionCalculatorFragmentFactory implements FragmentFactory {
@@ -54,7 +52,7 @@ public class SwiperCalculatorActivity extends ActionBarActivity {
         }
 
         private Context mContext;
-        private ViewPager mViewPager;
+        private ViewPager SwipePage;
         private static ArrayList<FragmentFactory> mFragments;
         private Integer fragmentIndex = 0;
 
@@ -63,14 +61,13 @@ public class SwiperCalculatorActivity extends ActionBarActivity {
 
             super(activity.getSupportFragmentManager());
             mContext = activity;
-            mViewPager = pager;
-            mViewPager.setAdapter(this);
-            mViewPager.addOnPageChangeListener(this);
-            mFragments = new ArrayList<FragmentFactory>();
+            SwipePage = pager;
+            SwipePage.setAdapter(this);
+            SwipePage.addOnPageChangeListener(this);
+            mFragments = new ArrayList<>(); //implicitly type FragmentFactory
             mFragments.add(new ConverterFragmentFactory() );
             mFragments.add(new ExpressionCalculatorFragmentFactory());
         }
-
 
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -78,7 +75,7 @@ public class SwiperCalculatorActivity extends ActionBarActivity {
                 return ;
             }
             fragmentIndex = (fragmentIndex + 1 ) % mFragments.size();
-            mViewPager.setCurrentItem( fragmentIndex );
+            SwipePage.setCurrentItem( fragmentIndex );
         }
 
         @Override
@@ -88,7 +85,6 @@ public class SwiperCalculatorActivity extends ActionBarActivity {
         @Override
         public void onPageScrollStateChanged(int state) {
         }
-
 
         @Override
         public Fragment getItem(int position) {

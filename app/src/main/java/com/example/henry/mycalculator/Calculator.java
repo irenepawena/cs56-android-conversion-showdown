@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 import android.content.Intent;
-
+//Java file responsible for the Calculator mode on the Application
 public class Calculator extends Activity implements OnClickListener {
 
         Button btnStartAnotherActivity;

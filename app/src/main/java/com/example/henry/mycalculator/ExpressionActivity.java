@@ -16,6 +16,7 @@ import net.sourceforge.jeval.EvaluationException;
  */
 public class ExpressionActivity extends Activity {
 
+    //This class deals with the Expression Calculator
     private Button evalButton;
     private TextView evalResult;
     private EditText evalInput;

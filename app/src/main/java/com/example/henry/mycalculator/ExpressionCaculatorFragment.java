@@ -25,7 +25,6 @@ public class ExpressionCaculatorFragment extends android.support.v4.app.Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //setContentView( R.layout.expression_activity );
         View res_view = inflater.inflate(R.layout.expression_activity, container, false);
         evalButton = (Button) res_view.findViewById( R.id.evalButton );
         evalResult = (TextView) res_view.findViewById( R.id.evalResult);

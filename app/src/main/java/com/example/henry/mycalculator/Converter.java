@@ -3,6 +3,8 @@ package com.example.henry.mycalculator;
 /**
  * Created by UMARU on 7/27/2016.
  */
+
+//Deals with conversion between bases in application
 public class Converter {
     Integer num = -1 ;
     boolean isValid = true;
@@ -13,7 +15,6 @@ public class Converter {
         }
         num = Integer.parseInt( s , base);
     }
-
 
     public String toHex(){
         return Integer.toHexString( num );

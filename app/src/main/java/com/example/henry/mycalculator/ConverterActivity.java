@@ -24,11 +24,11 @@ import java.util.TreeSet;
 /**
  * Created by UMARU on 7/26/2016.
  */
+
+//Activity class for the converting
 public class ConverterActivity extends Activity {
     Integer fromBase = 10, toBase = 2;
-    private Button mFromButton;
-    private Button mToButton;
-    private Button mConvertButton;
+    private Button mFromButton, mToButton, mConvertButton;
     private EditText mFromText;
     private TextView mToText;
     private InputMethodManager inputMethodManager;
@@ -46,7 +46,6 @@ public class ConverterActivity extends Activity {
      */
     private GoogleApiClient client;
 
-
     private void update_base(int base, boolean isFrom) {
         if (isFrom) {
             fromBase = base;
@@ -60,29 +59,28 @@ public class ConverterActivity extends Activity {
     public void showPopup(View v, final boolean isFrom) {
         PopupMenu popup = new PopupMenu(this, v);
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                                             @Override
-                                             public boolean onMenuItemClick(MenuItem item) {
-                                                 int id = item.getItemId();
-                                                 switch (id) {
-                                                     case R.id.Hex:
-                                                         update_base(16, isFrom);
-                                                         break;
-                                                     case R.id.Dec:
-                                                         update_base(10, isFrom);
-                                                         break;
-                                                     case R.id.Oct:
-                                                         update_base(8, isFrom);
-                                                         break;
-                                                     case R.id.Bin:
-                                                         update_base(2, isFrom);
-                                                         break;
-                                                     default:
-                                                         return false;
-
-                                                 }
-                                                 return true;
-                                             }
-                                         }
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int id = item.getItemId();
+                switch (id) {
+                    case R.id.Hex:
+                        update_base(16, isFrom);
+                        break;
+                    case R.id.Dec:
+                        update_base(10, isFrom);
+                        break;
+                    case R.id.Oct:
+                        update_base(8, isFrom);
+                        break;
+                    case R.id.Bin:
+                        update_base(2, isFrom);
+                        break;
+                    default:
+                        return false;
+                }
+                return true;
+            }
+        }
         );
         MenuInflater inflater = popup.getMenuInflater();
         inflater.inflate(R.menu.base_menu, popup.getMenu());
@@ -119,7 +117,6 @@ public class ConverterActivity extends Activity {
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-
     class convertButtonOnClickListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
@@ -135,7 +132,6 @@ public class ConverterActivity extends Activity {
             } catch (IntOverFlow e) {
                 mFromText.setError("Input Number Too Large");
             }
-
 
         }
     }

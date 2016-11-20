@@ -80,7 +80,7 @@ public class Quiz extends Activity implements OnClickListener {
 
     };
     int[] scoreBoardByKey = new int[13];
-    private ArrayList<Question> wrongQuestions = new ArrayList<Question>();
+    private ArrayList<Question> wrongQuestions = new ArrayList<>();
 
     private void initializeScoreBoard() {
         for (int i = 0; i < scoreBoardByKey.length; ++i) {
@@ -181,7 +181,7 @@ public class Quiz extends Activity implements OnClickListener {
 
     private void set_input_error(TextView answer, int radix) {
         if (answer.getText().toString().equals("")) {
-            answer.setError("Please input a value.");
+            answer.setError("Please input a value");
             return;
         }
         if (radix == 2) {

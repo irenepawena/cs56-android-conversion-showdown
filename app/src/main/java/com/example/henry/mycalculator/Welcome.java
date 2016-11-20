@@ -10,18 +10,18 @@ import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.content.Intent;
 import android.widget.EditText;
-
+//Welcome screen with ENTER button
 public class Welcome extends Activity implements OnClickListener{
-
-    Button btnStartAnotherActivity;
+    //ENTER button allows user to continue to the Introduction page
+    Button ENTERbttn;
     public final static String EXTRA_NAME = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome);
-        btnStartAnotherActivity = (Button) findViewById(R.id.btnStartAnotherActivity);
-        btnStartAnotherActivity.setOnClickListener(this);
+        ENTERbttn = (Button) findViewById(R.id.ENTERbttn);
+        ENTERbttn.setOnClickListener(this);
     }
 
     @Override

@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.widget.EditText;
 import android.widget.TextView;
 
+//Introduction page after Splash Screen and Welcome
 public class Introduction extends Activity implements OnClickListener {
 
     Button btnStartAnotherActivity;
