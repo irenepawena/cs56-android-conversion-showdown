@@ -7,6 +7,7 @@
         android:icon="@mipmap/icon"
         android:label="Conversion Showdown!"
         android:supportsRtl="true"
+        android:screenOrientation="portrait"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name=".SplashScreen"
@@ -22,6 +23,7 @@
             android:label="Conversion Showdown!" />
         <activity
             android:name=".baseCalculator"
+            android:screenOrientation="portrait"
             android:label="Conversion Showdown!" />
         <activity
             android:name=".Introduction"
