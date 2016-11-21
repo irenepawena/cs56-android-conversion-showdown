@@ -58,4 +58,52 @@ public class QuizTest {
             assert false;
         }
     }
+
+    @Test
+    public void sanity_check_dec_1() {
+        try {
+            String dec_s = "1abcg546";
+            boolean res = MyUtils.sanity_check(dec_s,10);
+            boolean ans = false;
+            assertEquals(ans,res);
+        } catch (IntOverFlow e) {
+            assert false;
+        }
+    }
+
+    @Test
+    public void sanity_check_dec_2() {
+        try {
+            String dec_s = "1234";
+            boolean res = MyUtils.sanity_check(dec_s,10);
+            boolean ans = true;
+            assertEquals(ans,res);
+        } catch (IntOverFlow e) {
+            assert false;
+        }
+    }
+
+    @Test
+    public void sanity_check_oct_1() {
+        try {
+            String oct_s = "16ah";
+            boolean res = MyUtils.sanity_check(oct_s,10);
+            boolean ans = false;
+            assertEquals(ans,res);
+        } catch (IntOverFlow e) {
+            assert false;
+        }
+    }
+
+    @Test
+    public void sanity_check_oct_2() {
+        try {
+            String oct_s = "140";
+            boolean res = MyUtils.sanity_check(oct_s,10);
+            boolean ans = true;
+            assertEquals(ans,res);
+        } catch (IntOverFlow e) {
+            assert false;
+        }
+    }
 }

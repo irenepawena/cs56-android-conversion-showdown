@@ -52,7 +52,7 @@ public class MyUtils {
             isValid = false;
             for (int i = 0 ; i < radix ; ++i ) {
                 Character target = symbols.get(i);
-                //lower cases and upper cases are both okay
+                //lower cases and upper cases are  xboth okay
                 if ( (target.equals(c)) |
                         (target.isLetter(target) && Character.toLowerCase(target) == c) ) {
                     isValid = true;

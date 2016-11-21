@@ -8,12 +8,13 @@ package com.example.henry.mycalculator;
 public class Converter {
     Integer num = -1 ;
     boolean isValid = true;
+
     public Converter(String s , int base) throws IntOverFlow {
         if (!MyUtils.sanity_check(s, base)) {
             isValid = false;
             return;
         }
-        num = Integer.parseInt( s , base);
+        num = Integer.parseInt(s , base);
     }
 
     public String toHex(){
