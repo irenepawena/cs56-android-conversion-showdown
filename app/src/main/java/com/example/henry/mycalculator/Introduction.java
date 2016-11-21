@@ -67,7 +67,7 @@ public class Introduction extends Activity implements OnClickListener {
     @Override
     public void onClick(View view) {
 
-        Intent intent = new Intent(this, ExpressionActivity.class);
+        Intent intent = new Intent(this, baseCalculator.class);
         MyUtils.startNoHistoryAcitivity( this, intent );
     }
 
