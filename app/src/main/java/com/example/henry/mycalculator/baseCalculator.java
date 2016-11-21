@@ -13,15 +13,18 @@ import android.widget.TextView;
 
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.Result;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.lang.String;
 import java.util.StringTokenizer;
 
 /**
  * Created by Jordan Ang on 11/20/2016.
  */
 
+//Calculator that allows for user to input different bases
 public class baseCalculator extends Activity {
     Integer inputOneBase = 10;
     Integer inputTwoBase = 10;
@@ -47,6 +50,7 @@ public class baseCalculator extends Activity {
     };
 
     private GoogleApiClient client;
+
 
     private void update_base(int base, int whichBase) {
         if (whichBase == 0) {
@@ -190,6 +194,7 @@ public class baseCalculator extends Activity {
             firstInput.setError("Input Number Too Large");
         }
     }
+    
 }
 
 

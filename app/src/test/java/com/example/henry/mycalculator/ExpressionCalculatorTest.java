@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 public class ExpressionCalculatorTest {
     ExpressionCalculator a;
     @Before
-    public  void setUp() throws Exception{
+    public void setUp() throws Exception{
         a  =  new ExpressionCalculator();
     }
 
