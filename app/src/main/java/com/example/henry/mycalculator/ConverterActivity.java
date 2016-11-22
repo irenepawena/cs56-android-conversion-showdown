@@ -25,7 +25,7 @@ import java.util.TreeSet;
  * Created by UMARU on 7/26/2016.
  */
 
-//Activity class for the converting
+//Activity class for converting
 public class ConverterActivity extends Activity {
     Integer fromBase = 10, toBase = 2;
     private Button mFromButton, mToButton, mConvertButton;
@@ -122,6 +122,7 @@ public class ConverterActivity extends Activity {
         public void onClick(View v) {
             String input = mFromText.getText().toString();
             try {
+                //Uses Converter class to help validate input
                 Converter converter = new Converter(input, fromBase);
                 if (!converter.isValid()) {
                     mFromText.setError("Input Format Error");

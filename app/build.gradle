@@ -11,6 +11,7 @@ android {
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner" //added to test activity
     }
     buildTypes {
         release {
@@ -20,10 +21,21 @@ android {
     }
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-annotations:23.1.1'
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support:support-annotations:23.1.1' //added to test activity
+    androidTestCompile 'com.android.support.test:runner:0.5' //added to test activity
+    androidTestCompile 'com.android.support.test:rules:0.5' //added to test activity
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2' //added to test activity
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile files('lib/jeval.jar')
+    androidTestCompile 'junit:junit:4.12'
 }

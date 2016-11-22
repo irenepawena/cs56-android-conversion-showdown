@@ -7,6 +7,8 @@ import android.os.Parcelable;
 /**
  * Created by UMARU on 7/26/2016.
  */
+
+//Class that deals with type of questions
 public class Question implements Parcelable{
     private String from, to, questionType;
 

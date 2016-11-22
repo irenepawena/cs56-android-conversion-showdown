@@ -33,6 +33,7 @@ public class Converter {
         return Integer.toBinaryString( num );
     }
 
+    //Gives the correct method based on input of base
     public String toBase(int base){
         switch(base){
             case(2):

@@ -3,7 +3,7 @@ package com.example.henry.mycalculator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-//Splash screen implementation
+//Splash screen implementation. This is the first screen the user will see when the application starts
 public class SplashScreen extends Activity {
 
     @Override

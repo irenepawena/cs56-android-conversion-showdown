@@ -64,7 +64,7 @@ public class SwiperCalculatorActivity extends ActionBarActivity {
             SwipePage = pager;
             SwipePage.setAdapter(this);
             SwipePage.addOnPageChangeListener(this);
-            mFragments = new ArrayList<>(); //implicitly type FragmentFactory
+            mFragments = new ArrayList<>(); //implicitly holds type FragmentFactory
             mFragments.add(new ConverterFragmentFactory() );
             mFragments.add(new ExpressionCalculatorFragmentFactory());
         }

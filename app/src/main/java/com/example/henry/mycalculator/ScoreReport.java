@@ -13,13 +13,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Map;
 
+//The report of score at the end of taking Quiz
 public class ScoreReport extends Activity {
 
     private ArrayList<Question> wrongQuestions;
 
-
+    //Displays the questions you got wrong
     private void set_wrongQuestions(){
-
         String content = "";
         assert wrongQuestions != null;
         for(Question q : wrongQuestions ){
@@ -78,11 +78,13 @@ public class ScoreReport extends Activity {
         }
     }
 
+    //Go take a new quiz
     public void newTestSelection(View view){
         Intent activity = new Intent(this, QuizSelection.class);
         startActivity(activity);
     }
 
+    //Go to the calculator page from this page
     public void goToCalculator(View view){
         Intent activity = new Intent(this, ExpressionActivity.class);
         MyUtils.startNoHistoryAcitivity(this, activity);

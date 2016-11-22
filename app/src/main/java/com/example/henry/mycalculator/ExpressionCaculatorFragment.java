@@ -16,6 +16,8 @@ import net.sourceforge.jeval.EvaluationException;
 /**
  * Created by UMARU on 7/27/2016.
  */
+
+//fragment class for Expression Calculator
 public class ExpressionCaculatorFragment extends android.support.v4.app.Fragment {
     private Button evalButton;
     private TextView evalResult;

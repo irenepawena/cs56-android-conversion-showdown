@@ -51,7 +51,6 @@ public class baseCalculator extends Activity {
 
     private GoogleApiClient client;
 
-
     private void update_base(int base, int whichBase) {
         if (whichBase == 0) {
             inputOneBase = base;
@@ -100,7 +99,6 @@ public class baseCalculator extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.base_calculator_activity);
-
         inputOneBaseButton = (Button) findViewById(R.id.inputOneBaseButton);
         inputTwoBaseButton = (Button) findViewById(R.id.inputTwoBaseButton);
         firstInput = (EditText) findViewById(R.id.firstInput);
@@ -185,7 +183,7 @@ public class baseCalculator extends Activity {
                 result = Integer.toString(input1_decimal * input2_decimal);
             }
             Converter converter3 = new Converter(result, 10);
-            if(negative == false) {
+            if(!negative) {
                 baseCalcResult.setText(converter3.toBase(resultBase));
             } else {
                 baseCalcResult.setText("-" + converter3.toBase(resultBase));
@@ -194,7 +192,7 @@ public class baseCalculator extends Activity {
             firstInput.setError("Input Number Too Large");
         }
     }
-    
+
 }
 
 

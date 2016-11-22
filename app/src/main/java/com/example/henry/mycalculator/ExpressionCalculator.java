@@ -12,18 +12,13 @@ import java.lang.reflect.AccessibleObject;
 /**
  * Created by UMARU on 7/15/2016.
  */
+//The Expression Calculator class
 public class ExpressionCalculator {
 
 
     Evaluator evaluator = new Evaluator();
-    /*
-    @Override
-    public void onCreate( Bundle savedInstance ){
-        super.onCreate( savedInstance );
 
-
-    }
-    */
+    //Calculates with double
     public double eval_double( String exp) throws EvaluationException{
         return Double.parseDouble( evaluator.evaluate( exp ) );
     }
@@ -31,6 +26,5 @@ public class ExpressionCalculator {
     public String eval(String exp) throws EvaluationException{
         return evaluator.evaluate( exp );
     }
-
 
 }

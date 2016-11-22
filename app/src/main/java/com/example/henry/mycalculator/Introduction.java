@@ -34,8 +34,7 @@ public class Introduction extends Activity implements OnClickListener {
         TextView resp = (TextView) findViewById(R.id.response);
         Intent intent = getIntent();
         String name = intent.getStringExtra(Welcome.EXTRA_NAME);
-        String str = "Welcome " + name + "!";
-        resp.setText(str);
+        resp.setText("Welcome " + name + "!");
 
 
         startQuizButton.setOnClickListener(new OnClickListener() {
